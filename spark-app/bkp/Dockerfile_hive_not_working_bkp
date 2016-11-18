@@ -1,0 +1,130 @@
+FROM centos:centos6
+
+RUN yum -y update;
+RUN yum -y clean all;
+
+# Install basic tools
+RUN yum install -y  wget dialog curl sudo lsof vim axel telnet nano openssh-server openssh-clients bzip2 passwd tar bc git unzip
+
+#Install Java
+#RUN yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel 
+
+# JAVA
+ARG JAVA_MAJOR_VERSION=8
+ARG JAVA_UPDATE_VERSION=92
+ARG JAVA_BUILD_NUMBER=14
+ENV JAVA_HOME /usr/jdk1.${JAVA_MAJOR_VERSION}.0_${JAVA_UPDATE_VERSION}
+
+ENV PATH $PATH:$JAVA_HOME/bin
+RUN curl -sL --retry 3 --insecure \
+  --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
+  "http://download.oracle.com/otn-pub/java/jdk/${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-b${JAVA_BUILD_NUMBER}/server-jre-${JAVA_MAJOR_VERSION}u${JAVA_UPDATE_VERSION}-linux-x64.tar.gz" \
+  | gunzip \
+  | tar x -C /usr/ \
+  && ln -s $JAVA_HOME /usr/java \
+  && rm -rf $JAVA_HOME/man
+
+
+# HADOOP
+ENV HADOOP_VERSION 2.7.2
+ENV HADOOP_HOME /usr/hadoop-$HADOOP_VERSION
+ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+ENV PATH $PATH:$HADOOP_HOME/bin
+RUN curl -sL --retry 3 \
+  "http://archive.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz" \
+  | gunzip \
+  | tar -x -C /usr/ \
+ && rm -rf $HADOOP_HOME/share/doc \
+&& chown -R root:root $HADOOP_HOME
+
+
+#Install Spark
+#Spark 2.0.0, precompiled with : mvn -Pyarn -Phadoop-2.6 -Dhadoop.version=2.6.0 -Dyarn.version=2.6.0 -DskipTests -Dscala-2.11 -Phive -Phive-thriftserver clean package
+#RUN wget http://litpc45.ulb.ac.be/spark-2.0.0_Hadoop-2.6_Scala-2.11.tgz
+#RUN tar xvzf spark-2.0.0_Hadoop-2.6_Scala-2.11.tgz
+
+#ENV SPARK_HOME $HOME/spark
+
+# SPARK
+ENV SPARK_VERSION 2.0.1
+ENV SPARK_PACKAGE spark-${SPARK_VERSION}-bin-without-hadoop
+ENV SPARK_HOME /usr/spark-${SPARK_VERSION}
+ENV SPARK_DIST_CLASSPATH="$HADOOP_HOME/etc/hadoop/*:$HADOOP_HOME/share/hadoop/common/lib/*:$HADOOP_HOME/share/hadoop/common/*:$HADOOP_HOME/share/hadoop/hdfs/*:$HADOOP_HOME/share/hadoop/hdfs/lib/*:$HADOOP_HOME/share/hadoop/hdfs/*:$HADOOP_HOME/share/hadoop/yarn/lib/*:$HADOOP_HOME/share/hadoop/yarn/*:$HADOOP_HOME/share/hadoop/mapreduce/lib/*:$HADOOP_HOME/share/hadoop/mapreduce/*:$HADOOP_HOME/share/hadoop/tools/lib/*"
+ENV PATH $PATH:${SPARK_HOME}/bin
+RUN curl -sL --retry 3 \
+  "http://d3kbcqa49mib13.cloudfront.net/${SPARK_PACKAGE}.tgz" \
+  | gunzip \
+  | tar x -C /usr/ \
+ && mv /usr/$SPARK_PACKAGE $SPARK_HOME \
+&& chown -R root:root $SPARK_HOME
+
+
+#Install Hive
+RUN \
+  cd /usr/local && curl -LO http://www.us.apache.org/dist/hive/hive-2.1.0/apache-hive-2.1.0-bin.tar.gz && \
+  tar -xzf apache-hive-2.1.0-bin.tar.gz && \
+  ln -s apache-hive-2.1.0-bin hive && \
+  rm apache-hive-2.1.0-bin.tar.gz
+
+ENV HIVE_HOME /usr/local/hive
+ENV HADOOP_USER_CLASSPATH_FIRST true
+RUN \
+  echo 'HIVE_HOME="/usr/local/hive"' >> /etc/environment && \
+  echo 'HADOOP_USER_CLASSPATH_FIRST="true"' >> /etc/environment
+ENV PATH $PATH:$HIVE_HOME/bin
+
+
+#Install Kafka
+RUN wget http://apache.belnet.be/kafka/0.10.0.0/kafka_2.11-0.10.0.0.tgz
+RUN tar xvzf kafka_2.11-0.10.0.0.tgz
+RUN mv kafka_2.11-0.10.0.0 kafka
+
+ENV PATH $HOME/spark/bin:$HOME/spark/sbin:$HOME/kafka/bin:$PATH
+
+#Create guest user. IMPORTANT: Change here UID 1000 to your host UID if you plan to share folders.
+RUN useradd guest -u 1000
+RUN echo guest | passwd guest --stdin
+
+ENV HOME /home/guest
+WORKDIR $HOME
+
+USER guest
+
+#Install Anaconda Python distribution
+RUN wget http://repo.continuum.io/archive/Anaconda2-4.1.1-Linux-x86_64.sh
+RUN bash Anaconda2-4.1.1-Linux-x86_64.sh -b
+ENV PATH $HOME/anaconda2/bin:$PATH
+RUN conda install python=2.7.10 -y
+
+#Install Jupyer notebook + Toree Scala kernel
+RUN conda install jupyter -y 
+
+#Install Kafka Python module
+RUN pip install kafka-python
+
+USER root
+
+#Startup (start SSH, Cassandra, Zookeeper, Kafka producer)
+ADD startup_script.sh /usr/bin/startup_script.sh
+RUN chmod +x /usr/bin/startup_script.sh
+
+#Environment variables for Spark and Java
+ADD setenv.sh /home/guest/setenv.sh
+RUN chown guest:guest setenv.sh
+RUN echo . ./setenv.sh >> .bashrc
+
+#Init Cassandra 
+ADD init_cassandra.cql /home/guest/init_cassandra.cql
+RUN chown guest:guest init_cassandra.cql
+
+#Add notebooks
+#ADD notebooks /home/guest/notebooks
+#RUN chown -R guest:guest notebooks
+
+#Install Cassandra
+ADD datastax.repo /etc/yum.repos.d/datastax.repo
+RUN yum install -y datastax-ddc
+RUN echo "/usr/lib/python2.7/site-packages" |tee /home/guest/anaconda2/lib/python2.7/site-packages/cqlshlib.pth
+
+#Install HBase
+

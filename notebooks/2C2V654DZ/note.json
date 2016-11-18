@@ -1,0 +1,212 @@
+{
+  "paragraphs": [
+    {
+      "text": "sqlContext",
+      "dateUpdated": "Nov 17, 2016 7:33:06 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479367946837_-1432095492",
+      "id": "20161117-073226_189390845",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres0: org.apache.spark.sql.SQLContext \u003d org.apache.spark.sql.SQLContext@5357ac23\n"
+      },
+      "dateCreated": "Nov 17, 2016 7:32:26 AM",
+      "dateStarted": "Nov 17, 2016 7:33:07 AM",
+      "dateFinished": "Nov 17, 2016 7:34:48 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive",
+      "dateUpdated": "Nov 17, 2016 7:54:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479367986989_-2057484310",
+      "id": "20161117-073306_1372574249",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\n\n\n\u003cconsole\u003e:26: error: not found: value %\n       %hive\n       ^\n"
+      },
+      "dateCreated": "Nov 17, 2016 7:33:06 AM",
+      "dateStarted": "Nov 17, 2016 7:54:29 AM",
+      "dateFinished": "Nov 17, 2016 7:55:57 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sqlContext.sql(\"select * from account\")\n",
+      "dateUpdated": "Nov 17, 2016 8:42:17 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479372116223_819030331",
+      "id": "20161117-084156_106543898",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\norg.apache.spark.SparkException: Unable to create database default as failed to create its directory hdfs://spark-docker:9000/table\n  at org.apache.spark.sql.catalyst.catalog.InMemoryCatalog.liftedTree1$1(InMemoryCatalog.scala:114)\n  at org.apache.spark.sql.catalyst.catalog.InMemoryCatalog.createDatabase(InMemoryCatalog.scala:108)\n  at org.apache.spark.sql.catalyst.catalog.SessionCatalog.createDatabase(SessionCatalog.scala:147)\n  at org.apache.spark.sql.catalyst.catalog.SessionCatalog.\u003cinit\u003e(SessionCatalog.scala:89)\n  at org.apache.spark.sql.internal.SessionState.catalog$lzycompute(SessionState.scala:95)\n  at org.apache.spark.sql.internal.SessionState.catalog(SessionState.scala:95)\n  at org.apache.spark.sql.internal.SessionState$$anon$1.\u003cinit\u003e(SessionState.scala:112)\n  at org.apache.spark.sql.internal.SessionState.analyzer$lzycompute(SessionState.scala:112)\n  at org.apache.spark.sql.internal.SessionState.analyzer(SessionState.scala:111)\n  at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:49)\n  at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:64)\n  at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:582)\n  at org.apache.spark.sql.SQLContext.sql(SQLContext.scala:682)\n  ... 47 elided\nCaused by: java.net.ConnectException: Call From 8126ffe1c7e2/172.21.0.4 to spark-docker:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused\n  at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n  at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n  at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n  at java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n  at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:792)\n  at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:732)\n  at org.apache.hadoop.ipc.Client.call(Client.java:1479)\n  at org.apache.hadoop.ipc.Client.call(Client.java:1412)\n  at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)\n  at com.sun.proxy.$Proxy15.mkdirs(Unknown Source)\n  at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.mkdirs(ClientNamenodeProtocolTranslatorPB.java:558)\n  at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n  at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n  at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n  at java.lang.reflect.Method.invoke(Method.java:498)\n  at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)\n  at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)\n  at com.sun.proxy.$Proxy16.mkdirs(Unknown Source)\n  at org.apache.hadoop.hdfs.DFSClient.primitiveMkdir(DFSClient.java:3000)\n  at org.apache.hadoop.hdfs.DFSClient.mkdirs(DFSClient.java:2970)\n  at org.apache.hadoop.hdfs.DistributedFileSystem$21.doCall(DistributedFileSystem.java:1047)\n  at org.apache.hadoop.hdfs.DistributedFileSystem$21.doCall(DistributedFileSystem.java:1043)\n  at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)\n  at org.apache.hadoop.hdfs.DistributedFileSystem.mkdirsInternal(DistributedFileSystem.java:1043)\n  at org.apache.hadoop.hdfs.DistributedFileSystem.mkdirs(DistributedFileSystem.java:1036)\n  at org.apache.hadoop.fs.FileSystem.mkdirs(FileSystem.java:1877)\n  at org.apache.spark.sql.catalyst.catalog.InMemoryCatalog.liftedTree1$1(InMemoryCatalog.scala:111)\n  ... 59 more\nCaused by: java.net.ConnectException: Connection refused\n  at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)\n  at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)\n  at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:206)\n  at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:531)\n  at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:495)\n  at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:614)\n  at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:712)\n  at org.apache.hadoop.ipc.Client$Connection.access$2900(Client.java:375)\n  at org.apache.hadoop.ipc.Client.getConnection(Client.java:1528)\n  at org.apache.hadoop.ipc.Client.call(Client.java:1451)\n  ... 79 more\n"
+      },
+      "dateCreated": "Nov 17, 2016 8:41:56 AM",
+      "dateStarted": "Nov 17, 2016 8:42:18 AM",
+      "dateFinished": "Nov 17, 2016 8:43:51 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect * from account;",
+      "dateUpdated": "Nov 17, 2016 7:56:20 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479368283186_1337953738",
+      "id": "20161117-073803_368302890",
+      "result": {
+        "code": "ERROR",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 17, 2016 7:38:03 AM",
+      "dateStarted": "Nov 17, 2016 7:56:20 AM",
+      "dateFinished": "Nov 17, 2016 8:17:17 AM",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Nov 17, 2016 7:56:09 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479369353380_984489326",
+      "id": "20161117-075553_731206375",
+      "dateCreated": "Nov 17, 2016 7:55:53 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Untitled Note 1",
+  "id": "2C2V654DZ",
+  "angularObjects": {
+    "2C48NDCNC:shared_process": [],
+    "2C2JM1Q6B:shared_process": [],
+    "2C2F89TDT:shared_process": [],
+    "2C41E3TFN:shared_process": [],
+    "2BZZCMM2T:shared_process": [],
+    "2C15JGEDV:shared_process": [],
+    "2C3U2XXRB:shared_process": [],
+    "2C2CYD7ED:shared_process": [],
+    "2C23JHBJQ:shared_process": [],
+    "2C2C1T3DG:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
