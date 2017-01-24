@@ -1,0 +1,77 @@
+#hbase:
+#  image: dajobe/hbase
+  #container_name: hbase-docker
+#  expose:
+#    - "8080" # REST API
+#    - "8085" # REST Web UI
+#    - "9090" # Thrift API
+#    - "9095" # Thrift Web UI
+#    - "2181" # Hbase's embedded zookeeper cluster
+#    - "16010" # HBase Master web UI
+
+#kafka:
+#  image: antlypls/kafka:0.10.0.0
+#  environment:
+#    - KAFKA=localhost:9092
+#    - ZOOKEEPER=localhost:2181
+#  expose:
+#    - "2181"
+#    - "9092"
+
+version: '2'
+
+services:
+
+  hue:
+    image: gethue/hue:latest
+    container_name: hue-docker
+    expose:
+      - "8888"
+    ports:
+      - "8888:8888"
+    networks:
+      - new
+
+  spark:
+#  image: antlypls/spark:1.6.1
+#  image: sequenceiq/spark:1.6.2
+    build: ./spark-app
+    container_name: spark-docker 
+    command: bash
+    volumes:
+      - ./target/scala-2.11:/app
+    tty: true
+    ports:
+      - "50070:50070"
+      - "50075:50075"
+      - "10000:10000"
+      - "10001:10001"
+      - "10002:10002"
+      - "9000:9000"
+      - "8080:8080"
+    expose:
+      - "9000"
+    networks:
+      - new
+    #links:
+    #  - hue
+
+#  zeppelin:
+#    image: dylanmei/zeppelin
+#    container_name: zeppelin-docker
+#    environment:
+#      ZEPPELIN_PORT: 8080
+#      ZEPPELIN_JAVA_OPTS: >-
+#        -Dspark.driver.memory=1g
+#        -Dspark.executor.memory=2g
+#      MASTER: local[*]
+#    ports:
+#      - "8080:8080"
+#    volumes:
+#      - ./data:/usr/zeppelin/data
+#      - ./notebooks:/usr/zeppelin/notebook
+#    networks:
+#      - new
+
+networks:
+  new:

@@ -4,32 +4,32 @@
 <configuration>
     <property>
         <name>yarn.resourcemanager.scheduler.address</name>
-        <value>localhost:8030</value>
+        <value>hive-docker:8030</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.resource-tracker.address</name>
-        <value>localhost:8025</value>
+        <value>hive-docker:8025</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.address</name>
-        <value>localhost:8050</value>
+        <value>hive-docker:8050</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.admin.address</name>
-        <value>localhost:8141</value>
+        <value>hive-docker:8141</value>
     </property>
 
     <property>
         <name>yarn.resourcemanager.webapp.address</name>
-        <value>localhost:8088</value>
+        <value>hive-docker:8088</value>
     </property>
 
     <property>
         <name>yarn.log.server.url</name>
-        <value>http://localhost:19888/jobhistory/logs/</value>
+        <value>http://hive-docker:19888/jobhistory/logs/</value>
         <description>URL for job history server</description>
     </property>
 

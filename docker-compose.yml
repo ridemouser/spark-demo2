@@ -22,15 +22,15 @@ version: '2'
 
 services:
 
-  hue:
-    image: gethue/hue:latest
-    container_name: hue-docker
-    expose:
-      - "8888"
-    ports:
-      - "8888:8888"
-    networks:
-      - new
+#  hue:
+#    image: gethue/hue:latest
+#    container_name: hue-docker
+#    expose:
+#      - "8888"
+#    ports:
+#      - "8888:8888"
+#    networks:
+#      - new
 
   spark:
 #  image: antlypls/spark:1.6.1
@@ -70,6 +70,8 @@ services:
     volumes:
       - ./zeppelin-app/data:/usr/zeppelin/data
       - ./zeppelin-app/notebooks:/usr/zeppelin/notebook
+      - ./zeppelin-app/config/hadoop:/opt
+#      - ./zeppelin-app/scripts:/tmp
     networks:
       - new
 
@@ -80,6 +82,7 @@ services:
       - "50070:50070"
       - "50075:50075"
       - "9000:9000"
+      - "8088:8088"
       - "10000:10000"
       - "10001:10001"
       - "10002:10002"

@@ -1,0 +1,1348 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md \n# Working with Dataframes",
+      "dateUpdated": "Nov 29, 2016 6:58:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872538_-453188360",
+      "id": "20161122-213028_552453387",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eWorking with Dataframes\u003c/h1\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:24:49 PM",
+      "dateFinished": "Nov 29, 2016 6:24:49 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// For spark 2.0 onwards, use below\nspark",
+      "dateUpdated": "Nov 29, 2016 6:24:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872549_-471271559",
+      "id": "20161122-213816_149260135",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres39: org.apache.spark.sql.SparkSession \u003d org.apache.spark.sql.SparkSession@66b706bc\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:24:54 PM",
+      "dateFinished": "Nov 29, 2016 6:24:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### First define the schema for the data\n",
+      "dateUpdated": "Nov 29, 2016 6:58:35 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872549_-471271559",
+      "id": "20161122-213927_926862739",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eFirst define the schema for the data\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:33:24 PM",
+      "dateFinished": "Nov 29, 2016 6:33:24 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nfinal case class Employee(id: Int, name: String, office: String, salary: Double)",
+      "dateUpdated": "Nov 29, 2016 6:58:53 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872549_-471271559",
+      "id": "20161122-214718_2117285959",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwarning: there was one unchecked warning; re-run with -unchecked for details\n\ndefined class Employee\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:58:53 PM",
+      "dateFinished": "Nov 29, 2016 6:58:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create Dataframe\nval emp \u003d spark.createDataFrame(Seq(Employee(1,\"Adam\",\"New York\",100000),Employee(2,\"Charlie\",\"Chicago\",200000),Employee(3,\"Liz\",\"Atlanta\",100500),Employee(4,\"Alex\",\"Miami\",100200),Employee(5,\"Alex\",\"Seattle\",100200),Employee(6,\"Brian\",\"Miami\",80000)))",
+      "dateUpdated": "Nov 30, 2016 2:08:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872557_-474349550",
+      "id": "20161128-005448_1346847967",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nemp: org.apache.spark.sql.DataFrame \u003d [id: int, name: string ... 2 more fields]\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 30, 2016 2:08:50 AM",
+      "dateFinished": "Nov 30, 2016 2:08:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Creating Dataframe from an RDD",
+      "dateUpdated": "Nov 29, 2016 6:51:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872576_-481659779",
+      "id": "20161129-023535_1102313470",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eCreating Dataframe from an RDD\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:51:08 PM",
+      "dateFinished": "Nov 29, 2016 6:51:08 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create RDD and transform it into a Dataframe \nval emp2 \u003d sc.parallelize(Seq(Employee(1,\"Adam\",\"New York\",100000),Employee(2,\"Charlie\",\"Chicago\",200000),Employee(3,\"Liz\",\"Atlanta\",100500),Employee(4,\"Alex\",\"Miami\",100200))).toDF()\nemp2.show()",
+      "dateUpdated": "Nov 30, 2016 2:09:08 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480445020208_98400879",
+      "id": "20161129-184340_501011897",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nemp2: org.apache.spark.sql.DataFrame \u003d [id: int, name: string ... 2 more fields]\n+---+-------+--------+--------+\n| id|   name|  office|  salary|\n+---+-------+--------+--------+\n|  1|   Adam|New York|100000.0|\n|  2|Charlie| Chicago|200000.0|\n|  3|    Liz| Atlanta|100500.0|\n|  4|   Alex|   Miami|100200.0|\n+---+-------+--------+--------+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:43:40 PM",
+      "dateStarted": "Nov 30, 2016 2:09:08 AM",
+      "dateFinished": "Nov 30, 2016 2:09:10 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create a temp view\nemp.createOrReplaceTempView(\"employee\")",
+      "dateUpdated": "Nov 30, 2016 2:10:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872557_-474349550",
+      "id": "20161128-010259_1573211695",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 30, 2016 2:10:57 AM",
+      "dateFinished": "Nov 30, 2016 2:10:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Display data\nemp.show()",
+      "dateUpdated": "Nov 30, 2016 2:12:03 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872575_-467424070",
+      "id": "20161128-005911_1437414316",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+---+-------+--------+--------+\n| id|   name|  office|  salary|\n+---+-------+--------+--------+\n|  1|   Adam|New York|100000.0|\n|  2|Charlie| Chicago|200000.0|\n|  3|    Liz| Atlanta|100500.0|\n|  4|   Alex|   Miami|100200.0|\n|  5|   Alex| Seattle|100200.0|\n|  6|  Brian|   Miami| 80000.0|\n+---+-------+--------+--------+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 30, 2016 2:12:03 AM",
+      "dateFinished": "Nov 30, 2016 2:12:04 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Filter rows that match the given predicate",
+      "dateUpdated": "Nov 30, 2016 1:19:18 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480468587515_-249303204",
+      "id": "20161130-011627_951684133",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eFilter rows that match the given predicate\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:16:27 AM",
+      "dateStarted": "Nov 30, 2016 1:19:18 AM",
+      "dateFinished": "Nov 30, 2016 1:19:18 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval filterDF \u003d emp.filter($\"salary\" \u003e\u003d 200000)\nfilterDF.show()",
+      "dateUpdated": "Nov 30, 2016 2:12:12 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480468433919_-1926621230",
+      "id": "20161130-011353_1726445175",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nfilterDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [id: int, name: string ... 2 more fields]\n+---+-------+-------+--------+\n| id|   name| office|  salary|\n+---+-------+-------+--------+\n|  2|Charlie|Chicago|200000.0|\n+---+-------+-------+--------+\n\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:13:53 AM",
+      "dateStarted": "Nov 30, 2016 2:12:12 AM",
+      "dateFinished": "Nov 30, 2016 2:12:13 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Where clause can also be used which is equivalent to Filter()",
+      "dateUpdated": "Nov 30, 2016 1:21:55 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480468763648_-216373498",
+      "id": "20161130-011923_2030620620",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eWhere clause can also be used which is equivalent to Filter()\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:19:23 AM",
+      "dateStarted": "Nov 30, 2016 1:21:55 AM",
+      "dateFinished": "Nov 30, 2016 1:21:55 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval whereDF \u003d emp.where($\"salary\" \u003e\u003d 200000)\nwhereDF.show()",
+      "dateUpdated": "Nov 30, 2016 2:12:22 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480468833586_-1110991311",
+      "id": "20161130-012033_1770204534",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwhereDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [id: int, name: string ... 2 more fields]\n+---+-------+-------+--------+\n| id|   name| office|  salary|\n+---+-------+-------+--------+\n|  2|Charlie|Chicago|200000.0|\n+---+-------+-------+--------+\n\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:20:33 AM",
+      "dateStarted": "Nov 30, 2016 2:12:22 AM",
+      "dateFinished": "Nov 30, 2016 2:12:23 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Sort records",
+      "dateUpdated": "Nov 30, 2016 1:30:25 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480468992482_-2063631233",
+      "id": "20161130-012312_316231190",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eSort records\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:23:12 AM",
+      "dateStarted": "Nov 30, 2016 1:30:25 AM",
+      "dateFinished": "Nov 30, 2016 1:30:25 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval sortDF \u003d emp.sort($\"salary\".desc)\nsortDF.show()",
+      "dateUpdated": "Nov 30, 2016 2:12:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480469026509_1825856695",
+      "id": "20161130-012346_14600753",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nsortDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [id: int, name: string ... 2 more fields]\n+---+-------+--------+--------+\n| id|   name|  office|  salary|\n+---+-------+--------+--------+\n|  2|Charlie| Chicago|200000.0|\n|  3|    Liz| Atlanta|100500.0|\n|  4|   Alex|   Miami|100200.0|\n|  5|   Alex| Seattle|100200.0|\n|  1|   Adam|New York|100000.0|\n|  6|  Brian|   Miami| 80000.0|\n+---+-------+--------+--------+\n\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:23:46 AM",
+      "dateStarted": "Nov 30, 2016 2:12:30 AM",
+      "dateFinished": "Nov 30, 2016 2:12:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Aggregations on DataFrames",
+      "dateUpdated": "Nov 30, 2016 1:40:27 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480469966456_1949714072",
+      "id": "20161130-013926_1252586949",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eAggregations on DataFrames\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:39:26 AM",
+      "dateStarted": "Nov 30, 2016 1:40:27 AM",
+      "dateFinished": "Nov 30, 2016 1:40:27 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nprint(\"Below are the distinct names\")\nval distinctDF \u003d emp.select($\"name\").distinct.show()\nprint(\"Count of distinct names\")\nval distinctCountDF \u003d emp.agg(countDistinct($\"name\") as \"distinct_names\")\ndistinctCountDF.show()\nprint(\"Average Salary by Office\")\nemp.groupBy(\"office\").agg(avg(\"salary\")).show()\nprint(\"Max Salary\")\nemp.agg(max(\"salary\")).show()",
+      "dateUpdated": "Nov 30, 2016 2:13:05 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480469980683_-1925645416",
+      "id": "20161130-013940_1533354597",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Below are the distinct names+-------+\n|   name|\n+-------+\n|    Liz|\n|   Alex|\n|Charlie|\n|   Adam|\n|  Brian|\n+-------+\n\n\ndistinctDF: Unit \u003d ()\nCount of distinct names\ndistinctCountDF: org.apache.spark.sql.DataFrame \u003d [distinct_names: bigint]\n+--------------+\n|distinct_names|\n+--------------+\n|             5|\n+--------------+\n\nAverage Salary by Office+--------+-----------+\n|  office|avg(salary)|\n+--------+-----------+\n| Chicago|   200000.0|\n| Atlanta|   100500.0|\n| Seattle|   100200.0|\n|   Miami|    90100.0|\n|New York|   100000.0|\n+--------+-----------+\n\nMax Salary+-----------+\n|max(salary)|\n+-----------+\n|   200000.0|\n+-----------+\n\n"
+      },
+      "dateCreated": "Nov 30, 2016 1:39:40 AM",
+      "dateStarted": "Nov 30, 2016 2:13:05 AM",
+      "dateFinished": "Nov 30, 2016 2:13:18 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Since we have registered the DataFrame as temporary table, we can run SQL statements using the sql methofs provided by sqlContext",
+      "dateUpdated": "Nov 30, 2016 2:03:51 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480471351652_681338155",
+      "id": "20161130-020231_208267653",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eSince we have registered the DataFrame as temporary table, we can run SQL statements using the sql methofs provided by sqlContext\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:02:31 AM",
+      "dateStarted": "Nov 30, 2016 2:03:51 AM",
+      "dateFinished": "Nov 30, 2016 2:03:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nprint(\"Count by name\")\nspark.sql(\"select name, count(name) from employee group by name\").show()\nprint(\"Min Salary, Max Salary, Average Salary rounded to 2 decimal places\")\nspark.sql(\"select min(salary), max(salary), ROUND(avg(salary),2) from employee\").show()",
+      "dateUpdated": "Nov 30, 2016 2:26:00 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480471443678_15661261",
+      "id": "20161130-020403_489742888",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Count by name+-------+-----------+\n|   name|count(name)|\n+-------+-----------+\n|    Liz|          1|\n|   Alex|          2|\n|Charlie|          1|\n|   Adam|          1|\n|  Brian|          1|\n+-------+-----------+\n\nMin Salary, Max Salary, Average Salary rounded to 2 decimal places+-----------+-----------+---------------------+\n|min(salary)|max(salary)|round(avg(salary), 2)|\n+-----------+-----------+---------------------+\n|    80000.0|   200000.0|            113483.33|\n+-----------+-----------+---------------------+\n\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:04:03 AM",
+      "dateStarted": "Nov 30, 2016 2:26:01 AM",
+      "dateFinished": "Nov 30, 2016 2:26:05 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Print Physical Plan to console",
+      "dateUpdated": "Nov 30, 2016 3:13:35 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480472736270_-842181828",
+      "id": "20161130-022536_1119893290",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003ePrint Physical Plan to console\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:25:36 AM",
+      "dateStarted": "Nov 30, 2016 3:13:35 AM",
+      "dateFinished": "Nov 30, 2016 3:13:35 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nemp.select($\"name\").distinct.explain()\n",
+      "dateUpdated": "Nov 30, 2016 2:42:01 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/text"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480472772901_-712460152",
+      "id": "20161130-022612_1211425968",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\u003d\u003d Physical Plan \u003d\u003d\n*HashAggregate(keys\u003d[name#914], functions\u003d[])\n+- Exchange hashpartitioning(name#914, 200)\n   +- *HashAggregate(keys\u003d[name#914], functions\u003d[])\n      +- LocalTableScan [name#914]\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:26:12 AM",
+      "dateStarted": "Nov 30, 2016 2:42:01 AM",
+      "dateFinished": "Nov 30, 2016 2:42:02 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Persist tables into Hive",
+      "dateUpdated": "Nov 30, 2016 2:44:44 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480473827079_-2884657",
+      "id": "20161130-024347_1234343286",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003ePersist tables into Hive\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:43:47 AM",
+      "dateStarted": "Nov 30, 2016 2:44:44 AM",
+      "dateFinished": "Nov 30, 2016 2:44:44 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nshow tables\n\n",
+      "dateUpdated": "Nov 30, 2016 3:20:06 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480473687204_-45373958",
+      "id": "20161130-024127_2076316061",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "tableName\tisTemporary\nemp\tfalse\nemployee\tfalse\nbank\ttrue\nemp\ttrue\nemployee\ttrue\nitems\ttrue\nwords\ttrue\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:41:27 AM",
+      "dateStarted": "Nov 30, 2016 3:20:06 AM",
+      "dateFinished": "Nov 30, 2016 3:20:06 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nshow \n## emp.write.mode(\"overwrite\").saveAsTable(\"emp\")",
+      "dateUpdated": "Nov 30, 2016 3:18:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "tab_name",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "tab_name",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480473984033_-1492061591",
+      "id": "20161130-024624_488379222",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "tab_name\naccount\n"
+      },
+      "dateCreated": "Nov 30, 2016 2:46:24 AM",
+      "dateStarted": "Nov 30, 2016 3:13:49 AM",
+      "dateFinished": "Nov 30, 2016 3:13:50 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nhadoop fs -ls /",
+      "dateUpdated": "Nov 30, 2016 3:05:32 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480474872509_409270594",
+      "id": "20161130-030112_1591593483",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Found 4 items\ndrwxr-xr-x   - root supergroup          0 2016-11-21 01:10 /table\ndrwxr-xr-x   - root supergroup          0 2016-11-21 00:53 /tmp\ndrwxr-xr-x   - root supergroup          0 2016-11-22 00:26 /user\ndrwxr-xr-x   - root supergroup          0 2016-11-21 22:47 /usr\n"
+      },
+      "dateCreated": "Nov 30, 2016 3:01:12 AM",
+      "dateStarted": "Nov 30, 2016 3:05:32 AM",
+      "dateFinished": "Nov 30, 2016 3:05:40 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Converting Dataframes to RDD\n",
+      "dateUpdated": "Nov 29, 2016 6:48:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872575_-467424070",
+      "id": "20161129-031244_10082052",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eConverting Dataframes to RDD\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 6:48:28 PM",
+      "dateFinished": "Nov 29, 2016 6:48:28 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval empRDD \u003d emp.rdd",
+      "dateUpdated": "Nov 30, 2016 2:45:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872576_-481659779",
+      "id": "20161128-010226_2094093304",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nempRDD: org.apache.spark.rdd.RDD[org.apache.spark.sql.Row] \u003d MapPartitionsRDD[504] at rdd at \u003cconsole\u003e:32\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 30, 2016 2:45:21 AM",
+      "dateFinished": "Nov 30, 2016 2:45:22 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nempRDD.collect().foreach(println)",
+      "dateUpdated": "Nov 30, 2016 2:45:24 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872576_-481659779",
+      "id": "20161129-023446_2081983181",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "[1,Adam,New York,100000.0]\n[2,Charlie,Chicago,200000.0]\n[3,Liz,Atlanta,100500.0]\n[4,Alex,Miami,100200.0]\n[5,Alex,Seattle,100200.0]\n[6,Brian,Miami,80000.0]\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 30, 2016 2:45:25 AM",
+      "dateFinished": "Nov 30, 2016 2:45:25 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "dateUpdated": "Nov 29, 2016 7:03:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480446149276_613232134",
+      "id": "20161129-190229_1299537886",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eConverting Dataframe to a Dataset\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 7:02:29 PM",
+      "dateStarted": "Nov 29, 2016 7:02:59 PM",
+      "dateFinished": "Nov 29, 2016 7:03:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval empDS \u003d emp.as[Employee]",
+      "dateUpdated": "Nov 30, 2016 2:45:42 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480446040860_2127418270",
+      "id": "20161129-190040_1378266612",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nempDS: org.apache.spark.sql.Dataset[Employee] \u003d [id: int, name: string ... 2 more fields]\n"
+      },
+      "dateCreated": "Nov 29, 2016 7:00:40 PM",
+      "dateStarted": "Nov 30, 2016 2:45:42 AM",
+      "dateFinished": "Nov 30, 2016 2:45:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Lets try the WordCount Example below...\n",
+      "dateUpdated": "Nov 29, 2016 7:03:07 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872576_-481659779",
+      "id": "20161129-024501_243897728",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eLets try the WordCount Example below\u0026hellip;\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval wordsDF \u003d sc.parallelize(Seq(\"Hello welcome to Spark training\",\"Hello how many of you know Spark\",\"Have you used spark\",\"Have you deployed Spark\")).toDF()\nwordsDF.printSchema()\n\nval countDF \u003d wordsDF.as[String]\n                     .flatMap(_.toLowerCase.split(\" \"))\n                     .filter(_ !\u003d \"\")\n                     .groupBy(\"value\")\n                     .count()\n                     .orderBy($\"count\".desc)\ncountDF.show()\n",
+      "dateUpdated": "Nov 29, 2016 7:46:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872576_-481659779",
+      "id": "20161129-024644_491904145",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwordsDF: org.apache.spark.sql.DataFrame \u003d [value: string]\nroot\n |-- value: string (nullable \u003d true)\n\n\ncountDF: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [value: string, count: bigint]\n+--------+-----+\n|   value|count|\n+--------+-----+\n|   spark|    4|\n|     you|    3|\n|    have|    2|\n|   hello|    2|\n|    used|    1|\n|deployed|    1|\n| welcome|    1|\n|training|    1|\n|     how|    1|\n|      to|    1|\n|      of|    1|\n|    know|    1|\n|    many|    1|\n+--------+-----+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "dateStarted": "Nov 29, 2016 7:46:55 PM",
+      "dateFinished": "Nov 29, 2016 7:47:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "dateUpdated": "Nov 29, 2016 6:24:32 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443872577_-482044528",
+      "id": "20161129-181103_1228164992",
+      "dateCreated": "Nov 29, 2016 6:24:32 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Exploring Dataframes",
+  "id": "2C4J1MGJ5",
+  "angularObjects": {
+    "2C3XQKRMG:shared_process": [],
+    "2C2X2W9NQ:shared_process": [],
+    "2C3HC55ZD:shared_process": [],
+    "2C1RMWH4Y:shared_process": [],
+    "2C2AHKRVE:shared_process": [],
+    "2C3XSUVJW:shared_process": [],
+    "2C3W9748F:shared_process": [],
+    "2C41H71F3:shared_process": [],
+    "2C2MWNBY4:shared_process": [],
+    "2C4S5CVR4:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

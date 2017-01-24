@@ -25,7 +25,8 @@
   </property>
   <property>
     <name>hive.metastore.warehouse.dir</name>
-    <value>/apps/hive/warehouse</value>
+<!--    <value>/apps/hive/warehouse</value> -->
+    <value>hdfs://hive-docker:9000/table</value>
   </property>
   <property>
     <name>hive.auto.convert.sortmerge.join</name>

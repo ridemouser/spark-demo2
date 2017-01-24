@@ -1,0 +1,21 @@
+2016-12-10 21:55:09,471 INFO  [main] util.VersionInfo: HBase 1.1.4
+2016-12-10 21:55:09,510 INFO  [main] util.VersionInfo: Source code repository git://diocles.local/Volumes/hbase-1.1.4/hbase revision=14c0e77956f9bb4c6edf0378474264843e4a82c3
+2016-12-10 21:55:09,510 INFO  [main] util.VersionInfo: Compiled by ndimiduk on Wed Mar 16 21:18:26 PDT 2016
+2016-12-10 21:55:09,511 INFO  [main] util.VersionInfo: From source with checksum b4727595ad30c5f09c49cd7af68642ad
+2016-12-10 21:55:11,972 INFO  [main] thrift.ThriftServerRunner: Using default thrift server type
+2016-12-10 21:55:11,972 INFO  [main] thrift.ThriftServerRunner: Using thrift server type threadpool
+2016-12-10 21:55:13,850 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-12-10 21:55:15,317 INFO  [main] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2016-12-10 21:55:16,045 INFO  [main] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2016-12-10 21:55:16,045 INFO  [main] impl.MetricsSystemImpl: HBase metrics system started
+2016-12-10 21:55:17,440 INFO  [main] mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2016-12-10 21:55:17,471 INFO  [main] http.HttpRequestLog: Http request log for http.requests.thrift is not defined
+2016-12-10 21:55:17,558 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2016-12-10 21:55:17,570 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context thrift
+2016-12-10 21:55:17,571 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2016-12-10 21:55:17,571 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2016-12-10 21:55:17,749 INFO  [main] http.HttpServer: Jetty bound to port 9095
+2016-12-10 21:55:17,749 INFO  [main] mortbay.log: jetty-6.1.26
+2016-12-10 21:55:19,622 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:9095
+2016-12-10 21:55:19,742 INFO  [main] thrift.ThriftServerRunner: starting TBoundedThreadPoolServer on /0.0.0.0:9090; min worker threads=16, max worker threads=1000, max queued requests=1000
+2016-12-11 18:08:42,253 INFO  [ConnectionCache_ChoreService_1] util.ConnectionCache$3: Chore: ConnectionCleaner missed its start time

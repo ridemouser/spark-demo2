@@ -1,0 +1,93 @@
+{
+  "paragraphs": [
+    {
+      "text": "%spark\nsc",
+      "dateUpdated": "Dec 3, 2016 2:04:40 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479517566107_15727129",
+      "id": "20161119-010606_79212399",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres0: org.apache.spark.SparkContext \u003d org.apache.spark.SparkContext@25fb0f6d\n"
+      },
+      "dateCreated": "Nov 19, 2016 1:06:06 AM",
+      "dateStarted": "Dec 3, 2016 2:04:40 AM",
+      "dateFinished": "Dec 3, 2016 2:05:42 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Nov 19, 2016 1:06:33 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479517582353_-2039970920",
+      "id": "20161119-010622_1104346651",
+      "dateCreated": "Nov 19, 2016 1:06:22 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "t2",
+  "id": "2C165HGQT",
+  "angularObjects": {
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

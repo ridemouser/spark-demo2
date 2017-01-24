@@ -1,0 +1,29 @@
+hbase:
+  image: dajobe/hbase
+  expose:
+    - "8080" # REST API
+    - "8085" # REST Web UI
+    - "9090" # Thrift API
+    - "9095" # Thrift Web UI
+    - "2181" # Hbase's embedded zookeeper cluster
+    - "16010" # HBase Master web UI
+
+#kafka:
+#  image: antlypls/kafka:0.10.0.0
+#  environment:
+#    - KAFKA=localhost:9092
+#    - ZOOKEEPER=localhost:2181
+#  expose:
+#    - "2181"
+#    - "9092"
+
+spark:
+#  image: antlypls/spark:1.6.1
+#  image: sequenceiq/spark:1.6.2
+  build: ./spark-app
+  container_name: spark-custom-image-ak1 
+  command: bash
+  volumes:
+    - ./target/scala-2.11:/app
+  links:
+   - hbase

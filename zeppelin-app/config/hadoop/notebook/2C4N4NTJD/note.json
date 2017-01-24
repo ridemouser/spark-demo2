@@ -1,0 +1,671 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md \n# Working with Datasets",
+      "dateUpdated": "Nov 29, 2016 6:20:51 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851701616_634265348",
+      "id": "20161122-213028_552453387",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eWorking with Datasets\u003c/h1\u003e\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:55:01 PM",
+      "dateStarted": "Nov 29, 2016 6:20:51 PM",
+      "dateFinished": "Nov 29, 2016 6:20:51 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// For spark 2.0 onwards, use below\nspark",
+      "dateUpdated": "Nov 24, 2016 4:31:01 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851701617_633880599",
+      "id": "20161122-213816_149260135",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres9: org.apache.spark.sql.SparkSession \u003d org.apache.spark.sql.SparkSession@66b706bc\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:55:01 PM",
+      "dateStarted": "Nov 24, 2016 4:31:01 PM",
+      "dateFinished": "Nov 24, 2016 4:31:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Exploring Datasets..\n### Lets first define the schema for the data\n",
+      "dateUpdated": "Nov 28, 2016 12:53:18 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851701617_633880599",
+      "id": "20161122-213927_926862739",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eExploring Datasets..\u003c/h3\u003e\n\u003ch3\u003eLets first define the schema for the data\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:55:01 PM",
+      "dateStarted": "Nov 28, 2016 12:53:18 AM",
+      "dateFinished": "Nov 28, 2016 12:53:19 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nfinal case class ProductCatalog(Id: Int, Product: String, Type: String, Amount: Double)\n",
+      "dateUpdated": "Nov 28, 2016 12:57:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851701618_635034845",
+      "id": "20161122-214718_2117285959",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwarning: there was one unchecked warning; re-run with -unchecked for details\n\ndefined class ProductCatalog\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:55:01 PM",
+      "dateStarted": "Nov 28, 2016 12:57:28 AM",
+      "dateFinished": "Nov 28, 2016 12:57:29 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create Dataset\nval items \u003d spark.createDataset(Seq(ProductCatalog(1,\"Bolt\",\"Hardware\",25.05),ProductCatalog(2,\"Plugs\",\"Electric\",20.05),ProductCatalog(3,\"Hammer\",\"Hardware\",45.05),ProductCatalog(4,\"Socket\",\"Electric\",35.05),ProductCatalog(5,\"Screw set\",\"Hardware\",28.05),ProductCatalog(6,\"Cable\",\"Electric\",15.05),ProductCatalog(7,\"Bulb\",\"Electric\",12.05)))",
+      "dateUpdated": "Nov 28, 2016 1:02:12 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480294488607_-58549853",
+      "id": "20161128-005448_1346847967",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nitems: org.apache.spark.sql.Dataset[ProductCatalog] \u003d [Id: int, Product: string ... 2 more fields]\n"
+      },
+      "dateCreated": "Nov 28, 2016 12:54:48 AM",
+      "dateStarted": "Nov 28, 2016 1:02:12 AM",
+      "dateFinished": "Nov 28, 2016 1:02:15 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create a temp view\nitems.createOrReplaceTempView(\"items\")",
+      "dateUpdated": "Nov 29, 2016 2:36:45 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480294979489_-707720294",
+      "id": "20161128-010259_1573211695",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 28, 2016 1:02:59 AM",
+      "dateStarted": "Nov 29, 2016 2:36:45 AM",
+      "dateFinished": "Nov 29, 2016 2:36:46 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nitems.show()",
+      "dateUpdated": "Nov 29, 2016 2:36:51 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480294751106_1730712610",
+      "id": "20161128-005911_1437414316",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+---+---------+--------+------+\n| Id|  Product|    Type|Amount|\n+---+---------+--------+------+\n|  1|     Bolt|Hardware| 25.05|\n|  2|    Plugs|Electric| 20.05|\n|  3|   Hammer|Hardware| 45.05|\n|  4|   Socket|Electric| 35.05|\n|  5|Screw set|Hardware| 28.05|\n|  6|    Cable|Electric| 15.05|\n|  7|     Bulb|Electric| 12.05|\n+---+---------+--------+------+\n\n"
+      },
+      "dateCreated": "Nov 28, 2016 12:59:11 AM",
+      "dateStarted": "Nov 29, 2016 2:36:51 AM",
+      "dateFinished": "Nov 29, 2016 2:36:52 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Converting Datasets to RDD\n",
+      "dateUpdated": "Nov 29, 2016 6:10:55 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480389164799_-1480080786",
+      "id": "20161129-031244_10082052",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eConverting Datasets to RDD\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 3:12:44 AM",
+      "dateStarted": "Nov 29, 2016 6:10:55 PM",
+      "dateFinished": "Nov 29, 2016 6:10:55 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval itemsRDD \u003d items.rdd",
+      "dateUpdated": "Nov 29, 2016 6:20:06 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480294946735_-989017713",
+      "id": "20161128-010226_2094093304",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nitemsRDD: org.apache.spark.rdd.RDD[ProductCatalog] \u003d MapPartitionsRDD[24] at rdd at \u003cconsole\u003e:34\n"
+      },
+      "dateCreated": "Nov 28, 2016 1:02:26 AM",
+      "dateStarted": "Nov 29, 2016 6:20:06 PM",
+      "dateFinished": "Nov 29, 2016 6:20:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nitemsRDD.collect().foreach(println)",
+      "dateUpdated": "Nov 29, 2016 2:36:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480386886203_946807778",
+      "id": "20161129-023446_2081983181",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "ProductCatalog(1,Bolt,Hardware,25.05)\nProductCatalog(2,Plugs,Electric,20.05)\nProductCatalog(3,Hammer,Hardware,45.05)\nProductCatalog(4,Socket,Electric,35.05)\nProductCatalog(5,Screw set,Hardware,28.05)\nProductCatalog(6,Cable,Electric,15.05)\nProductCatalog(7,Bulb,Electric,12.05)\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:34:46 AM",
+      "dateStarted": "Nov 29, 2016 2:36:26 AM",
+      "dateFinished": "Nov 29, 2016 2:36:32 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Creating Dataset from an RDD",
+      "dateUpdated": "Nov 29, 2016 2:44:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480386935091_-485935830",
+      "id": "20161129-023535_1102313470",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eCreating Dataset from an RDD\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:35:35 AM",
+      "dateStarted": "Nov 29, 2016 2:44:50 AM",
+      "dateFinished": "Nov 29, 2016 2:44:50 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval servicesRDD \u003d sc.parallelize(Seq((1 ,\"Advisory\"),(2, \"Audit\"),(3, \"Tax\"), (4, \"Risk\")))\nval servicesDS \u003d servicesRDD.toDS()\nservicesDS.show()\n\n",
+      "dateUpdated": "Nov 29, 2016 2:46:02 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480387463407_1893296650",
+      "id": "20161129-024423_1598929167",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nservicesRDD: org.apache.spark.rdd.RDD[(Int, String)] \u003d ParallelCollectionRDD[27] at parallelize at \u003cconsole\u003e:30\n\nservicesDS: org.apache.spark.sql.Dataset[(Int, String)] \u003d [_1: int, _2: string]\n+---+--------+\n| _1|      _2|\n+---+--------+\n|  1|Advisory|\n|  2|   Audit|\n|  3|     Tax|\n|  4|    Risk|\n+---+--------+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:44:23 AM",
+      "dateStarted": "Nov 29, 2016 2:46:02 AM",
+      "dateFinished": "Nov 29, 2016 2:46:08 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Lets try the WordCount Example below...\n",
+      "dateUpdated": "Nov 29, 2016 2:47:20 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480387501651_-1165426458",
+      "id": "20161129-024501_243897728",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eLets try the WordCount Example below\u0026hellip;\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:45:01 AM",
+      "dateStarted": "Nov 29, 2016 2:47:20 AM",
+      "dateFinished": "Nov 29, 2016 2:47:20 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval wordsDS \u003d sc.parallelize(Seq(\"Hello welcome to Spark training\",\"Hello how many of you know Spark\",\"Have you used spark\",\"Have you deployed Spark\")).toDS()\nwordsDS.printSchema()\nval countDS \u003d wordsDS.flatMap(_.toLowerCase.split(\" \"))\n                     .filter(_ !\u003d \"\")\n                     .groupBy(\"value\")\n                     .count()\ncountDS.show()\n",
+      "dateUpdated": "Nov 29, 2016 3:09:49 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480387604479_1440278628",
+      "id": "20161129-024644_491904145",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwordsDS: org.apache.spark.sql.Dataset[String] \u003d [value: string]\nroot\n |-- value: string (nullable \u003d true)\n\n\ncountDS: org.apache.spark.sql.DataFrame \u003d [value: string, count: bigint]\n+--------+-----+\n|   value|count|\n+--------+-----+\n|    used|    1|\n|     you|    3|\n| welcome|    1|\n|deployed|    1|\n|     how|    1|\n|   hello|    2|\n|    have|    2|\n|   spark|    4|\n|training|    1|\n|      of|    1|\n|    know|    1|\n|      to|    1|\n|    many|    1|\n+--------+-----+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:46:44 AM",
+      "dateStarted": "Nov 29, 2016 3:09:49 AM",
+      "dateFinished": "Nov 29, 2016 3:09:58 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Converting Datasets to Dataframes\n\n",
+      "dateUpdated": "Nov 29, 2016 3:11:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480388307424_694496451",
+      "id": "20161129-025827_1026500913",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eConverting Datasets to Dataframes\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 29, 2016 2:58:27 AM",
+      "dateStarted": "Nov 29, 2016 3:11:50 AM",
+      "dateFinished": "Nov 29, 2016 3:11:50 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval df \u003d countDS.toDF()\ndf.show()\n",
+      "dateUpdated": "Nov 29, 2016 3:12:44 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480389110107_-670630397",
+      "id": "20161129-031150_345761365",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ndf: org.apache.spark.sql.DataFrame \u003d [value: string, count: bigint]\n+--------+-----+\n|   value|count|\n+--------+-----+\n|    used|    1|\n|     you|    3|\n| welcome|    1|\n|deployed|    1|\n|     how|    1|\n|   hello|    2|\n|    have|    2|\n|   spark|    4|\n|training|    1|\n|      of|    1|\n|    know|    1|\n|      to|    1|\n|    many|    1|\n+--------+-----+\n\n"
+      },
+      "dateCreated": "Nov 29, 2016 3:11:50 AM",
+      "dateStarted": "Nov 29, 2016 3:12:44 AM",
+      "dateFinished": "Nov 29, 2016 3:12:50 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n",
+      "dateUpdated": "Nov 29, 2016 6:11:03 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480443063134_-415644433",
+      "id": "20161129-181103_1228164992",
+      "dateCreated": "Nov 29, 2016 6:11:03 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Exploring Datasets",
+  "id": "2C4N4NTJD",
+  "angularObjects": {
+    "2C3XQKRMG:shared_process": [],
+    "2C2X2W9NQ:shared_process": [],
+    "2C3HC55ZD:shared_process": [],
+    "2C1RMWH4Y:shared_process": [],
+    "2C2AHKRVE:shared_process": [],
+    "2C3XSUVJW:shared_process": [],
+    "2C3W9748F:shared_process": [],
+    "2C41H71F3:shared_process": [],
+    "2C2MWNBY4:shared_process": [],
+    "2C4S5CVR4:shared_process": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}

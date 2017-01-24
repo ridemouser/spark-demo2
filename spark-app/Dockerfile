@@ -79,20 +79,20 @@ RUN mv kafka_2.11-0.10.0.0 kafka
 ENV PATH $HOME/spark/bin:$HOME/spark/sbin:$HOME/kafka/bin:$PATH
 
 # hive
-RUN \
-  cd /usr/local && curl -LO http://www.us.apache.org/dist/hive/hive-2.0.1/apache-hive-2.0.1-bin.tar.gz && \
-  tar -xzf apache-hive-2.0.1-bin.tar.gz && \
-  ln -s apache-hive-2.0.1-bin hive && \
-  rm apache-hive-2.0.1-bin.tar.gz
+#RUN \
+#  cd /usr/local && curl -LO http://www.us.apache.org/dist/hive/hive-2.0.1/apache-hive-2.0.1-bin.tar.gz && \
+#  tar -xzf apache-hive-2.0.1-bin.tar.gz && \
+#  ln -s apache-hive-2.0.1-bin hive && \
+#  rm apache-hive-2.0.1-bin.tar.gz
 
-ENV HIVE_HOME /usr/local/hive
-ENV HADOOP_USER_CLASSPATH_FIRST true
-RUN \
-  echo 'HIVE_HOME="/usr/local/hive"' >> /etc/environment && \
-  echo 'HADOOP_USER_CLASSPATH_FIRST="true"' >> /etc/environment
-ENV PATH $PATH:$HIVE_HOME/bin
-COPY config/account.csv /root/
-COPY config/hive-create.sh /root/
+#ENV HIVE_HOME /usr/local/hive
+#ENV HADOOP_USER_CLASSPATH_FIRST true
+#RUN \
+#  echo 'HIVE_HOME="/usr/local/hive"' >> /etc/environment && \
+#  echo 'HADOOP_USER_CLASSPATH_FIRST="true"' >> /etc/environment
+#ENV PATH $PATH:$HIVE_HOME/bin
+#COPY config/account.csv /root/
+#COPY config/hive-create.sh /root/
 
 
 #Start Hadoop services
@@ -106,7 +106,9 @@ COPY kafka/kafka-producer-exec /root/
 COPY sparkParser/SparkParser.jar /root/
 RUN rm -rf /tmp/hadoop-root/dfs/data/*
 COPY config/log4j.properties /root/
-
+RUN mkdir /usr/local/hive
+RUN mkdir /usr/local/hive/conf
+COPY config/hive-site.xml /usr/local/hive/conf
 
 
 
@@ -150,8 +152,6 @@ COPY config/log4j.properties /root/
 #RUN echo "/usr/lib/python2.7/site-packages" |tee /home/guest/anaconda2/lib/python2.7/site-packages/cqlshlib.pth
 
 #Install HBase
-
-#Install Zepplin
 
 
 EXPOSE 22 7077 8020 8030 8031 8032 8033 8040 8042 8088 8888 9200 9300 10000 50010 50020 50060

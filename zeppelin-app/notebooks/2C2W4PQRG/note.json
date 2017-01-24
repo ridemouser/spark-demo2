@@ -1,0 +1,781 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md \n# Running Spark\n## Variable sc allows you to access a Spark context to run Spark programs\n### Do not create sc variable as it is already initialized for you.",
+      "dateUpdated": "Dec 10, 2016 10:32:36 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479850228931_-1658232984",
+      "id": "20161122-213028_552453387",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch1\u003eRunning Spark\u003c/h1\u003e\n\u003ch2\u003eVariable sc allows you to access a Spark context to run Spark programs\u003c/h2\u003e\n\u003ch3\u003eDo not create sc variable as it is already initialized for you.\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:30:28 PM",
+      "dateStarted": "Nov 22, 2016 9:37:40 PM",
+      "dateFinished": "Nov 22, 2016 9:37:40 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nsc",
+      "dateUpdated": "Dec 10, 2016 10:32:37 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479850428311_-173781427",
+      "id": "20161122-213348_696023734",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres2: org.apache.spark.SparkContext \u003d org.apache.spark.SparkContext@3a682a01\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:33:48 PM",
+      "dateStarted": "Nov 22, 2016 9:38:16 PM",
+      "dateFinished": "Nov 22, 2016 9:38:18 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// For spark 2.0 onwards, use below\nspark",
+      "dateUpdated": "Dec 10, 2016 10:32:38 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479850696297_-78395993",
+      "id": "20161122-213816_149260135",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres232: org.apache.spark.sql.SparkSession \u003d org.apache.spark.sql.SparkSession@66b706bc\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:38:16 PM",
+      "dateStarted": "Dec 1, 2016 7:06:09 PM",
+      "dateFinished": "Dec 1, 2016 7:06:10 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Creating an RDD",
+      "dateUpdated": "Dec 10, 2016 10:32:39 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621162984_-1644718526",
+      "id": "20161201-193922_905534593",
+      "dateCreated": "Dec 1, 2016 7:39:22 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create an RDD from a scala collection\nsc.parallelize(List(1,2,3,4,5))",
+      "dateUpdated": "Dec 10, 2016 10:32:40 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480619120249_1184998552",
+      "id": "20161201-190520_1331493458",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres2: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[0] at parallelize at \u003cconsole\u003e:29\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:05:20 PM",
+      "dateStarted": "Dec 3, 2016 2:06:45 AM",
+      "dateFinished": "Dec 3, 2016 2:06:53 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Create an RDD from a file in HDFS\nsc.textFile(\"hdfs://hive-docker:9000/table/account/account.csv\")\n",
+      "dateUpdated": "Dec 10, 2016 10:32:41 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621151652_-1613015875",
+      "id": "20161201-193911_1967973157",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres255: org.apache.spark.rdd.RDD[String] \u003d hdfs://hive-docker:9000/table/account/account.csv MapPartitionsRDD[570] at textFile at \u003cconsole\u003e:32\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:39:11 PM",
+      "dateStarted": "Dec 1, 2016 7:42:43 PM",
+      "dateFinished": "Dec 1, 2016 7:42:44 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### RDD Transformations",
+      "dateUpdated": "Dec 10, 2016 10:32:41 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621309026_358835918",
+      "id": "20161201-194149_765683912",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eRDD Transformations\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:41:49 PM",
+      "dateStarted": "Dec 1, 2016 7:42:18 PM",
+      "dateFinished": "Dec 1, 2016 7:42:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval numbers \u003d sc.parallelize(List(1,2,3,4,5))\n// Pass each number through a function\nval doubles \u003d numbers.map(x \u003d\u003e  x + x)\ndoubles.collect()\n// Filter values using filter() function\nval odd \u003d numbers.filter(_% 2 !\u003d 0)\nodd.collect()\n// Map each number to zero or more others\nval toX \u003d numbers.flatMap(x\u003d\u003e1 to x)\ntoX.collect()",
+      "dateUpdated": "Dec 10, 2016 10:32:42 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621343775_-546416947",
+      "id": "20161201-194223_781170412",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nnumbers: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[599] at parallelize at \u003cconsole\u003e:30\n\ndoubles: org.apache.spark.rdd.RDD[Int] \u003d MapPartitionsRDD[600] at map at \u003cconsole\u003e:32\n\nres268: Array[Int] \u003d Array(2, 4, 6, 8, 10)\n\nodd: org.apache.spark.rdd.RDD[Int] \u003d MapPartitionsRDD[601] at filter at \u003cconsole\u003e:32\n\nres269: Array[Int] \u003d Array(1, 3, 5)\n\ntoX: org.apache.spark.rdd.RDD[Int] \u003d MapPartitionsRDD[602] at flatMap at \u003cconsole\u003e:32\n\nres270: Array[Int] \u003d Array(1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5)\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:42:23 PM",
+      "dateStarted": "Dec 1, 2016 7:50:54 PM",
+      "dateFinished": "Dec 1, 2016 7:50:58 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### RDD Actions\n",
+      "dateUpdated": "Dec 10, 2016 10:32:42 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621826312_-1912189055",
+      "id": "20161201-195026_1622806881",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eRDD Actions\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:50:26 PM",
+      "dateStarted": "Dec 1, 2016 7:50:54 PM",
+      "dateFinished": "Dec 1, 2016 7:50:54 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval numbers \u003d sc.parallelize(List(1,2,3,4,5))\nval strings \u003d sc.parallelize(List(\"1\",\"2\",\"3\",\"4\",\"5\"))\n// Retrieve contents of RDD as a local collection\nnumbers.collect()\n// Retrieve first x elememts from the RR\nnumbers.take(2)\n// Count the number of elements in the RDD\nnumbers.count()\n// Merge all elements with an associative function\nnumbers.reduce(_+_)\nstrings.reduce(_+_)\n// Save numbers to a text file\nnumbers.saveAsTextFile(\"/tmp/zeppelin_rdd_output\")",
+      "dateUpdated": "Dec 10, 2016 10:37:33 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480621871818_814202948",
+      "id": "20161201-195111_84398313",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nnumbers: org.apache.spark.rdd.RDD[Int] \u003d ParallelCollectionRDD[0] at parallelize at \u003cconsole\u003e:27\n\nstrings: org.apache.spark.rdd.RDD[String] \u003d ParallelCollectionRDD[1] at parallelize at \u003cconsole\u003e:27\n\nres1: Array[Int] \u003d Array(1, 2, 3, 4, 5)\n\nres2: Array[Int] \u003d Array(1, 2)\n\nres3: Long \u003d 5\n\nres4: Int \u003d 15\n\nres5: String \u003d 12345\n"
+      },
+      "dateCreated": "Dec 1, 2016 7:51:11 PM",
+      "dateStarted": "Dec 10, 2016 10:37:33 PM",
+      "dateFinished": "Dec 10, 2016 10:37:59 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Operations on key-value pairs",
+      "dateUpdated": "Dec 10, 2016 10:32:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480625708558_1467306998",
+      "id": "20161201-205508_1784348128",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eOperations on key-value pairs\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Dec 1, 2016 8:55:08 PM",
+      "dateStarted": "Dec 1, 2016 8:59:00 PM",
+      "dateFinished": "Dec 1, 2016 8:59:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval pairs \u003d sc.parallelize(List((\"alpha\",1),(\"beta\",1),(\"alpha\",1),(\"delta\",1)))\n\n// reduceByKey\n// val reduce \u003d pairs.reduceByKey(_+_).toDebugString\nprintln(\"-----------ReduceByKey--------\")\nval reduce \u003d pairs.reduceByKey(_+_)\nreduce.collect().foreach(println)\n\n// groupByKey\nprintln(\"-----------GroupByKey--------\")\nval group \u003d pairs.groupByKey()\ngroup.collect().foreach(println)\n\n// Sort RDD\nprintln(\"-----------SortByKey--------\")\nval sortRDD \u003d pairs.sortByKey()\nsortRDD.collect().foreach(println)",
+      "dateUpdated": "Dec 10, 2016 10:32:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 307.54998779296875,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480625766142_-67997644",
+      "id": "20161201-205606_1059828778",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\npairs: org.apache.spark.rdd.RDD[(String, Int)] \u003d ParallelCollectionRDD[661] at parallelize at \u003cconsole\u003e:30\n-----------ReduceByKey--------\n\nreduce: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[662] at reduceByKey at \u003cconsole\u003e:32\n(beta,1)\n(delta,1)\n(alpha,2)\n-----------GroupByKey--------\n\ngroup: org.apache.spark.rdd.RDD[(String, Iterable[Int])] \u003d ShuffledRDD[663] at groupByKey at \u003cconsole\u003e:32\n(beta,CompactBuffer(1))\n(delta,CompactBuffer(1))\n(alpha,CompactBuffer(1, 1))\n-----------SortByKey--------\n\nsortRDD: org.apache.spark.rdd.RDD[(String, Int)] \u003d ShuffledRDD[664] at sortByKey at \u003cconsole\u003e:32\n(alpha,1)\n(alpha,1)\n(beta,1)\n(delta,1)\n"
+      },
+      "dateCreated": "Dec 1, 2016 8:56:06 PM",
+      "dateStarted": "Dec 1, 2016 9:23:09 PM",
+      "dateFinished": "Dec 1, 2016 9:23:18 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Joins\n",
+      "dateUpdated": "Dec 10, 2016 10:32:43 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480627377088_1499767636",
+      "id": "20161201-212257_2016062928",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eJoins\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Dec 1, 2016 9:22:57 PM",
+      "dateStarted": "Dec 1, 2016 9:23:47 PM",
+      "dateFinished": "Dec 1, 2016 9:23:47 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval x \u003d sc.parallelize(List(\"apple\",\"orange\",\"kiwi\")).map(m \u003d\u003e (m, m.length))\nval y \u003d sc.parallelize(List(\"apple\",\"banana\",\"kiwi\")).map(m \u003d\u003e (m, m.length))\nprintln(\"------ Inner Join ------\")\nx.join(y).collect\n\nprintln(\"------ Left Outer Join ------\")\nx.leftOuterJoin(y).collect\n\nprintln(\"------ Right Outer Join ------\")\nx.rightOuterJoin(y).collect\n\nprintln(\"------ Full Outer Join ------\")\nx.fullOuterJoin(y).collect\n\nprintln(\"------ Cogroup ------\")\nx.cogroup(y).collect.foreach(println)\n\n",
+      "dateUpdated": "Dec 10, 2016 10:32:44 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480627410727_235344832",
+      "id": "20161201-212330_470814595",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nx: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[673] at map at \u003cconsole\u003e:30\n\ny: org.apache.spark.rdd.RDD[(String, Int)] \u003d MapPartitionsRDD[675] at map at \u003cconsole\u003e:30\n------ Inner Join ------\n\nres333: Array[(String, (Int, Int))] \u003d Array((kiwi,(4,4)), (apple,(5,5)))\n------ Left Outer Join ------\n\nres335: Array[(String, (Int, Option[Int]))] \u003d Array((orange,(6,None)), (kiwi,(4,Some(4))), (apple,(5,Some(5))))\n------ Right Outer Join ------\n\nres337: Array[(String, (Option[Int], Int))] \u003d Array((banana,(None,6)), (kiwi,(Some(4),4)), (apple,(Some(5),5)))\n------ Full Outer Join ------\n\nres339: Array[(String, (Option[Int], Option[Int]))] \u003d Array((banana,(None,Some(6))), (orange,(Some(6),None)), (kiwi,(Some(4),Some(4))), (apple,(Some(5),Some(5))))\n------ Cogroup ------\n(banana,(CompactBuffer(),CompactBuffer(6)))\n(orange,(CompactBuffer(6),CompactBuffer()))\n(kiwi,(CompactBuffer(4),CompactBuffer(4)))\n(apple,(CompactBuffer(5),CompactBuffer(5)))\n"
+      },
+      "dateCreated": "Dec 1, 2016 9:23:30 PM",
+      "dateStarted": "Dec 2, 2016 2:00:30 AM",
+      "dateFinished": "Dec 2, 2016 2:00:37 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### Lets try the \"Word Count\" example using Spark RDDs\n",
+      "dateUpdated": "Dec 10, 2016 10:32:44 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/markdown",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479850767720_17714611",
+      "id": "20161122-213927_926862739",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eLets try the \u0026ldquo;Word Count\u0026rdquo; example using Spark RDDs\u003c/h3\u003e\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:39:27 PM",
+      "dateStarted": "Nov 22, 2016 9:42:57 PM",
+      "dateFinished": "Nov 22, 2016 9:42:57 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n// Parallel Collection RDD - change this later\nval words \u003d sc.parallelize(Array(\"Welcome\", \"to\", \"Spark\",\"training\",\"Welcome\",\"everyone\"))",
+      "dateUpdated": "Dec 10, 2016 10:32:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479850961254_-1894427770",
+      "id": "20161122-214241_418276124",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwords: org.apache.spark.rdd.RDD[String] \u003d ParallelCollectionRDD[16] at parallelize at \u003cconsole\u003e:31\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:42:41 PM",
+      "dateStarted": "Nov 22, 2016 9:48:03 PM",
+      "dateFinished": "Nov 22, 2016 9:48:06 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nval wordcounts \u003d words.map(x \u003d\u003e (x,1)).reduceByKey(_+_).collect()",
+      "dateUpdated": "Dec 10, 2016 10:32:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851107473_-1905738730",
+      "id": "20161122-214507_1075018848",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nwordcounts: Array[(String, Int)] \u003d Array((Spark,1), (Welcome,2), (to,1), (training,1), (everyone,1))\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:45:07 PM",
+      "dateStarted": "Dec 1, 2016 9:08:26 PM",
+      "dateFinished": "Dec 1, 2016 9:08:27 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nhadoop fs -ls /table/account",
+      "dateUpdated": "Dec 10, 2016 10:32:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh",
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1479851238636_-1700818411",
+      "id": "20161122-214718_2117285959",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Found 1 items\n-rw-r--r--   1 root supergroup        109 2016-11-21 01:11 /table/account/account.csv\n"
+      },
+      "dateCreated": "Nov 22, 2016 9:47:18 PM",
+      "dateStarted": "Dec 1, 2016 7:29:09 PM",
+      "dateFinished": "Dec 1, 2016 7:29:19 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\n",
+      "dateUpdated": "Dec 10, 2016 10:32:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1480620120047_-1526305045",
+      "id": "20161201-192200_1106924205",
+      "dateCreated": "Dec 1, 2016 7:22:00 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Basics - Introduction to Spark RDD",
+  "id": "2C2W4PQRG",
+  "angularObjects": {
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
