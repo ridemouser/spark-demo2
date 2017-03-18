@@ -1,19 +1,20 @@
 PBUF
 
-hbasemetaY
-coprocessor$1H|org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint|536870911|
-IS_METAtrueò
-info
-DATA_BLOCK_ENCODINGNONE
-BLOOMFILTERNONE
-REPLICATION_SCOPE0
-VERSIONS10
-COMPRESSIONNONE
-MIN_VERSIONS0
+hbasemeta
+IS_METAtrueY
+coprocessor$1H|org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint|536870911|Œ
+info
+BLOOMFILTERNONE
+VERSIONS10
+	IN_MEMORYtrue
+KEEP_DELETED_CELLSFALSE
+DATA_BLOCK_ENCODINGNONE
 TTL
-2147483647
-KEEP_DELETED_CELLSFALSE
-	BLOCKSIZE8192
-	IN_MEMORYtrue
+2147483647
+COMPRESSIONNONE
+CACHE_DATA_IN_L1true
+MIN_VERSIONS0
 
-BLOCKCACHEtrue
+BLOCKCACHEtrue
+	BLOCKSIZE8192
+REPLICATION_SCOPE0

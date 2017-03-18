@@ -104,14 +104,19 @@ RUN chmod 777 /root/*
 
 COPY kafka/kafka-producer-exec /root/
 COPY sparkParser/SparkParser.jar /root/
+RUN mkdir /root/aml-demo1
+COPY sparkParser/SparkParserAml.jar /root/aml-demo1
+COPY kafka/kafka_amldemo1/kafka-producer-exec-aml /root/aml-demo1
 RUN rm -rf /tmp/hadoop-root/dfs/data/*
 COPY config/log4j.properties /root/
 RUN mkdir /usr/local/hive
 RUN mkdir /usr/local/hive/conf
 COPY config/hive-site.xml /usr/local/hive/conf
+COPY config/hive-site.xml /usr/local/spark/conf
+COPY config/hive-site.xml /usr/local/hadoop/etc/hadoop
 
-
-
+#COPY hive/hive-jdbc-0.13.4-inm-SNAPSHOT.jar /root/
+COPY hive/* /root/
 # RUN kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic transaction
 #RUN /root/init-nn.sh -y
 #RUN ./root/hive-create.sh

@@ -43,7 +43,7 @@
     },
     {
       "text": "%spark\n// For spark 2.0 onwards, use below\nspark",
-      "dateUpdated": "Nov 29, 2016 6:24:54 PM",
+      "dateUpdated": "Jan 31, 2017 4:58:13 PM",
       "config": {
         "colWidth": 12.0,
         "editorMode": "ace/mode/scala",
@@ -61,7 +61,9 @@
             "pinCols": []
           }
         },
-        "enabled": true
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
       },
       "settings": {
         "params": {},
@@ -73,11 +75,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\nres39: org.apache.spark.sql.SparkSession \u003d org.apache.spark.sql.SparkSession@66b706bc\n"
+        "msg": "\nres1: org.apache.spark.sql.SparkSession \u003d org.apache.spark.sql.SparkSession@3baa034c\n"
       },
       "dateCreated": "Nov 29, 2016 6:24:32 PM",
-      "dateStarted": "Nov 29, 2016 6:24:54 PM",
-      "dateFinished": "Nov 29, 2016 6:24:54 PM",
+      "dateStarted": "Jan 31, 2017 4:57:05 PM",
+      "dateFinished": "Jan 31, 2017 4:58:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
@@ -1332,16 +1334,16 @@
   "name": "Exploring Dataframes",
   "id": "2C4J1MGJ5",
   "angularObjects": {
-    "2C3XQKRMG:shared_process": [],
-    "2C2X2W9NQ:shared_process": [],
-    "2C3HC55ZD:shared_process": [],
-    "2C1RMWH4Y:shared_process": [],
-    "2C2AHKRVE:shared_process": [],
-    "2C3XSUVJW:shared_process": [],
-    "2C3W9748F:shared_process": [],
-    "2C41H71F3:shared_process": [],
-    "2C2MWNBY4:shared_process": [],
-    "2C4S5CVR4:shared_process": []
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
   },
   "config": {},
   "info": {}

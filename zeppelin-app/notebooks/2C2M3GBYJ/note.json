@@ -85,7 +85,7 @@
     },
     {
       "text": "%sql \nselect age, count(1) value\nfrom bank \nwhere age \u003c 30 \ngroup by age \norder by age",
-      "dateUpdated": "Dec 10, 2016 11:01:56 PM",
+      "dateUpdated": "Mar 4, 2017 9:07:05 PM",
       "config": {
         "colWidth": 4.0,
         "editorMode": "ace/mode/sql",

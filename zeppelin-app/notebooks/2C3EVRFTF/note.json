@@ -1,30 +1,18 @@
 {
   "paragraphs": [
     {
-      "text": "%hive \nselect * from account",
-      "dateUpdated": "Dec 10, 2016 10:25:27 PM",
+      "text": "%hive \nselect tran_amt from transactions",
+      "dateUpdated": "Mar 4, 2017 2:01:12 AM",
       "config": {
         "colWidth": 12.0,
         "graph": {
           "mode": "table",
           "height": 300.0,
           "optionOpen": false,
-          "keys": [
-            {
-              "name": "database_name",
-              "index": 0.0,
-              "aggr": "sum"
-            }
-          ],
+          "keys": [],
           "values": [],
           "groups": [],
-          "scatter": {
-            "xAxis": {
-              "name": "database_name",
-              "index": 0.0,
-              "aggr": "sum"
-            }
-          },
+          "scatter": {},
           "map": {
             "baseMapType": "Streets",
             "isOnline": true,
@@ -44,24 +32,87 @@
       "apps": [],
       "jobName": "paragraph_1479516861697_-571394759",
       "id": "20161119-005421_1567871883",
+      "result": "org.apache.zeppelin.interpreter.InterpreterException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused",
+      "dateCreated": "Nov 19, 2016 12:54:21 AM",
+      "dateStarted": "Mar 4, 2017 2:01:13 AM",
+      "dateFinished": "Mar 4, 2017 2:01:13 AM",
+      "status": "ERROR",
+      "errorMessage": "java.net.ConnectException: Connection refused\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:589)\n\tat org.apache.thrift.transport.TSocket.open(TSocket.java:182)\n\tat org.apache.zeppelin.interpreter.remote.ClientFactory.create(ClientFactory.java:51)\n\tat org.apache.zeppelin.interpreter.remote.ClientFactory.create(ClientFactory.java:37)\n\tat org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:60)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:861)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.getClient(RemoteInterpreterProcess.java:96)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:305)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:94)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:325)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:176)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:329)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:745)\n",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nsqlContext.sql(\"show tables\").show()",
+      "dateUpdated": "Jan 25, 2017 6:19:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "account.id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "account.acct_num",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "account.id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "account.acct_num",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1485364880528_904837688",
+      "id": "20170125-172120_586310078",
       "result": {
         "code": "SUCCESS",
-        "type": "TABLE",
-        "msg": "account.id\taccount.acct_num\taccount.acc_credit_limit\taccount.acc_type\n1\ta1001\t5000.0\tpersonal\n2\ta1002\t6000.0\tbusiness\n3\ta1003\t7000.0\tpersonal\n4\ta1004\t8000.0\tbusiness\n5\ta1005\t9000.0\tpersonal\n"
+        "type": "TEXT",
+        "msg": "+---------+-----------+\n|tableName|isTemporary|\n+---------+-----------+\n+---------+-----------+\n\n"
       },
-      "dateCreated": "Nov 19, 2016 12:54:21 AM",
-      "dateStarted": "Dec 10, 2016 10:25:27 PM",
-      "dateFinished": "Dec 10, 2016 10:25:31 PM",
+      "dateCreated": "Jan 25, 2017 5:21:20 PM",
+      "dateStarted": "Jan 25, 2017 6:19:05 PM",
+      "dateFinished": "Jan 25, 2017 6:19:07 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%hive\nselect * from transactions",
-      "dateUpdated": "Dec 2, 2016 3:34:46 AM",
+      "dateUpdated": "Jan 25, 2017 6:34:45 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
-          "mode": "multiBarChart",
+          "mode": "pieChart",
           "height": 300.0,
           "optionOpen": true,
           "keys": [
@@ -112,17 +163,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "TABLE",
-        "msg": "transactions.acct_num\ttransactions.cust_name\ttransactions.merchant\ttransactions.tran_amt\ttransactions.tran_date\ttransactions.acc_credit_limit\ttransactions.acc_type\na1002\tJohn\tGap\t2002\t2016-12-02 02:59:28.974\t6000.0\tsavings\na1002\tJohn\tGap\t2002\t2016-12-02 02:31:48.885\t6000.0\tsavings\na1002\tJohn\tGap\t2002\t2016-12-02 03:25:26.878\t6000.0\tsavings\na1001\tAlex\tAmazon\t2001\t2016-12-02 02:59:28.53\t5000.0\tchecking\na1001\tAlex\tAmazon\t2001\t2016-12-02 02:28:01.737\t5000.0\tchecking\na1001\tAlex\tAmazon\t2001\t2016-12-02 03:25:25.897\t5000.0\tchecking\na1003\tMark\tWalmart\t2003\t2016-12-02 02:59:28.975\t7000.0\tchecking\na1003\tMark\tWalmart\t2003\t2016-12-02 02:31:48.925\t7000.0\tchecking\na1003\tMark\tWalmart\t2003\t2016-12-02 03:25:26.878\t7000.0\tchecking\na1004\tDan\tGoogle\t2004\t2016-12-02 02:59:28.981\t8000.0\tchecking\na1004\tDan\tGoogle\t2004\t2016-12-02 02:31:48.961\t8000.0\tchecking\na1004\tDan\tGoogle\t2004\t2016-12-02 03:25:26.878\t8000.0\tchecking\na1005\tJim\tExpedia\t2005\t2016-12-02 02:59:28.982\t9000.0\tchecking\na1005\tJim\tExpedia\t2005\t2016-12-02 02:31:48.966\t9000.0\tchecking\na1005\tJim\tExpedia\t2005\t2016-12-02 03:25:26.891\t9000.0\tchecking\n"
+        "msg": "transactions.acct_num\ttransactions.cust_name\ttransactions.merchant\ttransactions.tran_amt\ttransactions.tran_date\ttransactions.acc_credit_limit\ttransactions.acc_type\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:14:38.29\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:14:38.456\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:14:38.461\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:14:38.462\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:14:38.465\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:48.013\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:48.233\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:48.233\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:48.234\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:48.234\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 18:31:16.82\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 18:31:17.387\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 18:31:17.388\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 18:31:17.389\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 18:31:17.389\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 00:36:35.889\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 00:36:36.078\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 00:36:36.078\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 00:36:36.078\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 00:36:36.078\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:08.354\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:08.518\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:08.518\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:08.519\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:08.519\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:18:32.418\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:18:32.996\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:18:32.996\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:18:32.997\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:18:32.997\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:33.719\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:33.869\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:33.869\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:33.869\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:33.874\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:21:18.507\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:21:18.696\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:21:18.696\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:21:18.697\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:21:18.697\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:20:03.532\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:20:03.861\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:20:03.861\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:20:03.861\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:20:03.861\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:20:05.452\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:20:05.645\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:20:05.645\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:20:05.65\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:20:05.65\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 00:36:12.697\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 00:36:12.939\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 00:36:12.94\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 00:36:12.94\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 00:36:12.94\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 18:31:39.995\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 18:31:40.749\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 18:31:40.749\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 18:31:40.75\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 18:31:40.75\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:22:32.633\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:22:32.827\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:22:32.828\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:22:32.828\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:22:32.828\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:17.761\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:17.953\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:17.954\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:17.954\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:17.954\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:54.424\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:54.65\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:54.65\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:54.65\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:54.651\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:19:57.763\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:19:57.958\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:19:57.959\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:19:57.959\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:19:57.959\t9000.0\tpersonal\na1001\tAlex\tAmazon\t2001\t2017-01-25 17:21:51.551\t5000.0\tpersonal\na1002\tJohn\tGap\t2002\t2017-01-25 17:21:51.809\t6000.0\tbusiness\na1003\tMark\tWalmart\t2003\t2017-01-25 17:21:51.809\t7000.0\tpersonal\na1004\tDan\tGoogle\t2004\t2017-01-25 17:21:51.809\t8000.0\tbusiness\na1005\tJim\tExpedia\t2005\t2017-01-25 17:21:51.81\t9000.0\tpersonal\n"
       },
       "dateCreated": "Nov 21, 2016 1:14:03 AM",
-      "dateStarted": "Dec 2, 2016 3:31:46 AM",
-      "dateFinished": "Dec 2, 2016 3:32:11 AM",
+      "dateStarted": "Jan 25, 2017 6:32:05 PM",
+      "dateFinished": "Jan 25, 2017 6:32:10 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%sh\nhadoop  fs -ls /",
-      "dateUpdated": "Dec 10, 2016 10:27:29 PM",
+      "dateUpdated": "Jan 24, 2017 9:53:51 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -153,17 +204,17 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "Found 3 items\ndrwxr-xr-x   - root supergroup          0 2016-12-10 22:23 /table\ndrwxr-xr-x   - root supergroup          0 2016-12-10 21:33 /tmp\ndrwxr-xr-x   - root supergroup          0 2014-12-10 01:42 /user\n"
+        "msg": "Found 3 items\ndrwxr-xr-x   - root supergroup          0 2016-12-10 22:23 /table\ndrwxr-xr-x   - root supergroup          0 2017-01-24 20:27 /tmp\ndrwxr-xr-x   - root supergroup          0 2016-12-10 23:13 /user\n"
       },
       "dateCreated": "Nov 21, 2016 1:20:10 AM",
-      "dateStarted": "Dec 10, 2016 10:27:29 PM",
-      "dateFinished": "Dec 10, 2016 10:27:41 PM",
+      "dateStarted": "Jan 24, 2017 9:53:51 PM",
+      "dateFinished": "Jan 24, 2017 9:54:03 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%spark\nsc",
-      "dateUpdated": "Dec 10, 2016 10:30:30 PM",
+      "dateUpdated": "Jan 24, 2017 9:54:07 PM",
       "config": {
         "colWidth": 12.0,
         "graph": {
@@ -193,11 +244,11 @@
       "result": {
         "code": "SUCCESS",
         "type": "TEXT",
-        "msg": "\nres0: org.apache.spark.SparkContext \u003d org.apache.spark.SparkContext@2ef75ff7\n"
+        "msg": "\nres0: org.apache.spark.SparkContext \u003d org.apache.spark.SparkContext@7f7da626\n"
       },
       "dateCreated": "Nov 21, 2016 1:34:11 AM",
-      "dateStarted": "Dec 10, 2016 10:30:31 PM",
-      "dateFinished": "Dec 10, 2016 10:31:34 PM",
+      "dateStarted": "Jan 24, 2017 9:54:07 PM",
+      "dateFinished": "Jan 24, 2017 9:55:22 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },

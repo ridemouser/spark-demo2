@@ -1,20 +1,20 @@
-2016-12-10 21:55:09,661 INFO  [main] util.VersionInfo: HBase 1.1.4
-2016-12-10 21:55:09,662 INFO  [main] util.VersionInfo: Source code repository git://diocles.local/Volumes/hbase-1.1.4/hbase revision=14c0e77956f9bb4c6edf0378474264843e4a82c3
-2016-12-10 21:55:09,662 INFO  [main] util.VersionInfo: Compiled by ndimiduk on Wed Mar 16 21:18:26 PDT 2016
-2016-12-10 21:55:09,662 INFO  [main] util.VersionInfo: From source with checksum b4727595ad30c5f09c49cd7af68642ad
-2016-12-10 21:55:13,611 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2016-12-10 21:55:14,315 INFO  [main] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
-2016-12-10 21:55:15,152 INFO  [main] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
-2016-12-10 21:55:15,153 INFO  [main] impl.MetricsSystemImpl: HBase metrics system started
-2016-12-10 21:55:16,076 INFO  [main] mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
-2016-12-10 21:55:16,482 INFO  [main] http.HttpRequestLog: Http request log for http.requests.rest is not defined
-2016-12-10 21:55:16,562 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
-2016-12-10 21:55:16,598 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context rest
-2016-12-10 21:55:16,598 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
-2016-12-10 21:55:16,598 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
-2016-12-10 21:55:16,731 INFO  [main] http.HttpServer: Jetty bound to port 8085
-2016-12-10 21:55:16,731 INFO  [main] mortbay.log: jetty-6.1.26
-2016-12-10 21:55:19,154 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8085
-2016-12-10 21:55:19,155 INFO  [main] mortbay.log: jetty-6.1.26
-2016-12-10 21:55:19,173 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8080
-2016-12-11 18:08:41,731 INFO  [ConnectionCache_ChoreService_1] util.ConnectionCache$3: Chore: ConnectionCleaner missed its start time
+2017-03-17 22:44:17,504 INFO  [main] util.VersionInfo: HBase 1.2.4
+2017-03-17 22:44:17,505 INFO  [main] util.VersionInfo: Source code repository git://asf-dev/home/busbey/projects/hbase revision=67592f3d062743907f8c5ae00dbbe1ae4f69e5af
+2017-03-17 22:44:17,505 INFO  [main] util.VersionInfo: Compiled by busbey on Tue Oct 25 18:10:20 CDT 2016
+2017-03-17 22:44:17,505 INFO  [main] util.VersionInfo: From source with checksum b45f19b5ac28d9651aa2433a5fa33aa0
+2017-03-17 22:44:19,337 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-03-17 22:44:23,359 INFO  [main] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-17 22:44:24,147 INFO  [main] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-17 22:44:24,147 INFO  [main] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-17 22:44:24,531 INFO  [main] mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-03-17 22:44:24,816 INFO  [main] http.HttpRequestLog: Http request log for http.requests.rest is not defined
+2017-03-17 22:44:24,907 INFO  [main] http.HttpServer: Added global filter 'safety' (class=org.apache.hadoop.hbase.http.HttpServer$QuotingInputFilter)
+2017-03-17 22:44:24,921 INFO  [main] http.HttpServer: Added global filter 'clickjackingprevention' (class=org.apache.hadoop.hbase.http.ClickjackingPreventionFilter)
+2017-03-17 22:44:24,940 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context rest
+2017-03-17 22:44:24,940 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-03-17 22:44:24,941 INFO  [main] http.HttpServer: Added filter static_user_filter (class=org.apache.hadoop.hbase.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-03-17 22:44:25,025 INFO  [main] http.HttpServer: Jetty bound to port 8085
+2017-03-17 22:44:25,029 INFO  [main] mortbay.log: jetty-6.1.26
+2017-03-17 22:44:26,591 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8085
+2017-03-17 22:44:26,591 INFO  [main] mortbay.log: jetty-6.1.26
+2017-03-17 22:44:26,603 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:8080

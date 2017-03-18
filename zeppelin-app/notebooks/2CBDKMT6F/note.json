@@ -1,0 +1,1203 @@
+{
+  "paragraphs": [
+    {
+      "text": "%hive\nselect substr(tran_dt, 0,10) as tran_date,sum(tran_amt) as sum_tran_amt, count(tran_dt) as ct_tran from transactions_aml\ngroup by substr(tran_dt, 0,10)\norder by tran_date",
+      "dateUpdated": "Mar 5, 2017 6:50:57 PM",
+      "config": {
+        "colWidth": 8.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 275.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "tran_date",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran_amt",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "tran_date",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          },
+          "forceY": true
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1488678821517_-375358909",
+      "id": "20170305-015341_1825100133",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "tran_date\tsum_tran_amt\tct_tran\n2017-02-24\t714630.0\t60\n2017-03-04\t714630.0\t60\n2017-03-05\t1667470.0\t140\n"
+      },
+      "dateCreated": "Mar 5, 2017 1:53:41 AM",
+      "dateStarted": "Mar 5, 2017 5:15:55 AM",
+      "dateFinished": "Mar 5, 2017 6:36:14 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect count(*) as ct_tran from transactions_aml",
+      "dateUpdated": "Mar 18, 2017 4:05:10 PM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "pieChart",
+          "height": 247.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [
+            {
+              "name": "ct_tran",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "ct_tran",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1488663536566_1894995007",
+      "id": "20170304-213856_310305997",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "ct_tran\n260\n"
+      },
+      "dateCreated": "Mar 4, 2017 9:38:56 PM",
+      "dateStarted": "Mar 5, 2017 6:50:22 PM",
+      "dateFinished": "Mar 5, 2017 7:08:07 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Personal Cards - Distribution by segment",
+      "text": "%hive\nselect segment_id, sum(sum_tran_amt) as sum_tran from xborder_cust_segment\nwhere acc_type\u003d\"personal\"\ngroup by segment_id\norder by segment_id\n",
+      "dateUpdated": "Mar 4, 2017 7:30:23 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 290.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "segment_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "segment_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "sum_tran",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "helium": {},
+        "editorMode": "ace/mode/scala",
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1487888895549_882174843",
+      "id": "20170223-222815_786644525",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "segment_id\tsum_tran\npersonal-01000\t12027.0\npersonal-010000\t12039.0\npersonal-010001\t66045.0\npersonal-02000\t12021.0\npersonal-04000\t12033.0\n"
+      },
+      "dateCreated": "Feb 23, 2017 10:28:15 PM",
+      "dateStarted": "Mar 4, 2017 7:05:58 PM",
+      "dateFinished": "Mar 4, 2017 7:09:05 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Business Cards - Distribution by segment",
+      "text": "%hive\nselect segment_id, sum(sum_tran_amt) as sum_tran from xborder_cust_segment\nwhere acc_type\u003d\"business\"\ngroup by segment_id\norder by segment_id\n",
+      "dateUpdated": "Mar 4, 2017 8:58:17 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 292.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "segment_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "segment_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "sum_tran",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "title": true,
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1488654808672_999503494",
+      "id": "20170304-191328_235690562",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "segment_id\tsum_tran\nbusiness-01000\t60036.0\nbusiness-010000\t120099.0\nbusiness-010001\t120105.0\nbusiness-02000\t120081.0\nbusiness-04000\t120093.0\nbusiness-06000\t60051.0\n"
+      },
+      "dateCreated": "Mar 4, 2017 7:13:28 PM",
+      "dateStarted": "Mar 4, 2017 7:13:46 PM",
+      "dateFinished": "Mar 4, 2017 7:16:56 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Personal Cards - Distribution by segment for Cash Advance Transactions",
+      "text": "%hive\nselect * from xborder_cust_segment\nwhere tran_type_code\u003d${tran_type_code\u003d60}\nand acc_type\u003d${acc_type\u003d\"personal\"}",
+      "dateUpdated": "Mar 4, 2017 9:00:40 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 290.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "xborder_cust_segment.segment_id",
+              "index": 14.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "xborder_cust_segment.sum_tran_amt",
+              "index": 6.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "xborder_cust_segment.scenario_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "xborder_cust_segment.scenario_name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "helium": {},
+        "tableHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"personal\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "60",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1487888885088_-779186232",
+      "id": "20170223-222805_1933381365",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "xborder_cust_segment.scenario_id\txborder_cust_segment.scenario_name\txborder_cust_segment.run_date\txborder_cust_segment.last_run_date\txborder_cust_segment.cust_id\txborder_cust_segment.cust_credit_limit\txborder_cust_segment.sum_tran_amt\txborder_cust_segment.ct_tran\txborder_cust_segment.max_ctry_risk_rating\txborder_cust_segment.acc_type\txborder_cust_segment.tran_type_code\txborder_cust_segment.merchant_code\txborder_cust_segment.sys_update_dt\txborder_cust_segment.ct_tran_since_last_run\txborder_cust_segment.segment_id\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0001\t2000.0\t6003.0\t3\t3\tpersonal\t60\t7001\t2017-02-24 21:53:38.071\t3\tpersonal-02000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0003\t4000.0\t6009.0\t3\t1\tpersonal\t60\t7003\t2017-02-24 21:53:38.309\t3\tpersonal-04000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0005\t11000.0\t6015.0\t3\t2\tpersonal\t60\t7005\t2017-02-24 21:53:38.31\t3\tpersonal-010001\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0007\t1000.0\t6021.0\t3\t3\tpersonal\t60\t7007\t2017-02-24 21:53:38.314\t3\tpersonal-01000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0009\t7000.0\t6027.0\t3\t1\tpersonal\t60\t7009\t2017-02-24 21:53:38.315\t3\tpersonal-010000\n"
+      },
+      "dateCreated": "Feb 23, 2017 10:28:05 PM",
+      "dateStarted": "Mar 4, 2017 7:27:24 PM",
+      "dateFinished": "Mar 4, 2017 7:29:17 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Business Cards - Distribution by segment for Cash Advance Transactions",
+      "text": "%hive\nselect * from xborder_cust_segment\nwhere tran_type_code\u003d${tran_type_code\u003d60}\nand acc_type\u003d${acc_type\u003d\"business\"}\n",
+      "dateUpdated": "Mar 4, 2017 9:01:01 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 277.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "xborder_cust_segment.segment_id",
+              "index": 14.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "xborder_cust_segment.sum_tran_amt",
+              "index": 6.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {},
+        "title": true
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"business\"",
+          "tran_type_code": "60"
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"business\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "60",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488655706783_238377104",
+      "id": "20170304-192826_1229798571",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "xborder_cust_segment.scenario_id\txborder_cust_segment.scenario_name\txborder_cust_segment.run_date\txborder_cust_segment.last_run_date\txborder_cust_segment.cust_id\txborder_cust_segment.cust_credit_limit\txborder_cust_segment.sum_tran_amt\txborder_cust_segment.ct_tran\txborder_cust_segment.max_ctry_risk_rating\txborder_cust_segment.acc_type\txborder_cust_segment.tran_type_code\txborder_cust_segment.merchant_code\txborder_cust_segment.sys_update_dt\txborder_cust_segment.ct_tran_since_last_run\txborder_cust_segment.segment_id\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00011\t2000.0\t60033.0\t3\t2\tbusiness\t60\t70011\t2017-02-24 21:53:38.315\t3\tbusiness-02000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00013\t4000.0\t60039.0\t3\t3\tbusiness\t60\t70013\t2017-02-24 21:53:38.316\t3\tbusiness-04000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00015\t11000.0\t60045.0\t3\t1\tbusiness\t60\t70015\t2017-02-24 21:53:38.317\t3\tbusiness-010001\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00017\t6000.0\t60051.0\t3\t2\tbusiness\t60\t70017\t2017-02-24 21:53:38.317\t3\tbusiness-06000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00019\t7000.0\t60057.0\t3\t3\tbusiness\t60\t70019\t2017-02-24 21:53:38.333\t3\tbusiness-010000\n"
+      },
+      "dateCreated": "Mar 4, 2017 7:28:26 PM",
+      "dateStarted": "Mar 4, 2017 7:28:56 PM",
+      "dateFinished": "Mar 4, 2017 7:32:12 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Personal Cards - Distribution by segment for Cash Withdrawal Transactions",
+      "text": "%hive\nselect * from xborder_cust_segment\nwhere tran_type_code\u003d${tran_type_code\u003d61}\nand acc_type\u003d${acc_type\u003d\"personal\"}",
+      "dateUpdated": "Mar 4, 2017 9:01:28 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 292.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "xborder_cust_segment.segment_id",
+              "index": 14.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "xborder_cust_segment.sum_tran_amt",
+              "index": 6.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "xborder_cust_segment.scenario_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "xborder_cust_segment.scenario_name",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {},
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"personal\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "61",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488655661531_632851996",
+      "id": "20170304-192741_2102783933",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "xborder_cust_segment.scenario_id\txborder_cust_segment.scenario_name\txborder_cust_segment.run_date\txborder_cust_segment.last_run_date\txborder_cust_segment.cust_id\txborder_cust_segment.cust_credit_limit\txborder_cust_segment.sum_tran_amt\txborder_cust_segment.ct_tran\txborder_cust_segment.max_ctry_risk_rating\txborder_cust_segment.acc_type\txborder_cust_segment.tran_type_code\txborder_cust_segment.merchant_code\txborder_cust_segment.sys_update_dt\txborder_cust_segment.ct_tran_since_last_run\txborder_cust_segment.segment_id\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00010\t11000.0\t60030.0\t3\t3\tpersonal\t61\t70010\t2017-02-24 21:53:38.315\t3\tpersonal-010001\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0002\t800.0\t6006.0\t3\t2\tpersonal\t61\t7002\t2017-02-24 21:53:38.308\t3\tpersonal-01000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0004\t7000.0\t6012.0\t3\t3\tpersonal\t61\t7004\t2017-02-24 21:53:38.309\t3\tpersonal-010000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0006\t2000.0\t6018.0\t3\t1\tpersonal\t61\t7006\t2017-02-24 21:53:38.31\t3\tpersonal-02000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc0008\t4000.0\t6024.0\t3\t2\tpersonal\t61\t7008\t2017-02-24 21:53:38.314\t3\tpersonal-04000\n"
+      },
+      "dateCreated": "Mar 4, 2017 7:27:41 PM",
+      "dateStarted": "Mar 4, 2017 7:28:04 PM",
+      "dateFinished": "Mar 4, 2017 7:30:48 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Business Cards - Distribution by segment for Cash Withdrawal Transactions",
+      "text": "%hive\nselect * from xborder_cust_segment\nwhere tran_type_code\u003d${tran_type_code\u003d61}\nand acc_type\u003d${acc_type\u003d\"business\"}\n\n",
+      "dateUpdated": "Mar 4, 2017 9:01:53 PM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 265.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "xborder_cust_segment.segment_id",
+              "index": 14.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "xborder_cust_segment.sum_tran_amt",
+              "index": 6.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "helium": {},
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"business\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "61",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488655694745_-372634798",
+      "id": "20170304-192814_1328367636",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "xborder_cust_segment.scenario_id\txborder_cust_segment.scenario_name\txborder_cust_segment.run_date\txborder_cust_segment.last_run_date\txborder_cust_segment.cust_id\txborder_cust_segment.cust_credit_limit\txborder_cust_segment.sum_tran_amt\txborder_cust_segment.ct_tran\txborder_cust_segment.max_ctry_risk_rating\txborder_cust_segment.acc_type\txborder_cust_segment.tran_type_code\txborder_cust_segment.merchant_code\txborder_cust_segment.sys_update_dt\txborder_cust_segment.ct_tran_since_last_run\txborder_cust_segment.segment_id\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00012\t1000.0\t60036.0\t3\t1\tbusiness\t61\t70012\t2017-02-24 21:53:38.316\t3\tbusiness-01000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00014\t8000.0\t60042.0\t3\t2\tbusiness\t61\t70014\t2017-02-24 21:53:38.316\t3\tbusiness-010000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00016\t2000.0\t60048.0\t3\t3\tbusiness\t61\t70016\t2017-02-24 21:53:38.317\t3\tbusiness-02000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00018\t4000.0\t60054.0\t3\t1\tbusiness\t61\t70018\t2017-02-24 21:53:38.318\t3\tbusiness-04000\nSc01\tCross Border Cash Advance and Withdrawls\t2017-02-28\t2017-01-31\tc00020\t11000.0\t60060.0\t3\t2\tbusiness\t61\t70020\t2017-02-24 21:53:38.333\t3\tbusiness-010001\n"
+      },
+      "dateCreated": "Mar 4, 2017 7:28:14 PM",
+      "dateStarted": "Mar 4, 2017 7:29:14 PM",
+      "dateFinished": "Mar 4, 2017 7:33:32 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Personal Cards - Distribution  by Merchant code",
+      "text": "%hive\nselect merchant_code, segment_id, sum(sum_tran_amt) as sum_tran from xborder_cust_segment\nwhere acc_type\u003d${acc_type\u003d\"personal\"}\ngroup by merchant_code, segment_id",
+      "dateUpdated": "Mar 5, 2017 12:51:28 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 280.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "merchant_code",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [
+            {
+              "name": "segment_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "scatter": {
+            "xAxis": {
+              "name": "merchant_code",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "segment_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          },
+          "forceY": true
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "helium": {},
+        "title": true
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"personal\""
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"personal\"",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488653019112_-1053271450",
+      "id": "20170304-184339_1691939597",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "merchant_code\tsegment_id\tsum_tran\n7001\tpersonal-02000\t6003.0\n70010\tpersonal-010001\t60030.0\n7002\tpersonal-01000\t6006.0\n7003\tpersonal-04000\t6009.0\n7004\tpersonal-010000\t6012.0\n7005\tpersonal-010001\t6015.0\n7006\tpersonal-02000\t6018.0\n7007\tpersonal-01000\t6021.0\n7008\tpersonal-04000\t6024.0\n7009\tpersonal-010000\t6027.0\n"
+      },
+      "dateCreated": "Mar 4, 2017 6:43:39 PM",
+      "dateStarted": "Mar 4, 2017 9:03:41 PM",
+      "dateFinished": "Mar 4, 2017 9:07:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "title": "Business Cards - Distribution  by Merchant code",
+      "text": "%hive\nselect merchant_code, segment_id, sum(sum_tran_amt) as sum_tran from xborder_cust_segment\nwhere acc_type\u003d${acc_type\u003d\"business\"}\ngroup by merchant_code, segment_id",
+      "dateUpdated": "Mar 5, 2017 12:52:35 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 282.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "merchant_code",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [
+            {
+              "name": "segment_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "scatter": {
+            "xAxis": {
+              "name": "merchant_code",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          },
+          "lineWithFocus": false,
+          "forceY": false
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "tableHide": false,
+        "helium": {},
+        "title": true
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"business\""
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"business\"",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488594090959_758145868",
+      "id": "20170304-022130_1765027979",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "merchant_code\tsegment_id\tsum_tran\n70011\tbusiness-02000\t60033.0\n70012\tbusiness-01000\t60036.0\n70013\tbusiness-04000\t60039.0\n70014\tbusiness-010000\t60042.0\n70015\tbusiness-010001\t60045.0\n70016\tbusiness-02000\t60048.0\n70017\tbusiness-06000\t60051.0\n70018\tbusiness-04000\t60054.0\n70019\tbusiness-010000\t60057.0\n70020\tbusiness-010001\t60060.0\n"
+      },
+      "dateCreated": "Mar 4, 2017 2:21:30 AM",
+      "dateStarted": "Mar 4, 2017 9:04:04 PM",
+      "dateFinished": "Mar 4, 2017 9:08:35 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect cust_id, tran_type_code, sum(tran_amt) as sum_tran_amt  from transactions_aml\nwhere acc_type\u003d${acc_type\u003d\"personal\"}\nand tran_type_code\u003d${tran_type_code\u003d60}\ngroup by cust_id, tran_type_code\norder by sum_tran_amt desc limit 5",
+      "dateUpdated": "Mar 5, 2017 9:01:46 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            "size": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          },
+          "forceY": false,
+          "lineWithFocus": false
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"personal\"",
+          "tran_type_code": "61"
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"personal\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "60",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488676035743_891082349",
+      "id": "20170305-010715_2007224663",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "cust_id\ttran_type_code\tsum_tran_amt\nc00010\t61\t260130.0\nc0008\t61\t26104.0\nc0006\t61\t26078.0\nc0004\t61\t26052.0\nc0002\t61\t26026.0\n"
+      },
+      "dateCreated": "Mar 5, 2017 1:07:15 AM",
+      "dateStarted": "Mar 5, 2017 5:21:06 AM",
+      "dateFinished": "Mar 5, 2017 6:37:28 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect cust_id, tran_type_code, sum(tran_amt) as sum_tran_amt  from transactions_aml\nwhere acc_type\u003d${acc_type\u003d\"business\"}\nand tran_type_code\u003d${tran_type_code\u003d60}\ngroup by cust_id, tran_type_code\norder by sum_tran_amt desc limit 5",
+      "dateUpdated": "Mar 5, 2017 9:01:51 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "scatterChart",
+          "height": 307.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            "size": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"business\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "60",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488678598145_-2007000729",
+      "id": "20170305-014958_1591091901",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "cust_id\ttran_type_code\tsum_tran_amt\nc00019\t60\t260247.0\nc00017\t60\t260221.0\nc00015\t60\t260195.0\nc00013\t60\t260169.0\nc00011\t60\t260143.0\n"
+      },
+      "dateCreated": "Mar 5, 2017 1:49:58 AM",
+      "dateStarted": "Mar 5, 2017 5:15:15 AM",
+      "dateFinished": "Mar 5, 2017 6:32:30 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect cust_id, tran_type_code, sum(tran_amt) as sum_tran_amt  from transactions_aml\nwhere acc_type\u003d${acc_type\u003d\"personal\"}\nand tran_type_code\u003d${tran_type_code\u003d61}\ngroup by cust_id, tran_type_code\norder by sum_tran_amt desc limit 5",
+      "dateUpdated": "Mar 5, 2017 9:00:55 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "helium": {}
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"personal\"",
+          "tran_type_code": "61"
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"personal\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "61",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488663633413_1336045155",
+      "id": "20170304-214033_896251099",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "cust_id\ttran_type_code\tsum_tran_amt\nc00010\t61\t260130.0\nc0008\t61\t26104.0\nc0006\t61\t26078.0\nc0004\t61\t26052.0\nc0002\t61\t26026.0\n"
+      },
+      "dateCreated": "Mar 4, 2017 9:40:33 PM",
+      "dateStarted": "Mar 5, 2017 5:15:34 AM",
+      "dateFinished": "Mar 5, 2017 6:33:45 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect cust_id, tran_type_code, sum(tran_amt) as sum_tran_amt  from transactions_aml\nwhere acc_type\u003d${acc_type\u003d\"business\"}\nand tran_type_code\u003d${tran_type_code\u003d61}\ngroup by cust_id, tran_type_code\norder by sum_tran_amt desc limit 5",
+      "dateUpdated": "Mar 5, 2017 9:00:31 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "scatterChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            },
+            "size": {
+              "name": "sum_tran_amt",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          },
+          "forceY": false,
+          "lineWithFocus": false
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "helium": {}
+      },
+      "settings": {
+        "params": {
+          "acc_type": "\"business\"",
+          "tran_type_code": "61"
+        },
+        "forms": {
+          "acc_type": {
+            "name": "acc_type",
+            "defaultValue": "\"business\"",
+            "hidden": false
+          },
+          "tran_type_code": {
+            "name": "tran_type_code",
+            "defaultValue": "61",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1488678702776_1296254113",
+      "id": "20170305-015142_1680121055",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "cust_id\ttran_type_code\tsum_tran_amt\nc00020\t61\t260260.0\nc00018\t61\t260234.0\nc00016\t61\t260208.0\nc00014\t61\t260182.0\nc00012\t61\t260156.0\n"
+      },
+      "dateCreated": "Mar 5, 2017 1:51:42 AM",
+      "dateStarted": "Mar 5, 2017 5:15:40 AM",
+      "dateFinished": "Mar 5, 2017 6:34:59 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nhadoop fs -ls /table/customer",
+      "dateUpdated": "Mar 4, 2017 2:15:46 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1487972137002_-615615980",
+      "id": "20170224-213537_927571207",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Found 1 items\n-rw-r--r--   1 root supergroup        685 2017-02-24 21:39 /table/customer/customer.csv\n"
+      },
+      "dateCreated": "Feb 24, 2017 9:35:37 PM",
+      "dateStarted": "Mar 4, 2017 2:15:50 AM",
+      "dateFinished": "Mar 4, 2017 2:16:20 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect substr(sys_update_dt, 0, 10) from transactions_aml\n",
+      "dateUpdated": "Mar 4, 2017 2:21:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "_c0",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "_c0",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "editorHide": true,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1487908553819_465242793",
+      "id": "20170224-035553_87554787",
+      "result": "org.apache.zeppelin.interpreter.InterpreterException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused",
+      "dateCreated": "Feb 24, 2017 3:55:53 AM",
+      "dateStarted": "Mar 4, 2017 1:49:38 AM",
+      "dateFinished": "Mar 4, 2017 1:49:39 AM",
+      "status": "ERROR",
+      "errorMessage": "java.net.ConnectException: Connection refused\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:589)\n\tat org.apache.thrift.transport.TSocket.open(TSocket.java:182)\n\tat org.apache.zeppelin.interpreter.remote.ClientFactory.create(ClientFactory.java:51)\n\tat org.apache.zeppelin.interpreter.remote.ClientFactory.create(ClientFactory.java:37)\n\tat org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:60)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:861)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.getClient(RemoteInterpreterProcess.java:96)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:305)\n\tat org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:94)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:325)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:176)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:329)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)\n\tat java.lang.Thread.run(Thread.java:745)\n",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\nselect * from transactions_aml where tran_amt \u003e 100.0",
+      "dateUpdated": "Mar 4, 2017 8:57:24 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "stackedAreaChart",
+          "height": 300.0,
+          "optionOpen": true,
+          "keys": [
+            {
+              "name": "cust_credit_limit",
+              "index": 1.0,
+              "aggr": "sum",
+              "$$hashKey": "object:2942"
+            }
+          ],
+          "values": [
+            {
+              "name": "tran_amt",
+              "index": 2.0,
+              "aggr": "sum",
+              "$$hashKey": "object:2951"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "cust_id",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "cust_credit_limit",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1487888923307_922035486",
+      "id": "20170223-222843_636366727",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "transactions_aml.cash_advance_cross_border_flag\ttransactions_aml.ctry_risk_rating\ttransactions_aml.cust_id\ttransactions_aml.merchant_code\ttransactions_aml.sys_update_dt\ttransactions_aml.tran_amt\ttransactions_aml.tran_dt\ttransactions_aml.tran_type_code\ttransactions_aml.cust_credit_limit\ttransactions_aml.acc_type\nY\tH\tc0001\t7001\t2017-03-04 01:56:33.096\t2001\t2017-03-04 01:56:33.096\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-03-04 01:56:33.294\t2004\t2017-03-04 01:56:33.294\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-03-04 01:56:33.298\t2007\t2017-03-04 01:56:33.298\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-03-04 01:56:33.299\t20010\t2017-03-04 01:56:33.299\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-03-04 01:56:33.3\t20013\t2017-03-04 01:56:33.3\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-03-04 01:56:33.301\t20016\t2017-03-04 01:56:33.301\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-03-04 01:56:33.302\t20019\t2017-03-04 01:56:33.302\t60\t7000.0\tbusiness\nY\tH\tc0001\t7001\t2017-03-04 01:56:34.784\t2001\t2017-03-04 01:56:34.784\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-03-04 01:56:35.077\t2004\t2017-03-04 01:56:35.077\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-03-04 01:56:35.078\t2007\t2017-03-04 01:56:35.078\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-03-04 01:56:35.079\t20010\t2017-03-04 01:56:35.079\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-03-04 01:56:35.08\t20013\t2017-03-04 01:56:35.08\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-03-04 01:56:35.086\t20016\t2017-03-04 01:56:35.086\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-03-04 01:56:35.096\t20019\t2017-03-04 01:56:35.096\t60\t7000.0\tbusiness\nY\tL\tc0003\t7003\t2017-03-04 01:56:33.293\t2003\t2017-03-04 01:56:33.293\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-03-04 01:56:33.296\t2006\t2017-03-04 01:56:33.296\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-03-04 01:56:33.299\t2009\t2017-03-04 01:56:33.299\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-03-04 01:56:33.299\t20012\t2017-03-04 01:56:33.299\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-03-04 01:56:33.3\t20015\t2017-03-04 01:56:33.3\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-03-04 01:56:33.301\t20018\t2017-03-04 01:56:33.301\t61\t4000.0\tbusiness\nY\tL\tc0003\t7003\t2017-03-04 01:56:35.076\t2003\t2017-03-04 01:56:35.076\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-03-04 01:56:35.078\t2006\t2017-03-04 01:56:35.078\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-03-04 01:56:35.079\t2009\t2017-03-04 01:56:35.079\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-03-04 01:56:35.08\t20012\t2017-03-04 01:56:35.08\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-03-04 01:56:35.086\t20015\t2017-03-04 01:56:35.086\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-03-04 01:56:35.096\t20018\t2017-03-04 01:56:35.096\t61\t4000.0\tbusiness\nY\tM\tc0002\t7002\t2017-03-04 01:56:33.293\t2002\t2017-03-04 01:56:33.293\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-03-04 01:56:33.296\t2005\t2017-03-04 01:56:33.296\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-03-04 01:56:33.298\t2008\t2017-03-04 01:56:33.298\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-03-04 01:56:33.299\t20011\t2017-03-04 01:56:33.299\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-03-04 01:56:33.3\t20014\t2017-03-04 01:56:33.3\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-03-04 01:56:33.301\t20017\t2017-03-04 01:56:33.301\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-03-04 01:56:33.302\t20020\t2017-03-04 01:56:33.302\t61\t11000.0\tbusiness\nY\tM\tc0002\t7002\t2017-03-04 01:56:35.076\t2002\t2017-03-04 01:56:35.076\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-03-04 01:56:35.077\t2005\t2017-03-04 01:56:35.077\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-03-04 01:56:35.078\t2008\t2017-03-04 01:56:35.078\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-03-04 01:56:35.079\t20011\t2017-03-04 01:56:35.079\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-03-04 01:56:35.085\t20014\t2017-03-04 01:56:35.085\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-03-04 01:56:35.087\t20017\t2017-03-04 01:56:35.087\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-03-04 01:56:35.096\t20020\t2017-03-04 01:56:35.096\t61\t11000.0\tbusiness\nY\tH\tc0001\t7001\t2017-02-24 21:53:01.172\t2001\t2017-02-24 21:53:01.172\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-02-24 21:53:01.383\t2004\t2017-02-24 21:53:01.383\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-02-24 21:53:01.384\t2007\t2017-02-24 21:53:01.384\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-02-24 21:53:01.392\t20010\t2017-02-24 21:53:01.392\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-02-24 21:53:01.392\t20013\t2017-02-24 21:53:01.392\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-02-24 21:53:01.393\t20016\t2017-02-24 21:53:01.393\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-02-24 21:53:01.403\t20019\t2017-02-24 21:53:01.403\t60\t7000.0\tbusiness\nY\tH\tc0001\t7001\t2017-02-24 21:52:46.591\t2001\t2017-02-24 21:52:46.591\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-02-24 21:52:46.849\t2004\t2017-02-24 21:52:46.849\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-02-24 21:52:46.855\t2007\t2017-02-24 21:52:46.855\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-02-24 21:52:46.856\t20010\t2017-02-24 21:52:46.856\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-02-24 21:52:46.856\t20013\t2017-02-24 21:52:46.856\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-02-24 21:52:46.857\t20016\t2017-02-24 21:52:46.857\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-02-24 21:52:46.871\t20019\t2017-02-24 21:52:46.871\t60\t7000.0\tbusiness\nY\tH\tc0001\t7001\t2017-03-04 01:56:08.914\t2001\t2017-03-04 01:56:08.914\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-03-04 01:56:09.084\t2004\t2017-03-04 01:56:09.084\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-03-04 01:56:09.085\t2007\t2017-03-04 01:56:09.085\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-03-04 01:56:09.086\t20010\t2017-03-04 01:56:09.086\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-03-04 01:56:09.087\t20013\t2017-03-04 01:56:09.087\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-03-04 01:56:09.096\t20016\t2017-03-04 01:56:09.096\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-03-04 01:56:09.104\t20019\t2017-03-04 01:56:09.104\t60\t7000.0\tbusiness\nY\tH\tc0001\t7001\t2017-02-24 21:53:38.071\t2001\t2017-02-24 21:53:38.071\t60\t2000.0\tpersonal\nY\tH\tc0004\t7004\t2017-02-24 21:53:38.309\t2004\t2017-02-24 21:53:38.309\t61\t7000.0\tpersonal\nY\tH\tc0007\t7007\t2017-02-24 21:53:38.314\t2007\t2017-02-24 21:53:38.314\t60\t1000.0\tpersonal\nY\tH\tc00010\t70010\t2017-02-24 21:53:38.315\t20010\t2017-02-24 21:53:38.315\t61\t11000.0\tpersonal\nY\tH\tc00013\t70013\t2017-02-24 21:53:38.316\t20013\t2017-02-24 21:53:38.316\t60\t4000.0\tbusiness\nY\tH\tc00016\t70016\t2017-02-24 21:53:38.317\t20016\t2017-02-24 21:53:38.317\t61\t2000.0\tbusiness\nY\tH\tc00019\t70019\t2017-02-24 21:53:38.333\t20019\t2017-02-24 21:53:38.333\t60\t7000.0\tbusiness\nY\tM\tc0002\t7002\t2017-02-24 21:53:38.308\t2002\t2017-02-24 21:53:38.308\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-02-24 21:53:38.31\t2005\t2017-02-24 21:53:38.31\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-02-24 21:53:38.314\t2008\t2017-02-24 21:53:38.314\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-02-24 21:53:38.315\t20011\t2017-02-24 21:53:38.315\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-02-24 21:53:38.316\t20014\t2017-02-24 21:53:38.316\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-02-24 21:53:38.317\t20017\t2017-02-24 21:53:38.317\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-02-24 21:53:38.333\t20020\t2017-02-24 21:53:38.333\t61\t11000.0\tbusiness\nY\tM\tc0002\t7002\t2017-03-04 01:56:09.083\t2002\t2017-03-04 01:56:09.083\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-03-04 01:56:09.085\t2005\t2017-03-04 01:56:09.085\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-03-04 01:56:09.086\t2008\t2017-03-04 01:56:09.086\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-03-04 01:56:09.087\t20011\t2017-03-04 01:56:09.087\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-03-04 01:56:09.088\t20014\t2017-03-04 01:56:09.088\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-03-04 01:56:09.1\t20017\t2017-03-04 01:56:09.1\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-03-04 01:56:09.104\t20020\t2017-03-04 01:56:09.104\t61\t11000.0\tbusiness\nY\tM\tc0002\t7002\t2017-02-24 21:53:01.382\t2002\t2017-02-24 21:53:01.382\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-02-24 21:53:01.383\t2005\t2017-02-24 21:53:01.383\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-02-24 21:53:01.384\t2008\t2017-02-24 21:53:01.384\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-02-24 21:53:01.392\t20011\t2017-02-24 21:53:01.392\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-02-24 21:53:01.393\t20014\t2017-02-24 21:53:01.393\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-02-24 21:53:01.394\t20017\t2017-02-24 21:53:01.394\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-02-24 21:53:01.403\t20020\t2017-02-24 21:53:01.403\t61\t11000.0\tbusiness\nY\tM\tc0002\t7002\t2017-02-24 21:52:46.848\t2002\t2017-02-24 21:52:46.848\t61\t800.0\tpersonal\nY\tM\tc0005\t7005\t2017-02-24 21:52:46.854\t2005\t2017-02-24 21:52:46.854\t60\t11000.0\tpersonal\nY\tM\tc0008\t7008\t2017-02-24 21:52:46.855\t2008\t2017-02-24 21:52:46.855\t61\t4000.0\tpersonal\nY\tM\tc00011\t70011\t2017-02-24 21:52:46.856\t20011\t2017-02-24 21:52:46.856\t60\t2000.0\tbusiness\nY\tM\tc00014\t70014\t2017-02-24 21:52:46.857\t20014\t2017-02-24 21:52:46.857\t61\t8000.0\tbusiness\nY\tM\tc00017\t70017\t2017-02-24 21:52:46.858\t20017\t2017-02-24 21:52:46.858\t60\t6000.0\tbusiness\nY\tM\tc00020\t70020\t2017-02-24 21:52:46.872\t20020\t2017-02-24 21:52:46.872\t61\t11000.0\tbusiness\nY\tL\tc0003\t7003\t2017-02-24 21:53:38.309\t2003\t2017-02-24 21:53:38.309\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-02-24 21:53:38.31\t2006\t2017-02-24 21:53:38.31\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-02-24 21:53:38.315\t2009\t2017-02-24 21:53:38.315\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-02-24 21:53:38.316\t20012\t2017-02-24 21:53:38.316\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-02-24 21:53:38.317\t20015\t2017-02-24 21:53:38.317\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-02-24 21:53:38.318\t20018\t2017-02-24 21:53:38.318\t61\t4000.0\tbusiness\nY\tL\tc0003\t7003\t2017-03-04 01:56:09.084\t2003\t2017-03-04 01:56:09.084\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-03-04 01:56:09.085\t2006\t2017-03-04 01:56:09.085\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-03-04 01:56:09.086\t2009\t2017-03-04 01:56:09.086\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-03-04 01:56:09.087\t20012\t2017-03-04 01:56:09.087\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-03-04 01:56:09.088\t20015\t2017-03-04 01:56:09.088\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-03-04 01:56:09.103\t20018\t2017-03-04 01:56:09.103\t61\t4000.0\tbusiness\nY\tL\tc0003\t7003\t2017-02-24 21:52:46.849\t2003\t2017-02-24 21:52:46.849\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-02-24 21:52:46.854\t2006\t2017-02-24 21:52:46.854\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-02-24 21:52:46.855\t2009\t2017-02-24 21:52:46.855\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-02-24 21:52:46.856\t20012\t2017-02-24 21:52:46.856\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-02-24 21:52:46.857\t20015\t2017-02-24 21:52:46.857\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-02-24 21:52:46.864\t20018\t2017-02-24 21:52:46.864\t61\t4000.0\tbusiness\nY\tL\tc0003\t7003\t2017-02-24 21:53:01.382\t2003\t2017-02-24 21:53:01.382\t60\t4000.0\tpersonal\nY\tL\tc0006\t7006\t2017-02-24 21:53:01.383\t2006\t2017-02-24 21:53:01.383\t61\t2000.0\tpersonal\nY\tL\tc0009\t7009\t2017-02-24 21:53:01.391\t2009\t2017-02-24 21:53:01.391\t60\t7000.0\tpersonal\nY\tL\tc00012\t70012\t2017-02-24 21:53:01.392\t20012\t2017-02-24 21:53:01.392\t61\t1000.0\tbusiness\nY\tL\tc00015\t70015\t2017-02-24 21:53:01.393\t20015\t2017-02-24 21:53:01.393\t60\t11000.0\tbusiness\nY\tL\tc00018\t70018\t2017-02-24 21:53:01.394\t20018\t2017-02-24 21:53:01.394\t61\t4000.0\tbusiness\n"
+      },
+      "dateCreated": "Feb 23, 2017 10:28:43 PM",
+      "dateStarted": "Mar 4, 2017 8:57:24 PM",
+      "dateFinished": "Mar 4, 2017 9:05:15 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%hive\n",
+      "dateUpdated": "Feb 23, 2017 11:07:53 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1487891273529_1448142643",
+      "id": "20170223-230753_869910433",
+      "dateCreated": "Feb 23, 2017 11:07:53 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "AML Notebook",
+  "id": "2CBDKMT6F",
+  "angularObjects": {
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
