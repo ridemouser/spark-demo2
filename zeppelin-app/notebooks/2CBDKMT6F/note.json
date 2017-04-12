@@ -696,13 +696,13 @@
     },
     {
       "text": "%hive\nselect cust_id, tran_type_code, sum(tran_amt) as sum_tran_amt  from transactions_aml\nwhere acc_type\u003d${acc_type\u003d\"personal\"}\nand tran_type_code\u003d${tran_type_code\u003d60}\ngroup by cust_id, tran_type_code\norder by sum_tran_amt desc limit 5",
-      "dateUpdated": "Mar 5, 2017 9:01:46 AM",
+      "dateUpdated": "Mar 24, 2017 8:44:21 PM",
       "config": {
         "colWidth": 6.0,
         "graph": {
           "mode": "multiBarChart",
           "height": 300.0,
-          "optionOpen": false,
+          "optionOpen": true,
           "keys": [
             {
               "name": "cust_id",
@@ -744,7 +744,7 @@
           "lineWithFocus": false
         },
         "enabled": true,
-        "editorMode": "ace/mode/scala",
+        "editorMode": "ace/mode/sql",
         "helium": {}
       },
       "settings": {

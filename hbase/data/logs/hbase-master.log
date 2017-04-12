@@ -2039,3 +2039,1173 @@ org.apache.hadoop.hbase.regionserver.NoSuchColumnFamilyException: Column family 
 2017-03-18 17:09:43,447 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
 2017-03-18 17:09:43,448 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
 2017-03-18 17:09:43,448 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:14:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=268, hits=261, hitRatio=97.39%, , cachingAccesses=262, cachingHits=257, cachingHitsRatio=98.09%, evictions=6659, evicted=4, evictedPerRun=6.006907788105309E-4
+2017-03-18 17:14:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:14:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:14:43,448 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:14:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:14:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:19:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=269, hits=262, hitRatio=97.40%, , cachingAccesses=263, cachingHits=258, cachingHitsRatio=98.10%, evictions=6689, evicted=4, evictedPerRun=5.97996695432812E-4
+2017-03-18 17:19:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:19:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:19:43,448 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:19:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:19:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:24:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=270, hits=263, hitRatio=97.41%, , cachingAccesses=264, cachingHits=259, cachingHitsRatio=98.11%, evictions=6719, evicted=4, evictedPerRun=5.953267100267112E-4
+2017-03-18 17:24:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:24:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:24:43,448 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:24:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:24:43,449 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:29:30,839 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=271, hits=264, hitRatio=97.42%, , cachingAccesses=265, cachingHits=260, cachingHitsRatio=98.11%, evictions=6749, evicted=4, evictedPerRun=5.926804151386023E-4
+2017-03-18 17:29:42,947 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:29:42,948 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:29:43,448 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:29:43,450 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:29:43,455 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:34:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=272, hits=265, hitRatio=97.43%, , cachingAccesses=266, cachingHits=261, cachingHitsRatio=98.12%, evictions=6779, evicted=4, evictedPerRun=5.900575197301805E-4
+2017-03-18 17:34:42,949 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:34:42,949 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:34:43,450 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:34:43,450 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:34:43,450 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:39:30,841 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=273, hits=266, hitRatio=97.44%, , cachingAccesses=267, cachingHits=262, cachingHitsRatio=98.13%, evictions=6809, evicted=4, evictedPerRun=5.874577909708023E-4
+2017-03-18 17:39:42,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:39:42,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:39:43,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:39:43,456 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:39:43,456 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:44:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=274, hits=267, hitRatio=97.45%, , cachingAccesses=268, cachingHits=263, cachingHitsRatio=98.13%, evictions=6839, evicted=4, evictedPerRun=5.848808214068413E-4
+2017-03-18 17:44:35,919 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489855475684 with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489859075893
+2017-03-18 17:44:35,920 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489855475684 to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903.default.1489855475684
+2017-03-18 17:44:40,595 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489855480405.meta with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489859080581.meta
+2017-03-18 17:44:40,595 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489855480405.meta to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903..meta.1489855480405.meta
+2017-03-18 17:44:42,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:44:42,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:44:43,451 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:44:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:44:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:49:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=275, hits=268, hitRatio=97.45%, , cachingAccesses=269, cachingHits=264, cachingHitsRatio=98.14%, evictions=6869, evicted=4, evictedPerRun=5.823263782076538E-4
+2017-03-18 17:49:42,950 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:49:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:49:43,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:49:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:49:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:54:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=276, hits=269, hitRatio=97.46%, , cachingAccesses=270, cachingHits=265, cachingHitsRatio=98.15%, evictions=6899, evicted=4, evictedPerRun=5.797941703349352E-4
+2017-03-18 17:54:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:54:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:54:43,451 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:54:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:54:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 17:59:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=277, hits=270, hitRatio=97.47%, , cachingAccesses=271, cachingHits=266, cachingHitsRatio=98.15%, evictions=6929, evicted=4, evictedPerRun=5.77283906750381E-4
+2017-03-18 17:59:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 17:59:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 17:59:43,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 17:59:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 17:59:43,453 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:04:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=278, hits=271, hitRatio=97.48%, , cachingAccesses=272, cachingHits=267, cachingHitsRatio=98.16%, evictions=6959, evicted=4, evictedPerRun=5.747952382080257E-4
+2017-03-18 18:04:33,087 INFO  [WALProcedureStoreSyncThread] wal.WALProcedureStore: Remove log: file:/data/hbase/MasterProcWALs/state-00000000000000000023.log
+2017-03-18 18:04:33,087 INFO  [WALProcedureStoreSyncThread] wal.WALProcedureStore: Removed logs: [file:/data/hbase/MasterProcWALs/state-00000000000000000024.log]
+2017-03-18 18:04:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:04:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:04:43,452 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:04:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:04:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:09:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=279, hits=272, hitRatio=97.49%, , cachingAccesses=273, cachingHits=268, cachingHitsRatio=98.17%, evictions=6989, evicted=4, evictedPerRun=5.723279318772256E-4
+2017-03-18 18:09:42,951 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:09:42,952 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:09:43,453 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:09:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:09:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:14:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=280, hits=273, hitRatio=97.50%, , cachingAccesses=274, cachingHits=269, cachingHitsRatio=98.18%, evictions=7019, evicted=4, evictedPerRun=5.698817549273372E-4
+2017-03-18 18:14:42,952 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:14:42,952 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:14:43,453 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:14:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:14:43,454 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:19:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=281, hits=274, hitRatio=97.51%, , cachingAccesses=275, cachingHits=270, cachingHitsRatio=98.18%, evictions=7049, evicted=4, evictedPerRun=5.674563581123948E-4
+2017-03-18 18:19:42,955 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:19:42,955 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:19:43,456 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:19:43,457 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:19:43,457 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:24:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=282, hits=275, hitRatio=97.52%, , cachingAccesses=276, cachingHits=271, cachingHitsRatio=98.19%, evictions=7079, evicted=4, evictedPerRun=5.650515668094158E-4
+2017-03-18 18:24:42,955 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:24:42,955 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:24:43,456 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:24:43,471 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:24:43,472 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:25:57,678 INFO  [hbase-docker,44393,1489790667382_splitLogManager__ChoreService_1] hbase.ScheduledChore: Chore: SplitLogManager Timeout Monitor missed its start time
+2017-03-18 18:29:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=283, hits=276, hitRatio=97.53%, , cachingAccesses=277, cachingHits=272, cachingHitsRatio=98.19%, evictions=7109, evicted=4, evictedPerRun=5.626670317724347E-4
+2017-03-18 18:29:42,956 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:29:42,956 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:29:43,458 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:29:43,463 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:29:43,463 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:34:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=284, hits=277, hitRatio=97.54%, , cachingAccesses=278, cachingHits=273, cachingHitsRatio=98.20%, evictions=7139, evicted=4, evictedPerRun=5.603025783784688E-4
+2017-03-18 18:34:42,959 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:34:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:34:43,462 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:34:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:34:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:37:16,344 INFO  [hbase-docker,44393,1489790667382_splitLogManager__ChoreService_1] hbase.ScheduledChore: Chore: SplitLogManager Timeout Monitor missed its start time
+2017-03-18 18:39:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=285, hits=278, hitRatio=97.54%, , cachingAccesses=279, cachingHits=274, cachingHitsRatio=98.21%, evictions=7169, evicted=4, evictedPerRun=5.579578573815525E-4
+2017-03-18 18:39:42,956 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:39:42,956 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:39:43,457 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:39:43,460 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:39:43,460 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:44:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=286, hits=279, hitRatio=97.55%, , cachingAccesses=280, cachingHits=275, cachingHitsRatio=98.21%, evictions=7199, evicted=4, evictedPerRun=5.55632752366364E-4
+2017-03-18 18:44:36,414 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489859075893 with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489862676375
+2017-03-18 18:44:36,414 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489859075893 to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903.default.1489859075893
+2017-03-18 18:44:40,830 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489859080581.meta with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489862680808.meta
+2017-03-18 18:44:40,830 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489859080581.meta to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903..meta.1489859080581.meta
+2017-03-18 18:44:42,958 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:44:42,959 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:44:43,461 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:44:43,463 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:44:43,463 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:49:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=287, hits=280, hitRatio=97.56%, , cachingAccesses=281, cachingHits=276, cachingHitsRatio=98.22%, evictions=7229, evicted=4, evictedPerRun=5.53326855879277E-4
+2017-03-18 18:49:42,958 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:49:42,958 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:49:43,459 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:49:43,460 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:49:43,460 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:54:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=288, hits=281, hitRatio=97.57%, , cachingAccesses=282, cachingHits=277, cachingHitsRatio=98.23%, evictions=7259, evicted=4, evictedPerRun=5.510401097126305E-4
+2017-03-18 18:54:42,959 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:54:42,959 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:54:43,461 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:54:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:54:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 18:59:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=289, hits=282, hitRatio=97.58%, , cachingAccesses=283, cachingHits=278, cachingHitsRatio=98.23%, evictions=7289, evicted=4, evictedPerRun=5.487721064127982E-4
+2017-03-18 18:59:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 18:59:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 18:59:43,461 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 18:59:43,467 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 18:59:43,468 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:04:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=290, hits=283, hitRatio=97.59%, , cachingAccesses=284, cachingHits=279, cachingHitsRatio=98.24%, evictions=7319, evicted=4, evictedPerRun=5.465227295644581E-4
+2017-03-18 19:04:33,094 INFO  [WALProcedureStoreSyncThread] wal.WALProcedureStore: Remove log: file:/data/hbase/MasterProcWALs/state-00000000000000000024.log
+2017-03-18 19:04:33,094 INFO  [WALProcedureStoreSyncThread] wal.WALProcedureStore: Removed logs: [file:/data/hbase/MasterProcWALs/state-00000000000000000025.log]
+2017-03-18 19:04:42,959 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:04:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:04:43,461 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:04:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:04:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:09:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=291, hits=284, hitRatio=97.59%, , cachingAccesses=285, cachingHits=280, cachingHitsRatio=98.25%, evictions=7349, evicted=4, evictedPerRun=5.442917463369668E-4
+2017-03-18 19:09:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:09:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:09:43,461 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:09:43,465 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:09:43,465 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:14:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=292, hits=285, hitRatio=97.60%, , cachingAccesses=286, cachingHits=281, cachingHitsRatio=98.25%, evictions=7379, evicted=4, evictedPerRun=5.420788656920195E-4
+2017-03-18 19:14:42,960 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:14:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:14:43,462 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:14:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:14:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:19:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=293, hits=286, hitRatio=97.61%, , cachingAccesses=287, cachingHits=282, cachingHitsRatio=98.26%, evictions=7409, evicted=4, evictedPerRun=5.398839130066335E-4
+2017-03-18 19:19:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:19:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:19:43,462 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:19:43,473 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:19:43,473 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:24:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=294, hits=287, hitRatio=97.62%, , cachingAccesses=288, cachingHits=283, cachingHitsRatio=98.26%, evictions=7439, evicted=4, evictedPerRun=5.377066554501653E-4
+2017-03-18 19:24:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:24:42,961 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:24:43,462 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:24:43,463 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:24:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:29:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=295, hits=288, hitRatio=97.63%, , cachingAccesses=289, cachingHits=284, cachingHitsRatio=98.27%, evictions=7469, evicted=4, evictedPerRun=5.35546918399632E-4
+2017-03-18 19:29:42,966 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:29:42,966 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:29:43,474 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:29:43,477 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:29:43,478 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:34:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=296, hits=289, hitRatio=97.64%, , cachingAccesses=290, cachingHits=285, cachingHitsRatio=98.28%, evictions=7499, evicted=4, evictedPerRun=5.3340446902439E-4
+2017-03-18 19:34:42,962 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:34:42,963 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:34:43,471 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:34:43,477 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:34:43,478 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:39:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=297, hits=290, hitRatio=97.64%, , cachingAccesses=291, cachingHits=286, cachingHitsRatio=98.28%, evictions=7529, evicted=4, evictedPerRun=5.312790744937956E-4
+2017-03-18 19:39:42,962 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:39:42,962 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:39:43,463 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:39:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:39:43,464 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:44:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=298, hits=291, hitRatio=97.65%, , cachingAccesses=292, cachingHits=287, cachingHitsRatio=98.29%, evictions=7559, evicted=4, evictedPerRun=5.291705019772053E-4
+2017-03-18 19:44:36,601 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489862676375 with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489866276579
+2017-03-18 19:44:36,601 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903.default.1489862676375 to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903.default.1489862676375
+2017-03-18 19:44:41,076 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489862680808.meta with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489866281056.meta
+2017-03-18 19:44:41,076 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489862680808.meta to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903..meta.1489862680808.meta
+2017-03-18 19:44:42,963 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:44:42,963 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:44:43,465 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:44:43,467 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:44:43,467 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:49:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=299, hits=292, hitRatio=97.66%, , cachingAccesses=293, cachingHits=288, cachingHitsRatio=98.29%, evictions=7589, evicted=4, evictedPerRun=5.27078693266958E-4
+2017-03-18 19:49:42,964 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:49:42,965 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:49:43,465 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:49:43,466 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:49:43,467 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:54:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=300, hits=293, hitRatio=97.67%, , cachingAccesses=294, cachingHits=289, cachingHitsRatio=98.30%, evictions=7619, evicted=4, evictedPerRun=5.250032991170883E-4
+2017-03-18 19:54:42,964 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:54:42,965 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:54:43,467 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:54:43,470 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:54:43,472 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 19:59:30,840 INFO  [LruBlockCacheStatsExecutor] hfile.LruBlockCache: totalSize=329.56 KB, freeSize=309.95 MB, max=310.27 MB, blockCount=1, accesses=301, hits=294, hitRatio=97.67%, , cachingAccesses=295, cachingHits=290, cachingHitsRatio=98.31%, evictions=7649, evicted=4, evictedPerRun=5.229442031122744E-4
+2017-03-18 19:59:42,964 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 19:59:42,964 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 19:59:43,466 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 19:59:43,471 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 19:59:43,472 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 20:52:28,252 INFO  [RS:0;hbase-docker:35299-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3150468ms for sessionid 0x15ade7175a60003, closing socket connection and attempting reconnect
+2017-03-18 20:52:28,276 WARN  [RS:0;hbase-docker:35299] util.Sleeper: We slept 3150140ms instead of 3000ms, this is likely due to a long garbage collecting pause and it's usually bad, see http://hbase.apache.org/book.html#trouble.rs.runtime.zkexpired
+2017-03-18 20:52:28,277 WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x15ade7175a60003, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:28,292 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45878 which had sessionid 0x15ade7175a60003
+2017-03-18 20:52:28,303 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Rolled WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489866281056.meta with entries=0, filesize=91 B; new WAL /data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489870348250.meta
+2017-03-18 20:52:28,304 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] wal.FSHLog: Archiving file:/data/hbase/WALs/hbase-docker,35299,1489790669903/hbase-docker%2C35299%2C1489790669903..meta.1489866281056.meta to file:/data/hbase/oldWALs/hbase-docker%2C35299%2C1489790669903..meta.1489866281056.meta
+2017-03-18 20:52:28,350 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3149313ms for sessionid 0x15ade7175a60001, closing socket connection and attempting reconnect
+2017-03-18 20:52:28,350 WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x15ade7175a60001, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:28,351 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45874 which had sessionid 0x15ade7175a60001
+2017-03-18 20:52:28,477 INFO  [hbase-docker,44393,1489790667382_splitLogManager__ChoreService_1] hbase.ScheduledChore: Chore: SplitLogManager Timeout Monitor missed its start time
+2017-03-18 20:52:28,883 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Client session timed out, have not heard from server in 3150469ms for sessionid 0x15ade7175a60000, closing socket connection and attempting reconnect
+2017-03-18 20:52:28,883 WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: caught end of stream exception
+EndOfStreamException: Unable to read additional data from client sessionid 0x15ade7175a60000, likely client has closed socket
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:28,884 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45872 which had sessionid 0x15ade7175a60000
+2017-03-18 20:52:29,137 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60003, timeout of 10000ms exceeded
+2017-03-18 20:52:29,140 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60000, timeout of 10000ms exceeded
+2017-03-18 20:52:29,141 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60001, timeout of 10000ms exceeded
+2017-03-18 20:52:29,142 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60002, timeout of 10000ms exceeded
+2017-03-18 20:52:29,142 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60004, timeout of 10000ms exceeded
+2017-03-18 20:52:29,144 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60005, timeout of 10000ms exceeded
+2017-03-18 20:52:29,145 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60006, timeout of 10000ms exceeded
+2017-03-18 20:52:29,145 INFO  [SessionTracker] server.ZooKeeperServer: Expiring session 0x15ade7175a60007, timeout of 40000ms exceeded
+2017-03-18 20:52:29,153 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60003
+2017-03-18 20:52:29,161 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60000
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60001
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60002
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60004
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60005
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60006
+2017-03-18 20:52:29,163 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: Processed session termination for sessionid: 0x15ade7175a60007
+2017-03-18 20:52:29,182 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45876 which had sessionid 0x15ade7175a60002
+2017-03-18 20:52:29,182 INFO  [M:0;hbase-docker:44393-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to read additional data from server sessionid 0x15ade7175a60002, likely server has closed socket, closing socket connection and attempting reconnect
+2017-03-18 20:52:29,184 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45880 which had sessionid 0x15ade7175a60004
+2017-03-18 20:52:29,184 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to read additional data from server sessionid 0x15ade7175a60004, likely server has closed socket, closing socket connection and attempting reconnect
+2017-03-18 20:52:29,185 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45882 which had sessionid 0x15ade7175a60005
+2017-03-18 20:52:29,186 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45938 which had sessionid 0x15ade7175a60006
+2017-03-18 20:52:29,187 INFO  [SyncThread:0] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:45990 which had sessionid 0x15ade7175a60007
+2017-03-18 20:52:29,187 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to read additional data from server sessionid 0x15ade7175a60005, likely server has closed socket, closing socket connection and attempting reconnect
+2017-03-18 20:52:29,195 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to read additional data from server sessionid 0x15ade7175a60006, likely server has closed socket, closing socket connection and attempting reconnect
+2017-03-18 20:52:29,504 WARN  [M:0;hbase-docker:44393] util.Sleeper: We slept 3150133ms instead of 3000ms, this is likely due to a long garbage collecting pause and it's usually bad, see http://hbase.apache.org/book.html#trouble.rs.runtime.zkexpired
+2017-03-18 20:52:29,696 INFO  [hbase-docker,35299,1489790669903_ChoreService_1] hbase.ScheduledChore: Chore: CompactionChecker missed its start time
+2017-03-18 20:52:29,699 INFO  [hbase-docker,35299,1489790669903_ChoreService_1] hbase.ScheduledChore: Chore: hbase-docker,35299,1489790669903-MemstoreFlusherChore missed its start time
+2017-03-18 20:52:29,726 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:29,727 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49724
+2017-03-18 20:52:29,729 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:29,752 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60001 at /172.17.0.2:49724
+2017-03-18 20:52:29,756 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60001 for client /172.17.0.2:49724, probably expired
+2017-03-18 20:52:29,759 FATAL [main-EventThread] regionserver.HRegionServer: ABORTING region server hbase-docker,35299,1489790669903: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase regionserver:35299-0x15ade7175a60001 received expired from ZooKeeper, aborting
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.connectionEvent(ZooKeeperWatcher.java:702)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.process(ZooKeeperWatcher.java:613)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2017-03-18 20:52:29,761 FATAL [main-EventThread] regionserver.HRegionServer: RegionServer abort: loaded coprocessors are: [org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint]
+2017-03-18 20:52:29,762 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49724 which had sessionid 0x15ade7175a60001
+2017-03-18 20:52:29,764 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x15ade7175a60001 has expired, closing socket connection
+2017-03-18 20:52:29,798 INFO  [hbase-docker,44393,1489790667382_ChoreService_1] hbase.ScheduledChore: Chore: hbase-docker,44393,1489790667382-DoMetricsChore missed its start time
+2017-03-18 20:52:29,866 WARN  [RS:0;hbase-docker:35299] zookeeper.ZKUtil: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase Unable to get data of znode /hbase/master
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataInternal(ZKUtil.java:674)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataAndWatch(ZKUtil.java:650)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker.getData(ZooKeeperNodeTracker.java:177)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:127)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.createRegionServerStatusStub(HRegionServer.java:2210)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.tryRegionServerReport(HRegionServer.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:961)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:29,867 ERROR [RS:0;hbase-docker:35299] zookeeper.ZooKeeperWatcher: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataInternal(ZKUtil.java:674)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataAndWatch(ZKUtil.java:650)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker.getData(ZooKeeperNodeTracker.java:177)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:127)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.createRegionServerStatusStub(HRegionServer.java:2210)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.tryRegionServerReport(HRegionServer.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:961)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:29,867 FATAL [RS:0;hbase-docker:35299] regionserver.HRegionServer: ABORTING region server hbase-docker,35299,1489790669903: Unexpected exception handling getData
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataInternal(ZKUtil.java:674)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getDataAndWatch(ZKUtil.java:650)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperNodeTracker.getData(ZooKeeperNodeTracker.java:177)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:127)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.createRegionServerStatusStub(HRegionServer.java:2210)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.tryRegionServerReport(HRegionServer.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:961)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:29,868 FATAL [RS:0;hbase-docker:35299] regionserver.HRegionServer: RegionServer abort: loaded coprocessors are: [org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint]
+2017-03-18 20:52:29,925 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: Dump of metrics as JSON on abort: {
+  "beans" : [ {
+    "name" : "java.lang:type=Memory",
+    "modelerType" : "sun.management.MemoryImpl",
+    "ObjectPendingFinalizationCount" : 0,
+    "NonHeapMemoryUsage" : {
+      "committed" : 70893568,
+      "init" : 2555904,
+      "max" : -1,
+      "used" : 69783224
+    },
+    "Verbose" : false,
+    "HeapMemoryUsage" : {
+      "committed" : 59244544,
+      "init" : 52428800,
+      "max" : 813367296,
+      "used" : 40745432
+    },
+    "ObjectName" : "java.lang:type=Memory"
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=IPC",
+    "modelerType" : "RegionServer,sub=IPC",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "queueSize" : 0,
+    "numCallsInGeneralQueue" : 0,
+    "numCallsInReplicationQueue" : 0,
+    "numCallsInPriorityQueue" : 0,
+    "numOpenConnections" : 0,
+    "numActiveHandler" : 0,
+    "receivedBytes" : 113971,
+    "exceptions.RegionMovedException" : 0,
+    "exceptions.multiResponseTooLarge" : 0,
+    "authenticationSuccesses" : 0,
+    "authorizationFailures" : 0,
+    "TotalCallTime_num_ops" : 914,
+    "TotalCallTime_min" : 0,
+    "TotalCallTime_max" : 65,
+    "TotalCallTime_mean" : 1.2221006564551422,
+    "TotalCallTime_median" : 0.0,
+    "TotalCallTime_75th_percentile" : 1.0,
+    "TotalCallTime_90th_percentile" : 1.0,
+    "TotalCallTime_95th_percentile" : 4.0,
+    "TotalCallTime_99th_percentile" : 8.0,
+    "TotalCallTime_TimeRangeCount_0-1" : 774,
+    "TotalCallTime_TimeRangeCount_1-3" : 52,
+    "TotalCallTime_TimeRangeCount_3-10" : 74,
+    "TotalCallTime_TimeRangeCount_10-30" : 10,
+    "TotalCallTime_TimeRangeCount_30-100" : 4,
+    "exceptions.RegionTooBusyException" : 0,
+    "exceptions.FailedSanityCheckException" : 0,
+    "ResponseSize_num_ops" : 914,
+    "ResponseSize_min" : 2,
+    "ResponseSize_max" : 1551,
+    "ResponseSize_mean" : 15.24617067833698,
+    "ResponseSize_median" : 9.0,
+    "ResponseSize_75th_percentile" : 29.0,
+    "ResponseSize_90th_percentile" : 29.0,
+    "ResponseSize_95th_percentile" : 29.0,
+    "ResponseSize_99th_percentile" : 29.0,
+    "ResponseSize_SizeRangeCount_0-10" : 613,
+    "ResponseSize_SizeRangeCount_10-100" : 300,
+    "ResponseSize_SizeRangeCount_1000-10000" : 1,
+    "exceptions.UnknownScannerException" : 0,
+    "exceptions.OutOfOrderScannerNextException" : 0,
+    "exceptions" : 0,
+    "ProcessCallTime_num_ops" : 914,
+    "ProcessCallTime_min" : 0,
+    "ProcessCallTime_max" : 61,
+    "ProcessCallTime_mean" : 0.9551422319474836,
+    "ProcessCallTime_median" : 0.0,
+    "ProcessCallTime_75th_percentile" : 1.0,
+    "ProcessCallTime_90th_percentile" : 1.0,
+    "ProcessCallTime_95th_percentile" : 2.0,
+    "ProcessCallTime_99th_percentile" : 7.6299999999999955,
+    "ProcessCallTime_TimeRangeCount_0-1" : 810,
+    "ProcessCallTime_TimeRangeCount_1-3" : 40,
+    "ProcessCallTime_TimeRangeCount_3-10" : 50,
+    "ProcessCallTime_TimeRangeCount_10-30" : 12,
+    "ProcessCallTime_TimeRangeCount_30-100" : 2,
+    "authenticationFallbacks" : 0,
+    "exceptions.NotServingRegionException" : 0,
+    "authorizationSuccesses" : 276,
+    "exceptions.ScannerResetException" : 0,
+    "RequestSize_num_ops" : 914,
+    "RequestSize_min" : 12,
+    "RequestSize_max" : 124,
+    "RequestSize_mean" : 31.207877461706783,
+    "RequestSize_median" : 17.0,
+    "RequestSize_75th_percentile" : 51.0,
+    "RequestSize_90th_percentile" : 51.0,
+    "RequestSize_95th_percentile" : 51.0,
+    "RequestSize_99th_percentile" : 51.0,
+    "RequestSize_SizeRangeCount_10-100" : 904,
+    "RequestSize_SizeRangeCount_100-1000" : 10,
+    "sentBytes" : 523514,
+    "QueueCallTime_num_ops" : 914,
+    "QueueCallTime_min" : 0,
+    "QueueCallTime_max" : 16,
+    "QueueCallTime_mean" : 0.26695842450765866,
+    "QueueCallTime_median" : 0.0,
+    "QueueCallTime_75th_percentile" : 0.0,
+    "QueueCallTime_90th_percentile" : 1.0,
+    "QueueCallTime_95th_percentile" : 1.0,
+    "QueueCallTime_99th_percentile" : 4.0,
+    "QueueCallTime_TimeRangeCount_0-1" : 874,
+    "QueueCallTime_TimeRangeCount_1-3" : 21,
+    "QueueCallTime_TimeRangeCount_3-10" : 17,
+    "QueueCallTime_TimeRangeCount_10-30" : 2,
+    "authenticationFailures" : 0
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=Replication",
+    "modelerType" : "RegionServer,sub=Replication",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "sink.appliedOps" : 0,
+    "sink.ageOfLastAppliedOp" : 0,
+    "sink.appliedBatches" : 0
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=Server",
+    "modelerType" : "RegionServer,sub=Server",
+    "tag.zookeeperQuorum" : "hbase-docker:2181",
+    "tag.serverName" : "hbase-docker,35299,1489790669903",
+    "tag.clusterId" : "bf60bab1-0c2c-4f97-901e-48e26270baec",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "regionCount" : 5,
+    "storeCount" : 8,
+    "hlogFileCount" : 2,
+    "hlogFileSize" : 0,
+    "storeFileCount" : 5,
+    "memStoreSize" : 3328,
+    "storeFileSize" : 26365,
+    "regionServerStartTime" : 1489790669903,
+    "totalRequestCount" : 919,
+    "readRequestCount" : 1088,
+    "writeRequestCount" : 25,
+    "checkMutateFailedCount" : 0,
+    "checkMutatePassedCount" : 0,
+    "storeFileIndexSize" : 2048,
+    "staticIndexSize" : 259,
+    "staticBloomSize" : 10,
+    "mutationsWithoutWALCount" : 0,
+    "mutationsWithoutWALSize" : 0,
+    "percentFilesLocal" : 0.0,
+    "percentFilesLocalSecondaryRegions" : 0.0,
+    "splitQueueLength" : 0,
+    "compactionQueueLength" : 0,
+    "flushQueueLength" : 0,
+    "blockCacheFreeSize" : 325009440,
+    "blockCacheCount" : 1,
+    "blockCacheSize" : 337472,
+    "blockCacheHitCount" : 295,
+    "blockCacheHitCountPrimary" : 295,
+    "blockCacheMissCount" : 7,
+    "blockCacheMissCountPrimary" : 7,
+    "blockCacheEvictionCount" : 4,
+    "blockCacheEvictionCountPrimary" : 4,
+    "blockCacheCountHitPercent" : 97.68211841583252,
+    "blockCacheExpressHitPercent" : 98.31081032752991,
+    "blockCacheFailedInsertionCount" : 0,
+    "updatesBlockedTime" : 0,
+    "flushedCellsCount" : 35,
+    "compactedCellsCount" : 28,
+    "majorCompactedCellsCount" : 0,
+    "flushedCellsSize" : 7472,
+    "compactedCellsSize" : 3168,
+    "majorCompactedCellsSize" : 0,
+    "blockedRequestCount" : 0,
+    "Mutate_num_ops" : 32,
+    "Mutate_min" : 0,
+    "Mutate_max" : 36,
+    "Mutate_mean" : 5.65625,
+    "Mutate_median" : 2.5,
+    "Mutate_75th_percentile" : 7.0,
+    "Mutate_90th_percentile" : 14.0,
+    "Mutate_95th_percentile" : 22.999999999999957,
+    "Mutate_99th_percentile" : 36.0,
+    "Mutate_TimeRangeCount_0-1" : 6,
+    "Mutate_TimeRangeCount_1-3" : 11,
+    "Mutate_TimeRangeCount_3-10" : 10,
+    "Mutate_TimeRangeCount_10-30" : 4,
+    "Mutate_TimeRangeCount_30-100" : 1,
+    "slowAppendCount" : 0,
+    "slowDeleteCount" : 0,
+    "Increment_num_ops" : 0,
+    "Increment_min" : 0,
+    "Increment_max" : 0,
+    "Increment_mean" : 0.0,
+    "Increment_median" : 0.0,
+    "Increment_75th_percentile" : 0.0,
+    "Increment_90th_percentile" : 0.0,
+    "Increment_95th_percentile" : 0.0,
+    "Increment_99th_percentile" : 0.0,
+    "Replay_num_ops" : 0,
+    "Replay_min" : 0,
+    "Replay_max" : 0,
+    "Replay_mean" : 0.0,
+    "Replay_median" : 0.0,
+    "Replay_75th_percentile" : 0.0,
+    "Replay_90th_percentile" : 0.0,
+    "Replay_95th_percentile" : 0.0,
+    "Replay_99th_percentile" : 0.0,
+    "FlushTime_num_ops" : 9,
+    "FlushTime_min" : 7825,
+    "FlushTime_max" : 297556,
+    "FlushTime_mean" : 150048.0,
+    "FlushTime_median" : 136976.0,
+    "FlushTime_75th_percentile" : 256045.0,
+    "FlushTime_90th_percentile" : 297556.0,
+    "FlushTime_95th_percentile" : 297556.0,
+    "FlushTime_99th_percentile" : 297556.0,
+    "FlushTime_TimeRangeCount_3000-10000" : 1,
+    "FlushTime_TimeRangeCount_10000-30000" : 1,
+    "FlushTime_TimeRangeCount_60000-120000" : 2,
+    "FlushTime_TimeRangeCount_120000-300000" : 5,
+    "Delete_num_ops" : 1,
+    "Delete_min" : 1,
+    "Delete_max" : 1,
+    "Delete_mean" : 1.0,
+    "Delete_median" : 1.0,
+    "Delete_75th_percentile" : 1.0,
+    "Delete_90th_percentile" : 1.0,
+    "Delete_95th_percentile" : 1.0,
+    "Delete_99th_percentile" : 1.0,
+    "Delete_TimeRangeCount_0-1" : 1,
+    "splitRequestCount" : 0,
+    "splitSuccessCount" : 0,
+    "slowGetCount" : 0,
+    "Get_num_ops" : 10,
+    "Get_min" : 0,
+    "Get_max" : 12,
+    "Get_mean" : 2.1,
+    "Get_median" : 1.0,
+    "Get_75th_percentile" : 2.0,
+    "Get_90th_percentile" : 11.000000000000004,
+    "Get_95th_percentile" : 12.0,
+    "Get_99th_percentile" : 12.0,
+    "Get_TimeRangeCount_0-1" : 7,
+    "Get_TimeRangeCount_1-3" : 2,
+    "Get_TimeRangeCount_10-30" : 1,
+    "ScanNext_num_ops" : 293,
+    "ScanNext_min" : 0,
+    "ScanNext_max" : 2864,
+    "ScanNext_mean" : 2622.9624573378837,
+    "ScanNext_median" : 2864.0,
+    "ScanNext_75th_percentile" : 2864.0,
+    "ScanNext_90th_percentile" : 2864.0,
+    "ScanNext_95th_percentile" : 2864.0,
+    "ScanNext_99th_percentile" : 2864.0,
+    "ScanNext_TimeRangeCount_0-1" : 8,
+    "ScanNext_TimeRangeCount_100-300" : 5,
+    "ScanNext_TimeRangeCount_300-1000" : 12,
+    "ScanNext_TimeRangeCount_1000-3000" : 268,
+    "slowPutCount" : 0,
+    "slowIncrementCount" : 0,
+    "Append_num_ops" : 0,
+    "Append_min" : 0,
+    "Append_max" : 0,
+    "Append_mean" : 0.0,
+    "Append_median" : 0.0,
+    "Append_75th_percentile" : 0.0,
+    "Append_90th_percentile" : 0.0,
+    "Append_95th_percentile" : 0.0,
+    "Append_99th_percentile" : 0.0,
+    "SplitTime_num_ops" : 0,
+    "SplitTime_min" : 0,
+    "SplitTime_max" : 0,
+    "SplitTime_mean" : 0.0,
+    "SplitTime_median" : 0.0,
+    "SplitTime_75th_percentile" : 0.0,
+    "SplitTime_90th_percentile" : 0.0,
+    "SplitTime_95th_percentile" : 0.0,
+    "SplitTime_99th_percentile" : 0.0
+  } ]
+}
+2017-03-18 20:52:29,926 INFO  [main-EventThread] regionserver.HRegionServer: Dump of metrics as JSON on abort: {
+  "beans" : [ {
+    "name" : "java.lang:type=Memory",
+    "modelerType" : "sun.management.MemoryImpl",
+    "ObjectPendingFinalizationCount" : 0,
+    "NonHeapMemoryUsage" : {
+      "committed" : 70893568,
+      "init" : 2555904,
+      "max" : -1,
+      "used" : 69771856
+    },
+    "Verbose" : false,
+    "HeapMemoryUsage" : {
+      "committed" : 59244544,
+      "init" : 52428800,
+      "max" : 813367296,
+      "used" : 40763392
+    },
+    "ObjectName" : "java.lang:type=Memory"
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=IPC",
+    "modelerType" : "RegionServer,sub=IPC",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "queueSize" : 0,
+    "numCallsInGeneralQueue" : 0,
+    "numCallsInReplicationQueue" : 0,
+    "numCallsInPriorityQueue" : 0,
+    "numOpenConnections" : 1,
+    "numActiveHandler" : 0,
+    "receivedBytes" : 113971,
+    "exceptions.RegionMovedException" : 0,
+    "exceptions.multiResponseTooLarge" : 0,
+    "authenticationSuccesses" : 0,
+    "authorizationFailures" : 0,
+    "TotalCallTime_num_ops" : 914,
+    "TotalCallTime_min" : 0,
+    "TotalCallTime_max" : 65,
+    "TotalCallTime_mean" : 1.2221006564551422,
+    "TotalCallTime_median" : 0.0,
+    "TotalCallTime_75th_percentile" : 1.0,
+    "TotalCallTime_90th_percentile" : 1.0,
+    "TotalCallTime_95th_percentile" : 4.0,
+    "TotalCallTime_99th_percentile" : 8.0,
+    "TotalCallTime_TimeRangeCount_0-1" : 774,
+    "TotalCallTime_TimeRangeCount_1-3" : 52,
+    "TotalCallTime_TimeRangeCount_3-10" : 74,
+    "TotalCallTime_TimeRangeCount_10-30" : 10,
+    "TotalCallTime_TimeRangeCount_30-100" : 4,
+    "exceptions.RegionTooBusyException" : 0,
+    "exceptions.FailedSanityCheckException" : 0,
+    "ResponseSize_num_ops" : 914,
+    "ResponseSize_min" : 2,
+    "ResponseSize_max" : 1551,
+    "ResponseSize_mean" : 15.24617067833698,
+    "ResponseSize_median" : 9.0,
+    "ResponseSize_75th_percentile" : 29.0,
+    "ResponseSize_90th_percentile" : 29.0,
+    "ResponseSize_95th_percentile" : 29.0,
+    "ResponseSize_99th_percentile" : 29.0,
+    "ResponseSize_SizeRangeCount_0-10" : 613,
+    "ResponseSize_SizeRangeCount_10-100" : 300,
+    "ResponseSize_SizeRangeCount_1000-10000" : 1,
+    "exceptions.UnknownScannerException" : 0,
+    "exceptions.OutOfOrderScannerNextException" : 0,
+    "exceptions" : 0,
+    "ProcessCallTime_num_ops" : 914,
+    "ProcessCallTime_min" : 0,
+    "ProcessCallTime_max" : 61,
+    "ProcessCallTime_mean" : 0.9551422319474836,
+    "ProcessCallTime_median" : 0.0,
+    "ProcessCallTime_75th_percentile" : 1.0,
+    "ProcessCallTime_90th_percentile" : 1.0,
+    "ProcessCallTime_95th_percentile" : 2.0,
+    "ProcessCallTime_99th_percentile" : 7.6299999999999955,
+    "ProcessCallTime_TimeRangeCount_0-1" : 810,
+    "ProcessCallTime_TimeRangeCount_1-3" : 40,
+    "ProcessCallTime_TimeRangeCount_3-10" : 50,
+    "ProcessCallTime_TimeRangeCount_10-30" : 12,
+    "ProcessCallTime_TimeRangeCount_30-100" : 2,
+    "authenticationFallbacks" : 0,
+    "exceptions.NotServingRegionException" : 0,
+    "authorizationSuccesses" : 276,
+    "exceptions.ScannerResetException" : 0,
+    "RequestSize_num_ops" : 914,
+    "RequestSize_min" : 12,
+    "RequestSize_max" : 124,
+    "RequestSize_mean" : 31.207877461706783,
+    "RequestSize_median" : 17.0,
+    "RequestSize_75th_percentile" : 51.0,
+    "RequestSize_90th_percentile" : 51.0,
+    "RequestSize_95th_percentile" : 51.0,
+    "RequestSize_99th_percentile" : 51.0,
+    "RequestSize_SizeRangeCount_10-100" : 904,
+    "RequestSize_SizeRangeCount_100-1000" : 10,
+    "sentBytes" : 523514,
+    "QueueCallTime_num_ops" : 914,
+    "QueueCallTime_min" : 0,
+    "QueueCallTime_max" : 16,
+    "QueueCallTime_mean" : 0.26695842450765866,
+    "QueueCallTime_median" : 0.0,
+    "QueueCallTime_75th_percentile" : 0.0,
+    "QueueCallTime_90th_percentile" : 1.0,
+    "QueueCallTime_95th_percentile" : 1.0,
+    "QueueCallTime_99th_percentile" : 4.0,
+    "QueueCallTime_TimeRangeCount_0-1" : 874,
+    "QueueCallTime_TimeRangeCount_1-3" : 21,
+    "QueueCallTime_TimeRangeCount_3-10" : 17,
+    "QueueCallTime_TimeRangeCount_10-30" : 2,
+    "authenticationFailures" : 0
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=Replication",
+    "modelerType" : "RegionServer,sub=Replication",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "sink.appliedOps" : 0,
+    "sink.ageOfLastAppliedOp" : 0,
+    "sink.appliedBatches" : 0
+  } ],
+  "beans" : [ {
+    "name" : "Hadoop:service=HBase,name=RegionServer,sub=Server",
+    "modelerType" : "RegionServer,sub=Server",
+    "tag.zookeeperQuorum" : "hbase-docker:2181",
+    "tag.serverName" : "hbase-docker,35299,1489790669903",
+    "tag.clusterId" : "bf60bab1-0c2c-4f97-901e-48e26270baec",
+    "tag.Context" : "regionserver",
+    "tag.Hostname" : "hbase-docker",
+    "regionCount" : 5,
+    "storeCount" : 8,
+    "hlogFileCount" : 2,
+    "hlogFileSize" : 0,
+    "storeFileCount" : 5,
+    "memStoreSize" : 3328,
+    "storeFileSize" : 26365,
+    "regionServerStartTime" : 1489790669903,
+    "totalRequestCount" : 919,
+    "readRequestCount" : 1088,
+    "writeRequestCount" : 25,
+    "checkMutateFailedCount" : 0,
+    "checkMutatePassedCount" : 0,
+    "storeFileIndexSize" : 2048,
+    "staticIndexSize" : 259,
+    "staticBloomSize" : 10,
+    "mutationsWithoutWALCount" : 0,
+    "mutationsWithoutWALSize" : 0,
+    "percentFilesLocal" : 0.0,
+    "percentFilesLocalSecondaryRegions" : 0.0,
+    "splitQueueLength" : 0,
+    "compactionQueueLength" : 0,
+    "flushQueueLength" : 0,
+    "blockCacheFreeSize" : 325009440,
+    "blockCacheCount" : 1,
+    "blockCacheSize" : 337472,
+    "blockCacheHitCount" : 295,
+    "blockCacheHitCountPrimary" : 295,
+    "blockCacheMissCount" : 7,
+    "blockCacheMissCountPrimary" : 7,
+    "blockCacheEvictionCount" : 4,
+    "blockCacheEvictionCountPrimary" : 4,
+    "blockCacheCountHitPercent" : 97.68211841583252,
+    "blockCacheExpressHitPercent" : 98.31081032752991,
+    "blockCacheFailedInsertionCount" : 0,
+    "updatesBlockedTime" : 0,
+    "flushedCellsCount" : 35,
+    "compactedCellsCount" : 28,
+    "majorCompactedCellsCount" : 0,
+    "flushedCellsSize" : 7472,
+    "compactedCellsSize" : 3168,
+    "majorCompactedCellsSize" : 0,
+    "blockedRequestCount" : 0,
+    "Mutate_num_ops" : 32,
+    "Mutate_min" : 0,
+    "Mutate_max" : 36,
+    "Mutate_mean" : 5.65625,
+    "Mutate_median" : 2.5,
+    "Mutate_75th_percentile" : 7.0,
+    "Mutate_90th_percentile" : 14.0,
+    "Mutate_95th_percentile" : 22.999999999999957,
+    "Mutate_99th_percentile" : 36.0,
+    "Mutate_TimeRangeCount_0-1" : 6,
+    "Mutate_TimeRangeCount_1-3" : 11,
+    "Mutate_TimeRangeCount_3-10" : 10,
+    "Mutate_TimeRangeCount_10-30" : 4,
+    "Mutate_TimeRangeCount_30-100" : 1,
+    "slowAppendCount" : 0,
+    "slowDeleteCount" : 0,
+    "Increment_num_ops" : 0,
+    "Increment_min" : 0,
+    "Increment_max" : 0,
+    "Increment_mean" : 0.0,
+    "Increment_median" : 0.0,
+    "Increment_75th_percentile" : 0.0,
+    "Increment_90th_percentile" : 0.0,
+    "Increment_95th_percentile" : 0.0,
+    "Increment_99th_percentile" : 0.0,
+    "Replay_num_ops" : 0,
+    "Replay_min" : 0,
+    "Replay_max" : 0,
+    "Replay_mean" : 0.0,
+    "Replay_median" : 0.0,
+    "Replay_75th_percentile" : 0.0,
+    "Replay_90th_percentile" : 0.0,
+    "Replay_95th_percentile" : 0.0,
+    "Replay_99th_percentile" : 0.0,
+    "FlushTime_num_ops" : 9,
+    "FlushTime_min" : 7825,
+    "FlushTime_max" : 297556,
+    "FlushTime_mean" : 150048.0,
+    "FlushTime_median" : 136976.0,
+    "FlushTime_75th_percentile" : 256045.0,
+    "FlushTime_90th_percentile" : 297556.0,
+    "FlushTime_95th_percentile" : 297556.0,
+    "FlushTime_99th_percentile" : 297556.0,
+    "FlushTime_TimeRangeCount_3000-10000" : 1,
+    "FlushTime_TimeRangeCount_10000-30000" : 1,
+    "FlushTime_TimeRangeCount_60000-120000" : 2,
+    "FlushTime_TimeRangeCount_120000-300000" : 5,
+    "Delete_num_ops" : 1,
+    "Delete_min" : 1,
+    "Delete_max" : 1,
+    "Delete_mean" : 1.0,
+    "Delete_median" : 1.0,
+    "Delete_75th_percentile" : 1.0,
+    "Delete_90th_percentile" : 1.0,
+    "Delete_95th_percentile" : 1.0,
+    "Delete_99th_percentile" : 1.0,
+    "Delete_TimeRangeCount_0-1" : 1,
+    "splitRequestCount" : 0,
+    "splitSuccessCount" : 0,
+    "slowGetCount" : 0,
+    "Get_num_ops" : 10,
+    "Get_min" : 0,
+    "Get_max" : 12,
+    "Get_mean" : 2.1,
+    "Get_median" : 1.0,
+    "Get_75th_percentile" : 2.0,
+    "Get_90th_percentile" : 11.000000000000004,
+    "Get_95th_percentile" : 12.0,
+    "Get_99th_percentile" : 12.0,
+    "Get_TimeRangeCount_0-1" : 7,
+    "Get_TimeRangeCount_1-3" : 2,
+    "Get_TimeRangeCount_10-30" : 1,
+    "ScanNext_num_ops" : 293,
+    "ScanNext_min" : 0,
+    "ScanNext_max" : 2864,
+    "ScanNext_mean" : 2622.9624573378837,
+    "ScanNext_median" : 2864.0,
+    "ScanNext_75th_percentile" : 2864.0,
+    "ScanNext_90th_percentile" : 2864.0,
+    "ScanNext_95th_percentile" : 2864.0,
+    "ScanNext_99th_percentile" : 2864.0,
+    "ScanNext_TimeRangeCount_0-1" : 8,
+    "ScanNext_TimeRangeCount_100-300" : 5,
+    "ScanNext_TimeRangeCount_300-1000" : 12,
+    "ScanNext_TimeRangeCount_1000-3000" : 268,
+    "slowPutCount" : 0,
+    "slowIncrementCount" : 0,
+    "Append_num_ops" : 0,
+    "Append_min" : 0,
+    "Append_max" : 0,
+    "Append_mean" : 0.0,
+    "Append_median" : 0.0,
+    "Append_75th_percentile" : 0.0,
+    "Append_90th_percentile" : 0.0,
+    "Append_95th_percentile" : 0.0,
+    "Append_99th_percentile" : 0.0,
+    "SplitTime_num_ops" : 0,
+    "SplitTime_min" : 0,
+    "SplitTime_max" : 0,
+    "SplitTime_mean" : 0.0,
+    "SplitTime_median" : 0.0,
+    "SplitTime_75th_percentile" : 0.0,
+    "SplitTime_90th_percentile" : 0.0,
+    "SplitTime_95th_percentile" : 0.0,
+    "SplitTime_99th_percentile" : 0.0
+  } ]
+}
+2017-03-18 20:52:29,935 INFO  [main-EventThread] regionserver.HRegionServer: STOPPED: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase regionserver:35299-0x15ade7175a60001 received expired from ZooKeeper, aborting
+2017-03-18 20:52:29,936 INFO  [main-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:29,944 INFO  [RS:0;hbase-docker:35299] regionserver.SplitLogWorker: Sending interrupt to stop the worker thread
+2017-03-18 20:52:29,945 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: Stopping infoServer
+2017-03-18 20:52:29,957 INFO  [SplitLogWorker-hbase-docker:35299] regionserver.SplitLogWorker: SplitLogWorker interrupted. Exiting. 
+2017-03-18 20:52:29,957 INFO  [SplitLogWorker-hbase-docker:35299] regionserver.SplitLogWorker: SplitLogWorker hbase-docker,35299,1489790669903 exiting
+2017-03-18 20:52:29,998 INFO  [RS:0;hbase-docker:35299] mortbay.log: Stopped SelectChannelConnector@hbase-docker:0
+2017-03-18 20:52:30,110 INFO  [RS:0;hbase-docker:35299] regionserver.HeapMemoryManager: Stoping HeapMemoryTuner chore.
+2017-03-18 20:52:30,111 INFO  [MemStoreFlusher.1] regionserver.MemStoreFlusher: MemStoreFlusher.1 exiting
+2017-03-18 20:52:30,115 INFO  [RS:0;hbase-docker:35299] flush.RegionServerFlushTableProcedureManager: Stopping region server flush procedure manager abruptly.
+2017-03-18 20:52:30,116 INFO  [RS:0;hbase-docker:35299] snapshot.RegionServerSnapshotManager: Stopping RegionServerSnapshotManager abruptly.
+2017-03-18 20:52:30,111 INFO  [MemStoreFlusher.0] regionserver.MemStoreFlusher: MemStoreFlusher.0 exiting
+2017-03-18 20:52:30,127 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: aborting server hbase-docker,35299,1489790669903
+2017-03-18 20:52:30,130 INFO  [RS:0;hbase-docker:35299] client.ConnectionManager$HConnectionImplementation: Closing zookeeper sessionid=0x15ade7175a60003
+2017-03-18 20:52:30,143 INFO  [StoreCloserThread-test1,,1489792305962.76efc549cabcd4435df4af43e3aee399.-1] regionserver.HStore: Closed cf1
+2017-03-18 20:52:30,144 INFO  [StoreCloserThread-test2,,1489794471466.370a4b8e787a61555514d0dd70010b8b.-1] regionserver.HStore: Closed acct2
+2017-03-18 20:52:30,144 INFO  [StoreCloserThread-test1,,1489792305962.76efc549cabcd4435df4af43e3aee399.-1] regionserver.HStore: Closed cf2
+2017-03-18 20:52:30,152 INFO  [RS_CLOSE_REGION-hbase-docker:35299-2] regionserver.HRegion: Closed test1,,1489792305962.76efc549cabcd4435df4af43e3aee399.
+2017-03-18 20:52:30,155 INFO  [StoreCloserThread-hbase:namespace,,1489790678431.96a41d2ff26c234682d85ccdab0fa958.-1] regionserver.HStore: Closed info
+2017-03-18 20:52:30,156 INFO  [StoreCloserThread-test2,,1489794471466.370a4b8e787a61555514d0dd70010b8b.-1] regionserver.HStore: Closed tran1
+2017-03-18 20:52:30,161 INFO  [RS_CLOSE_REGION-hbase-docker:35299-0] regionserver.HRegion: Closed hbase:namespace,,1489790678431.96a41d2ff26c234682d85ccdab0fa958.
+2017-03-18 20:52:30,162 INFO  [RS_CLOSE_REGION-hbase-docker:35299-1] regionserver.HRegion: Closed test2,,1489794471466.370a4b8e787a61555514d0dd70010b8b.
+2017-03-18 20:52:30,163 INFO  [StoreCloserThread-cust_table1,,1489795142900.4789ada2821956c74db9236da8ed5247.-1] regionserver.HStore: Closed acct2
+2017-03-18 20:52:30,166 INFO  [StoreCloserThread-cust_table1,,1489795142900.4789ada2821956c74db9236da8ed5247.-1] regionserver.HStore: Closed tran1
+2017-03-18 20:52:30,170 INFO  [RS_CLOSE_REGION-hbase-docker:35299-2] regionserver.HRegion: Closed cust_table1,,1489795142900.4789ada2821956c74db9236da8ed5247.
+2017-03-18 20:52:30,222 INFO  [RS:0;hbase-docker:35299-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:30,222 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49726
+2017-03-18 20:52:30,223 INFO  [RS:0;hbase-docker:35299-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:30,224 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60003 at /172.17.0.2:49726
+2017-03-18 20:52:30,224 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60003 for client /172.17.0.2:49726, probably expired
+2017-03-18 20:52:30,224 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49726 which had sessionid 0x15ade7175a60003
+2017-03-18 20:52:30,325 INFO  [RS:0;hbase-docker:35299] zookeeper.ZooKeeper: Session: 0x15ade7175a60003 closed
+2017-03-18 20:52:30,325 INFO  [RS:0;hbase-docker:35299-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:30,326 INFO  [RS:0;hbase-docker:35299] regionserver.CompactSplitThread: Waiting for Split Thread to finish...
+2017-03-18 20:52:30,327 INFO  [RS:0;hbase-docker:35299] regionserver.CompactSplitThread: Waiting for Merge Thread to finish...
+2017-03-18 20:52:30,327 INFO  [RS:0;hbase-docker:35299] regionserver.CompactSplitThread: Waiting for Large Compaction Thread to finish...
+2017-03-18 20:52:30,327 INFO  [RS:0;hbase-docker:35299] regionserver.CompactSplitThread: Waiting for Small Compaction Thread to finish...
+2017-03-18 20:52:30,328 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: Waiting on 1 regions to close
+2017-03-18 20:52:30,330 INFO  [StoreCloserThread-hbase:meta,,1.1588230740-1] regionserver.HStore: Closed info
+2017-03-18 20:52:30,336 INFO  [RS_CLOSE_META-hbase-docker:35299-0] regionserver.HRegion: Closed hbase:meta,,1.1588230740
+2017-03-18 20:52:30,531 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: stopping server hbase-docker,35299,1489790669903; all regions closed.
+2017-03-18 20:52:30,545 INFO  [RS:0;hbase-docker:35299] regionserver.Leases: RS:0;hbase-docker:35299 closing leases
+2017-03-18 20:52:30,545 INFO  [RS:0;hbase-docker:35299] regionserver.Leases: RS:0;hbase-docker:35299 closed leases
+2017-03-18 20:52:30,550 INFO  [M:0;hbase-docker:44393-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:30,551 INFO  [M:0;hbase-docker:44393-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:30,551 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49728
+2017-03-18 20:52:30,551 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60002 at /172.17.0.2:49728
+2017-03-18 20:52:30,553 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60002 for client /172.17.0.2:49728, probably expired
+2017-03-18 20:52:30,554 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49728 which had sessionid 0x15ade7175a60002
+2017-03-18 20:52:30,550 INFO  [RS:0;hbase-docker:35299] hbase.ChoreService: Chore service for: hbase-docker,35299,1489790669903 had [[ScheduledChore: Name: MovedRegionsCleaner for region hbase-docker,35299,1489790669903 Period: 120000 Unit: MILLISECONDS], [ScheduledChore: Name: hbase-docker,35299,1489790669903-MemstoreFlusherChore Period: 10000 Unit: MILLISECONDS]] on shutdown
+2017-03-18 20:52:30,554 INFO  [M:0;hbase-docker:44393-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x15ade7175a60002 has expired, closing socket connection
+2017-03-18 20:52:30,554 WARN  [M:0;hbase-docker:44393-EventThread] client.ConnectionManager$HConnectionImplementation: This client just lost it's session with ZooKeeper, closing it. It will be recreated next time someone needs it
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.connectionEvent(ZooKeeperWatcher.java:702)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.process(ZooKeeperWatcher.java:613)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2017-03-18 20:52:30,557 INFO  [M:0;hbase-docker:44393-EventThread] client.ConnectionManager$HConnectionImplementation: Closing zookeeper sessionid=0x15ade7175a60002
+2017-03-18 20:52:30,557 INFO  [M:0;hbase-docker:44393-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:30,817 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:30,818 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:30,818 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49730
+2017-03-18 20:52:30,819 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60004 at /172.17.0.2:49730
+2017-03-18 20:52:30,819 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60004 for client /172.17.0.2:49730, probably expired
+2017-03-18 20:52:30,819 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49730 which had sessionid 0x15ade7175a60004
+2017-03-18 20:52:30,819 WARN  [hbase-docker:44393.activeMasterManager-EventThread] client.ConnectionManager$HConnectionImplementation: This client just lost it's session with ZooKeeper, closing it. It will be recreated next time someone needs it
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.connectionEvent(ZooKeeperWatcher.java:702)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.process(ZooKeeperWatcher.java:613)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2017-03-18 20:52:30,820 INFO  [hbase-docker:44393.activeMasterManager-EventThread] client.ConnectionManager$HConnectionImplementation: Closing zookeeper sessionid=0x15ade7175a60004
+2017-03-18 20:52:30,820 INFO  [hbase-docker:44393.activeMasterManager-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:30,819 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x15ade7175a60004 has expired, closing socket connection
+2017-03-18 20:52:30,886 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49732
+2017-03-18 20:52:30,891 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60007 at /172.17.0.2:49732
+2017-03-18 20:52:30,891 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60007 for client /172.17.0.2:49732, probably expired
+2017-03-18 20:52:30,891 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49732 which had sessionid 0x15ade7175a60007
+2017-03-18 20:52:30,944 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:30,945 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:30,946 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49734
+2017-03-18 20:52:30,946 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60005 at /172.17.0.2:49734
+2017-03-18 20:52:30,946 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60005 for client /172.17.0.2:49734, probably expired
+2017-03-18 20:52:30,947 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49734 which had sessionid 0x15ade7175a60005
+2017-03-18 20:52:30,947 INFO  [hbase-docker:44393.activeMasterManager-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:30,947 INFO  [hbase-docker:44393.activeMasterManager-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x15ade7175a60005 has expired, closing socket connection
+2017-03-18 20:52:30,969 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:30,969 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Socket connection established to hbase-docker/172.17.0.2:2181, initiating session
+2017-03-18 20:52:30,970 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: Accepted socket connection from /172.17.0.2:49736
+2017-03-18 20:52:30,970 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Client attempting to renew session 0x15ade7175a60000 at /172.17.0.2:49736
+2017-03-18 20:52:30,970 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.ZooKeeperServer: Invalid session 0x15ade7175a60000 for client /172.17.0.2:49736, probably expired
+2017-03-18 20:52:30,971 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxn: Closed socket connection for client /172.17.0.2:49736 which had sessionid 0x15ade7175a60000
+2017-03-18 20:52:30,971 FATAL [main-EventThread] master.HMaster: Master server abort: loaded coprocessors are: [org.apache.hadoop.hbase.coprocessor.MultiRowMutationEndpoint]
+2017-03-18 20:52:30,972 FATAL [main-EventThread] master.HMaster: master:44393-0x15ade7175a60000, quorum=hbase-docker:2181, baseZNode=/hbase master:44393-0x15ade7175a60000 received expired from ZooKeeper, aborting
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.connectionEvent(ZooKeeperWatcher.java:702)
+	at org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher.process(ZooKeeperWatcher.java:613)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:522)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498)
+2017-03-18 20:52:30,972 INFO  [main-EventThread] regionserver.HRegionServer: STOPPED: master:44393-0x15ade7175a60000, quorum=hbase-docker:2181, baseZNode=/hbase master:44393-0x15ade7175a60000 received expired from ZooKeeper, aborting
+2017-03-18 20:52:30,972 INFO  [main-EventThread] zookeeper.ClientCnxn: EventThread shut down
+2017-03-18 20:52:30,971 INFO  [main-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Unable to reconnect to ZooKeeper service, session 0x15ade7175a60000 has expired, closing socket connection
+2017-03-18 20:52:30,974 INFO  [M:0;hbase-docker:44393] regionserver.HRegionServer: Stopping infoServer
+2017-03-18 20:52:31,000 INFO  [M:0;hbase-docker:44393] mortbay.log: Stopped SelectChannelConnector@hbase-docker:16010
+2017-03-18 20:52:31,121 INFO  [M:0;hbase-docker:44393] procedure2.ProcedureExecutor: Stopping the procedure executor
+2017-03-18 20:52:31,122 INFO  [M:0;hbase-docker:44393] wal.WALProcedureStore: Stopping the WAL Procedure Store
+2017-03-18 20:52:31,127 INFO  [M:0;hbase-docker:44393] regionserver.HRegionServer: stopping server hbase-docker,44393,1489790667382
+2017-03-18 20:52:31,127 INFO  [M:0;hbase-docker:44393] client.ConnectionManager$HConnectionImplementation: Closing master protocol: MasterService
+2017-03-18 20:52:31,127 INFO  [M:0;hbase-docker:44393] regionserver.HRegionServer: stopping server hbase-docker,44393,1489790667382; all regions closed.
+2017-03-18 20:52:31,132 INFO  [M:0;hbase-docker:44393] hbase.ChoreService: Chore service for: hbase-docker,44393,1489790667382 had [[ScheduledChore: Name: LogsCleaner Period: 60000 Unit: MILLISECONDS], [ScheduledChore: Name: hbase-docker,44393,1489790667382-RegionNormalizerChore Period: 1800000 Unit: MILLISECONDS], [ScheduledChore: Name: CatalogJanitor-hbase-docker:44393 Period: 300000 Unit: MILLISECONDS], [ScheduledChore: Name: hbase-docker,44393,1489790667382-BalancerChore Period: 300000 Unit: MILLISECONDS], [ScheduledChore: Name: hbase-docker,44393,1489790667382-DoMetricsChore Period: 3000 Unit: MILLISECONDS], [ScheduledChore: Name: HFileCleaner Period: 60000 Unit: MILLISECONDS], [ScheduledChore: Name: hbase-docker,44393,1489790667382-ClusterStatusChore Period: 60000 Unit: MILLISECONDS]] on shutdown
+2017-03-18 20:52:31,138 WARN  [M:0;hbase-docker:44393] zookeeper.ZKUtil: master:44393-0x15ade7175a60000, quorum=hbase-docker:2181, baseZNode=/hbase Unable to get data of znode /hbase/master
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getData(ZKUtil.java:623)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:148)
+	at org.apache.hadoop.hbase.master.ActiveMasterManager.stop(ActiveMasterManager.java:267)
+	at org.apache.hadoop.hbase.master.HMaster.stopServiceThreads(HMaster.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1082)
+	at org.apache.hadoop.hbase.master.HMasterCommandLine$LocalHMaster.run(HMasterCommandLine.java:317)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:31,139 ERROR [M:0;hbase-docker:44393] zookeeper.ZooKeeperWatcher: master:44393-0x15ade7175a60000, quorum=hbase-docker:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getData(ZKUtil.java:623)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:148)
+	at org.apache.hadoop.hbase.master.ActiveMasterManager.stop(ActiveMasterManager.java:267)
+	at org.apache.hadoop.hbase.master.HMaster.stopServiceThreads(HMaster.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1082)
+	at org.apache.hadoop.hbase.master.HMasterCommandLine$LocalHMaster.run(HMasterCommandLine.java:317)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:31,139 ERROR [M:0;hbase-docker:44393] master.ActiveMasterManager: master:44393-0x15ade7175a60000, quorum=hbase-docker:2181, baseZNode=/hbase Error deleting our own master address node
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/master
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1155)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:354)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getData(ZKUtil.java:623)
+	at org.apache.hadoop.hbase.zookeeper.MasterAddressTracker.getMasterAddress(MasterAddressTracker.java:148)
+	at org.apache.hadoop.hbase.master.ActiveMasterManager.stop(ActiveMasterManager.java:267)
+	at org.apache.hadoop.hbase.master.HMaster.stopServiceThreads(HMaster.java:1162)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1082)
+	at org.apache.hadoop.hbase.master.HMasterCommandLine$LocalHMaster.run(HMasterCommandLine.java:317)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:31,144 INFO  [M:0;hbase-docker:44393] hbase.ChoreService: Chore service for: hbase-docker,44393,1489790667382_splitLogManager_ had [[ScheduledChore: Name: SplitLogManager Timeout Monitor Period: 1000 Unit: MILLISECONDS]] on shutdown
+2017-03-18 20:52:31,144 INFO  [M:0;hbase-docker:44393] flush.MasterFlushTableProcedureManager: stop: server shutting down.
+2017-03-18 20:52:31,147 INFO  [M:0;hbase-docker:44393] ipc.RpcServer: Stopping server on 44393
+2017-03-18 20:52:31,159 INFO  [RpcServer.listener,port=44393] ipc.RpcServer: RpcServer.listener,port=44393: stopping
+2017-03-18 20:52:31,162 INFO  [RpcServer.responder] ipc.RpcServer: RpcServer.responder: stopped
+2017-03-18 20:52:31,159 WARN  [M:0;hbase-docker:44393] regionserver.HRegionServer: Failed deleting my ephemeral node
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/rs/hbase-docker,44393,1489790667382
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.delete(ZooKeeper.java:873)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.delete(RecoverableZooKeeper.java:178)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNode(ZKUtil.java:1236)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNode(ZKUtil.java:1225)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.deleteMyEphemeralNode(HRegionServer.java:1416)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1090)
+	at org.apache.hadoop.hbase.master.HMasterCommandLine$LocalHMaster.run(HMasterCommandLine.java:317)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:31,225 INFO  [RpcServer.responder] ipc.RpcServer: RpcServer.responder: stopping
+2017-03-18 20:52:31,230 INFO  [M:0;hbase-docker:44393] regionserver.HRegionServer: stopping server hbase-docker,44393,1489790667382; zookeeper connection closed.
+2017-03-18 20:52:31,230 INFO  [M:0;hbase-docker:44393] regionserver.HRegionServer: M:0;hbase-docker:44393 exiting
+2017-03-18 20:52:31,233 INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181] server.NIOServerCnxnFactory: NIOServerCnxn factory exited run method
+2017-03-18 20:52:31,235 INFO  [M:0;hbase-docker:44393] server.ZooKeeperServer: shutting down
+2017-03-18 20:52:31,235 INFO  [M:0;hbase-docker:44393] server.SessionTrackerImpl: Shutting down
+2017-03-18 20:52:31,235 INFO  [M:0;hbase-docker:44393] server.PrepRequestProcessor: Shutting down
+2017-03-18 20:52:31,236 INFO  [M:0;hbase-docker:44393] server.SyncRequestProcessor: Shutting down
+2017-03-18 20:52:31,237 INFO  [ProcessThread(sid:0 cport:-1):] server.PrepRequestProcessor: PrepRequestProcessor exited loop!
+2017-03-18 20:52:31,237 INFO  [SyncThread:0] server.SyncRequestProcessor: SyncRequestProcessor exited!
+2017-03-18 20:52:31,238 INFO  [M:0;hbase-docker:44393] server.FinalRequestProcessor: shutdown of request processor complete
+2017-03-18 20:52:31,247 INFO  [M:0;hbase-docker:44393] zookeeper.MiniZooKeeperCluster: Shutdown MiniZK cluster with all ZK servers
+2017-03-18 20:52:31,275 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:31,278 WARN  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session 0x15ade7175a60006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-03-18 20:52:32,001 INFO  [SessionTracker] server.SessionTrackerImpl: SessionTrackerImpl exited loop!
+2017-03-18 20:52:32,824 INFO  [regionserver/hbase-docker/172.17.0.2:0.leaseChecker] regionserver.Leases: regionserver/hbase-docker/172.17.0.2:0.leaseChecker closing leases
+2017-03-18 20:52:32,828 INFO  [regionserver/hbase-docker/172.17.0.2:0.leaseChecker] regionserver.Leases: regionserver/hbase-docker/172.17.0.2:0.leaseChecker closed leases
+2017-03-18 20:52:33,277 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:33,277 WARN  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session 0x15ade7175a60006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-03-18 20:52:33,776 INFO  [regionserver/hbase-docker/172.17.0.2:0.logRoller] regionserver.LogRoller: LogRoller exiting.
+2017-03-18 20:52:34,971 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:34,972 WARN  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session 0x15ade7175a60006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-03-18 20:52:35,148 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Stopping HBase metrics system...
+2017-03-18 20:52:35,148 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system stopped.
+2017-03-18 20:52:35,649 INFO  [HBase-Metrics2-1] impl.MetricsConfig: loaded properties from hadoop-metrics2-hbase.properties
+2017-03-18 20:52:35,650 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-03-18 20:52:35,650 INFO  [HBase-Metrics2-1] impl.MetricsSystemImpl: HBase metrics system started
+2017-03-18 20:52:36,160 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:36,161 WARN  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session 0x15ade7175a60006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-03-18 20:52:37,355 INFO  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Opening socket connection to server hbase-docker/172.17.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-03-18 20:52:37,356 WARN  [1092701349@qtp-726408598-5-SendThread(hbase-docker:2181)] zookeeper.ClientCnxn: Session 0x15ade7175a60006 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-03-18 20:52:38,306 INFO  [RS_OPEN_META-hbase-docker:35299-0-MetaLogRoller] regionserver.LogRoller: LogRoller exiting.
+2017-03-18 20:52:38,312 WARN  [RS:0;hbase-docker:35299] zookeeper.ZKUtil: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase Unable to list children of znode /hbase/replication/rs/hbase-docker,35299,1489790669903 
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/replication/rs/hbase-docker,35299,1489790669903
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1472)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getChildren(RecoverableZooKeeper.java:292)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenAndWatchForNewChildren(ZKUtil.java:456)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenAndWatchThem(ZKUtil.java:484)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenBFSAndWatchThem(ZKUtil.java:1476)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNodeRecursivelyMultiOrSequential(ZKUtil.java:1398)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNodeRecursively(ZKUtil.java:1280)
+	at org.apache.hadoop.hbase.replication.ReplicationQueuesZKImpl.removeAllQueues(ReplicationQueuesZKImpl.java:188)
+	at org.apache.hadoop.hbase.replication.regionserver.ReplicationSourceManager.join(ReplicationSourceManager.java:310)
+	at org.apache.hadoop.hbase.replication.regionserver.Replication.join(Replication.java:180)
+	at org.apache.hadoop.hbase.replication.regionserver.Replication.stopReplicationService(Replication.java:172)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.stopServiceThreads(HRegionServer.java:2151)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1082)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:38,313 ERROR [RS:0;hbase-docker:35299] zookeeper.ZooKeeperWatcher: regionserver:35299-0x15ade7175a60001, quorum=hbase-docker:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/replication/rs/hbase-docker,35299,1489790669903
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getChildren(ZooKeeper.java:1472)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getChildren(RecoverableZooKeeper.java:292)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenAndWatchForNewChildren(ZKUtil.java:456)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenAndWatchThem(ZKUtil.java:484)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.listChildrenBFSAndWatchThem(ZKUtil.java:1476)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNodeRecursivelyMultiOrSequential(ZKUtil.java:1398)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNodeRecursively(ZKUtil.java:1280)
+	at org.apache.hadoop.hbase.replication.ReplicationQueuesZKImpl.removeAllQueues(ReplicationQueuesZKImpl.java:188)
+	at org.apache.hadoop.hbase.replication.regionserver.ReplicationSourceManager.join(ReplicationSourceManager.java:310)
+	at org.apache.hadoop.hbase.replication.regionserver.Replication.join(Replication.java:180)
+	at org.apache.hadoop.hbase.replication.regionserver.Replication.stopReplicationService(Replication.java:172)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.stopServiceThreads(HRegionServer.java:2151)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1082)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:38,316 INFO  [RS:0;hbase-docker:35299] ipc.RpcServer: Stopping server on 35299
+2017-03-18 20:52:38,317 INFO  [RpcServer.listener,port=35299] ipc.RpcServer: RpcServer.listener,port=35299: stopping
+2017-03-18 20:52:38,325 INFO  [RpcServer.responder] ipc.RpcServer: RpcServer.responder: stopped
+2017-03-18 20:52:38,325 INFO  [RpcServer.responder] ipc.RpcServer: RpcServer.responder: stopping
+2017-03-18 20:52:38,363 WARN  [RS:0;hbase-docker:35299] regionserver.HRegionServer: Failed deleting my ephemeral node
+org.apache.zookeeper.KeeperException$SessionExpiredException: KeeperErrorCode = Session expired for /hbase/rs/hbase-docker,35299,1489790669903
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:127)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.delete(ZooKeeper.java:873)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.delete(RecoverableZooKeeper.java:178)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNode(ZKUtil.java:1236)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.deleteNode(ZKUtil.java:1225)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.deleteMyEphemeralNode(HRegionServer.java:1416)
+	at org.apache.hadoop.hbase.regionserver.HRegionServer.run(HRegionServer.java:1090)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-18 20:52:38,364 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: stopping server hbase-docker,35299,1489790669903; zookeeper connection closed.
+2017-03-18 20:52:38,364 INFO  [RS:0;hbase-docker:35299] regionserver.HRegionServer: RS:0;hbase-docker:35299 exiting
+2017-03-18 20:52:38,383 INFO  [Thread-6] regionserver.ShutdownHook: Shutdown hook starting; hbase.shutdown.hook=true; fsShutdownHook=org.apache.hadoop.fs.FileSystem$Cache$ClientFinalizer@3eb77ea8
+2017-03-18 20:52:38,384 INFO  [Thread-6] regionserver.ShutdownHook: Starting fs shutdown hook thread.
+2017-03-18 20:52:38,385 INFO  [Thread-6] regionserver.ShutdownHook: Shutdown hook finished.

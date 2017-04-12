@@ -22,15 +22,15 @@ version: '2'
 
 services:
 
-#  hue:
-#    image: gethue/hue:latest
-#    container_name: hue-docker
-#    expose:
-#      - "8888"
-#    ports:
-#      - "8888:8888"
-#    networks:
-#      - new
+  hue:
+    image: gethue/hue:latest
+    container_name: hue-docker
+    expose:
+      - "8888"
+    ports:
+      - "8888:8888"
+    networks:
+      - new
 
   spark:
 #  image: antlypls/spark:1.6.1

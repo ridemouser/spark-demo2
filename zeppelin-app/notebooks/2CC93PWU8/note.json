@@ -1,0 +1,913 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n#### In this example, we will be using the Uber Trip dataset, which can found at https://raw.githubusercontent.com/fivethirtyeight/uber-tlc-foil-response/master/uber-trip-data/uber-raw-data-apr14.csv\n",
+      "dateUpdated": "Mar 28, 2017 3:19:25 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398407_-636072609",
+      "id": "20170324-193858_760053000",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch4\u003eIn this example, we will be using the Uber Trip dataset, which can found at https://raw.githubusercontent.com/fivethirtyeight/uber-tlc-foil-response/master/uber-trip-data/uber-raw-data-apr14.csv\u003c/h4\u003e\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:26 AM",
+      "dateFinished": "Mar 28, 2017 3:19:41 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nwhoami\n\ncurl -sSL -O \"https://raw.githubusercontent.com/fivethirtyeight/uber-tlc-foil-response/master/uber-trip-data/uber-raw-data-apr14.csv\"",
+      "dateUpdated": "Mar 28, 2017 3:19:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sh",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398503_-970804152",
+      "id": "20170324-042130_644498535",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:26 AM",
+      "dateFinished": "Mar 28, 2017 3:20:01 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nimport org.apache.spark._\n\nimport org.apache.spark.rdd.RDD\nimport org.apache.spark.sql.types._\nimport org.apache.spark.sql.functions._\nimport org.apache.spark.sql._\nimport org.apache.spark._\nimport org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.feature.VectorAssembler\nimport org.apache.spark.ml.clustering.KMeans\nimport org.apache.spark.ml.clustering.KMeansModel\nimport org.apache.spark.mllib.linalg.Vectors",
+      "dateUpdated": "Mar 28, 2017 3:19:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398513_-961570179",
+      "id": "20170324-042403_374759768",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nimport org.apache.spark._\n\nimport org.apache.spark.rdd.RDD\n\nimport org.apache.spark.sql.types._\n\nimport org.apache.spark.sql.functions._\n\nimport org.apache.spark.sql._\n\nimport org.apache.spark._\n\nimport org.apache.spark.ml.feature.StringIndexer\n\nimport org.apache.spark.ml.feature.VectorAssembler\n\nimport org.apache.spark.ml.clustering.KMeans\n\nimport org.apache.spark.ml.clustering.KMeansModel\n\nimport org.apache.spark.mllib.linalg.Vectors\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:27 AM",
+      "dateFinished": "Mar 28, 2017 3:20:14 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "    import sqlContext.implicits._\n    import sqlContext._\n\n    val uschema \u003d StructType(Array(\n      StructField(\"dt\", StringType, true),\n      StructField(\"lat\", DoubleType, true),\n      StructField(\"lon\", DoubleType, true),\n      StructField(\"base\", StringType, true)\n    ))\n",
+      "dateUpdated": "Mar 28, 2017 3:19:27 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398521_-964648170",
+      "id": "20170324-174630_950617944",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nimport sqlContext.implicits._\n\nimport sqlContext._\n\nuschema: org.apache.spark.sql.types.StructType \u003d StructType(StructField(dt,StringType,true), StructField(lat,DoubleType,true), StructField(lon,DoubleType,true), StructField(base,StringType,true))\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:27 AM",
+      "dateFinished": "Mar 28, 2017 3:20:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nhadoop fs -ls /user/zeppelin\nhadoop fs -mkdir /user/zeppelin/uber\nhadoop fs -put uber-raw-data-apr14.csv /user/zeppelin/uber/\nhadoop fs -ls /user/zeppelin/uber",
+      "dateUpdated": "Mar 28, 2017 3:19:27 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sh",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398537_-983116117",
+      "id": "20170324-174618_1556351634",
+      "result": {
+        "code": "INCOMPLETE",
+        "type": "TEXT",
+        "msg": "Found 2 items\ndrwxr-xr-x   - root supergroup          0 2016-12-10 23:17 /user/zeppelin/iotdemo\ndrwxr-xr-x   - root supergroup          0 2017-03-24 18:09 /user/zeppelin/uber\nmkdir: `/user/zeppelin/uber\u0027: File exists\nParagraph received a SIGTERM.\nExitValue: 143"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:40 AM",
+      "dateFinished": "Mar 28, 2017 3:21:00 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n val dfRaw \u003d sqlContext.read.format(\"com.databricks.spark.csv\").option(\"header\", \"true\").option(\"dateFormat\",\"MM/dd/yyyy HH:mm:ss\").schema(uschema).load(\"/user/zeppelin/uber/uber-raw-data-apr14.csv\")\n val ts \u003d unix_timestamp($\"dt\",\"MM/dd/yyyy HH:mm:ss\").cast(\"timestamp\")\n val temp \u003d dfRaw.withColumn(\"ts\",ts)\n val df \u003d temp.drop(temp.col(\"dt\"))\n df.show(2,false)",
+      "dateUpdated": "Mar 28, 2017 3:19:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398550_-974266892",
+      "id": "20170324-175225_581727332",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ndfRaw: org.apache.spark.sql.DataFrame \u003d [dt: string, lat: double ... 2 more fields]\n\nts: org.apache.spark.sql.Column \u003d CAST(unix_timestamp(dt, MM/dd/yyyy HH:mm:ss) AS TIMESTAMP)\n\ntemp: org.apache.spark.sql.DataFrame \u003d [dt: string, lat: double ... 3 more fields]\n\ndf: org.apache.spark.sql.DataFrame \u003d [lat: double, lon: double ... 2 more fields]\n+-------+--------+------+---------------------+\n|lat    |lon     |base  |ts                   |\n+-------+--------+------+---------------------+\n|40.769 |-73.9549|B02512|2014-04-01 00:11:00.0|\n|40.7267|-74.0345|B02512|2014-04-01 00:17:00.0|\n+-------+--------+------+---------------------+\nonly showing top 2 rows\n\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:20:14 AM",
+      "dateFinished": "Mar 28, 2017 3:21:26 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\ndf.printSchema",
+      "dateUpdated": "Mar 28, 2017 3:19:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398558_-977344884",
+      "id": "20170324-175925_35204998",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- lat: double (nullable \u003d true)\n |-- lon: double (nullable \u003d true)\n |-- base: string (nullable \u003d true)\n |-- ts: timestamp (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:20:51 AM",
+      "dateFinished": "Mar 28, 2017 3:21:29 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\n\n  \n    \n    val featureCols \u003d Array(\"lat\", \"lon\")\n    val assembler \u003d new VectorAssembler().setInputCols(featureCols).setOutputCol(\"features\")\n    val df2 \u003d assembler.transform(df)\n    val Array(trainingData, testData) \u003d df2.randomSplit(Array(0.7, 0.3), 5043)\n\n    val kmeans \u003d new KMeans().setK(8).setFeaturesCol(\"features\").setMaxIter(5)\n    val model \u003d kmeans.fit(trainingData)\n    println(\"Final Centers: \")\n    model.clusterCenters.foreach(println)\n\n \n \n\n ",
+      "dateUpdated": "Mar 28, 2017 3:19:30 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398563_-991580593",
+      "id": "20170324-183428_430270808",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nfeatureCols: Array[String] \u003d Array(lat, lon)\n\nassembler: org.apache.spark.ml.feature.VectorAssembler \u003d vecAssembler_311583716d88\n\ndf2: org.apache.spark.sql.DataFrame \u003d [lat: double, lon: double ... 3 more fields]\n\n\ntrainingData: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [lat: double, lon: double ... 3 more fields]\ntestData: org.apache.spark.sql.Dataset[org.apache.spark.sql.Row] \u003d [lat: double, lon: double ... 3 more fields]\n\nkmeans: org.apache.spark.ml.clustering.KMeans \u003d kmeans_9663ac3bca7c\n\nmodel: org.apache.spark.ml.clustering.KMeansModel \u003d kmeans_9663ac3bca7c\nFinal Centers: \n[40.77387804401896,-73.96183902265453]\n[40.66140189873418,-74.40468829113927]\n[40.70385635313123,-73.82134693038323]\n[40.89529193548383,-73.56238431085033]\n[40.70895043991831,-73.9889898782628]\n[40.705296787532205,-74.18016272264651]\n[40.74777218591167,-73.98995495032318]\n[40.87877765604251,-73.8962542828685]\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:21:26 AM",
+      "dateFinished": "Mar 28, 2017 3:26:27 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "  val categories \u003d model.transform(testData)\n  categories.show\n  categories.registerTempTable(\"uber\")",
+      "dateUpdated": "Mar 28, 2017 3:19:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398573_-996967077",
+      "id": "20170324-190816_518260107",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\ncategories: org.apache.spark.sql.DataFrame \u003d [lat: double, lon: double ... 4 more fields]\n+-------+--------+------+--------------------+------------------+----------+\n|    lat|     lon|  base|                  ts|          features|prediction|\n+-------+--------+------+--------------------+------------------+----------+\n|40.0729|-74.1638|B02617|2014-04-08 14:11:...|[40.0729,-74.1638]|         5|\n|40.2168| -74.567|B02617|2014-04-14 18:43:...| [40.2168,-74.567]|         1|\n|40.2643|-74.3553|B02682|2014-04-03 07:16:...|[40.2643,-74.3553]|         1|\n|40.3082|-74.1148|B02682|2014-04-01 21:35:...|[40.3082,-74.1148]|         5|\n|40.4277|-74.1951|B02617|2014-04-18 19:48:...|[40.4277,-74.1951]|         5|\n|40.4786|-74.4609|B02682|2014-04-03 13:12:...|[40.4786,-74.4609]|         1|\n|40.4977|-74.4241|B02598|2014-04-21 10:40:...|[40.4977,-74.4241]|         1|\n|40.4979|-74.4421|B02682|2014-04-29 16:28:...|[40.4979,-74.4421]|         1|\n|40.4986|-74.6447|B02682|2014-04-27 14:14:...|[40.4986,-74.6447]|         1|\n|40.4996|-74.4533|B02682|2014-04-20 01:38:...|[40.4996,-74.4533]|         1|\n|40.4999|-74.4539|B02682|2014-04-23 00:46:...|[40.4999,-74.4539]|         1|\n|40.5004|-74.4554|B02598|2014-04-30 20:13:...|[40.5004,-74.4554]|         1|\n|40.5078|-74.3897|B02598|2014-04-30 22:30:...|[40.5078,-74.3897]|         1|\n|40.5104|  -74.41|B02598|2014-04-20 10:24:...|  [40.5104,-74.41]|         1|\n|40.5137|-74.4675|B02682|2014-04-12 20:52:...|[40.5137,-74.4675]|         1|\n| 40.519|-74.4108|B02682|2014-04-04 07:21:...| [40.519,-74.4108]|         1|\n|40.5193|-74.3395|B02682|2014-04-23 11:02:...|[40.5193,-74.3395]|         1|\n|40.5195|-74.3399|B02598|2014-04-30 17:05:...|[40.5195,-74.3399]|         1|\n|40.5218|-74.4634|B02617|2014-04-06 20:39:...|[40.5218,-74.4634]|         1|\n|40.5362| -74.327|B02512|2014-04-16 10:57:...| [40.5362,-74.327]|         1|\n+-------+--------+------+--------------------+------------------+----------+\nonly showing top 20 rows\n\n\nwarning: there was one deprecation warning; re-run with -deprecation for details\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:21:29 AM",
+      "dateFinished": "Mar 28, 2017 3:26:49 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n#### Count of Predictions",
+      "dateUpdated": "Mar 28, 2017 3:19:32 AM",
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398582_-986578857",
+      "id": "20170328-013238_1689008334",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch4\u003eCount of Predictions\u003c/h4\u003e\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:40 AM",
+      "dateFinished": "Mar 28, 2017 3:19:41 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n#### Count of Uber trips by Predction",
+      "dateUpdated": "Mar 28, 2017 3:19:33 AM",
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398590_-989656848",
+      "id": "20170328-013549_2008899170",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch4\u003eCount of Uber trips by Predction\u003c/h4\u003e\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:19:41 AM",
+      "dateFinished": "Mar 28, 2017 3:19:41 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": " categories.select(\"prediction\").distinct().count()",
+      "dateUpdated": "Mar 28, 2017 3:19:34 AM",
+      "config": {
+        "colWidth": 6.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398593_-906166337",
+      "id": "20170328-013318_641020650",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres6: Long \u003d 8\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:26:28 AM",
+      "dateFinished": "Mar 28, 2017 3:27:20 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "z.show(categories.groupBy(\"prediction\").count())",
+      "dateUpdated": "Mar 28, 2017 3:19:35 AM",
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/scala",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "prediction",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "count",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "prediction",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "count",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398601_-909244328",
+      "id": "20170328-013623_1965485124",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "prediction\tcount\n1\t122\n6\t72032\n3\t287\n5\t1354\n4\t49669\n7\t1508\n2\t8000\n0\t36327\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:26:49 AM",
+      "dateFinished": "Mar 28, 2017 3:27:45 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nz.show(categories.select(hour($\"ts\").alias(\"hour\"), $\"prediction\")\n.groupBy(\"hour\",\"prediction\").agg(count(\"prediction\")\n.alias(\"count\")).orderBy( \"hour\",\"prediction\"))",
+      "dateUpdated": "Mar 28, 2017 3:19:38 AM",
+      "config": {
+        "colWidth": 12.0,
+        "helium": {},
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": true,
+          "keys": [
+            {
+              "name": "hour",
+              "index": 0.0,
+              "aggr": "sum",
+              "$$hashKey": "object:1937"
+            }
+          ],
+          "values": [
+            {
+              "name": "count",
+              "index": 2.0,
+              "aggr": "sum",
+              "$$hashKey": "object:1943"
+            }
+          ],
+          "groups": [
+            {
+              "name": "prediction",
+              "index": 1.0,
+              "aggr": "sum",
+              "$$hashKey": "object:1940"
+            }
+          ],
+          "scatter": {
+            "xAxis": {
+              "name": "hour",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "prediction",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398655_-916169808",
+      "id": "20170328-011325_1148255480",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "hour\tprediction\tcount\n0\t0\t335\n0\t1\t4\n0\t2\t116\n0\t3\t6\n0\t4\t1448\n0\t5\t28\n0\t6\t1606\n0\t7\t28\n1\t0\t215\n1\t1\t2\n1\t2\t40\n1\t3\t3\n1\t4\t949\n1\t5\t7\n1\t6\t1132\n1\t7\t18\n2\t0\t153\n2\t1\t1\n2\t2\t33\n2\t3\t4\n2\t4\t598\n2\t5\t6\n2\t6\t702\n2\t7\t28\n3\t0\t275\n3\t2\t38\n3\t3\t2\n3\t4\t526\n3\t5\t11\n3\t6\t610\n3\t7\t29\n4\t0\t364\n4\t1\t3\n4\t2\t154\n4\t3\t2\n4\t4\t625\n4\t5\t41\n4\t6\t610\n4\t7\t19\n5\t0\t643\n5\t1\t2\n5\t2\t162\n5\t3\t5\n5\t4\t1060\n5\t5\t37\n5\t6\t893\n5\t7\t36\n6\t0\t1783\n6\t1\t3\n6\t2\t306\n6\t3\t2\n6\t4\t1666\n6\t5\t53\n6\t6\t1679\n6\t7\t41\n7\t0\t2245\n7\t1\t7\n7\t2\t258\n7\t3\t3\n7\t4\t2138\n7\t5\t55\n7\t6\t2602\n7\t7\t41\n8\t0\t1893\n8\t2\t249\n8\t3\t9\n8\t4\t2143\n8\t5\t44\n8\t6\t2513\n8\t7\t37\n9\t0\t1422\n9\t1\t7\n9\t2\t274\n9\t3\t9\n9\t4\t1705\n9\t5\t43\n9\t6\t1854\n9\t7\t66\n10\t0\t1379\n10\t1\t6\n10\t2\t263\n10\t3\t11\n10\t4\t1602\n10\t5\t48\n10\t6\t1947\n10\t7\t61\n11\t0\t1423\n11\t1\t6\n11\t2\t254\n11\t3\t9\n11\t4\t1665\n11\t5\t41\n11\t6\t2193\n11\t7\t69\n12\t0\t1349\n12\t1\t5\n12\t2\t308\n12\t3\t16\n12\t4\t1819\n12\t5\t70\n12\t6\t2337\n12\t7\t59\n13\t0\t1592\n13\t1\t7\n13\t2\t374\n13\t3\t12\n13\t4\t1937\n13\t5\t69\n13\t6\t2598\n13\t7\t97\n14\t0\t1885\n14\t1\t11\n14\t2\t580\n14\t3\t26\n14\t4\t2189\n14\t5\t83\n14\t6\t3284\n14\t7\t109\n15\t0\t2628\n15\t1\t9\n15\t2\t562\n15\t3\t21\n15\t4\t2697\n15\t5\t93\n15\t6\t4530\n15\t7\t103\n16\t0\t3026\n16\t1\t6\n16\t2\t505\n16\t3\t21\n16\t4\t2992\n16\t5\t94\n16\t6\t5823\n16\t7\t112\n17\t0\t3062\n17\t1\t7\n17\t2\t502\n17\t3\t20\n17\t4\t3438\n17\t5\t82\n17\t6\t6463\n17\t7\t86\n18\t0\t2861\n18\t1\t5\n18\t2\t538\n18\t3\t10\n18\t4\t3526\n18\t5\t77\n18\t6\t5769\n18\t7\t71\n19\t0\t2319\n19\t1\t2\n19\t2\t541\n19\t3\t24\n19\t4\t3379\n19\t5\t70\n19\t6\t5293\n19\t7\t71\n20\t0\t1911\n20\t1\t12\n20\t2\t580\n20\t3\t17\n20\t4\t3103\n20\t5\t68\n20\t6\t5065\n20\t7\t115\n21\t0\t1722\n21\t1\t6\n21\t2\t576\n21\t3\t25\n21\t4\t3270\n21\t5\t87\n21\t6\t5368\n21\t7\t105\n22\t0\t1184\n22\t1\t7\n22\t2\t434\n22\t3\t18\n22\t4\t2957\n22\t5\t79\n22\t6\t4355\n22\t7\t65\n23\t0\t658\n23\t1\t4\n23\t2\t353\n23\t3\t12\n23\t4\t2237\n23\t5\t68\n23\t6\t2806\n23\t7\t42\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:28:12 AM",
+      "dateFinished": "Mar 28, 2017 3:28:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark\nz.show(sqlContext.sql(\"SELECT hour(uber.ts) as hr,count(prediction) as ct FROM uber group By hour(uber.ts)\"))",
+      "dateUpdated": "Mar 28, 2017 3:29:39 AM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "helium": {},
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "hr",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "ct",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398686_-928097024",
+      "id": "20170328-011424_807261782",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "hr\tct\n12\t5963\n22\t9099\n1\t2366\n13\t6686\n16\t12579\n6\t5533\n3\t1491\n20\t10871\n5\t2838\n19\t11699\n15\t10643\n17\t13660\n9\t5380\n4\t1818\n8\t6888\n23\t6180\n7\t7349\n10\t5317\n21\t11159\n11\t5660\n14\t8167\n2\t1525\n0\t3571\n18\t12857\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:28:33 AM",
+      "dateFinished": "Mar 28, 2017 3:29:19 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\n\nSELECT * from uber limit 50",
+      "dateUpdated": "Mar 28, 2017 3:32:24 AM",
+      "config": {
+        "colWidth": 6.0,
+        "editorMode": "ace/mode/sql",
+        "helium": {},
+        "graph": {
+          "mode": "scatterChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "lat",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "lon",
+              "index": 1.0,
+              "aggr": "sum"
+            },
+            "group": {
+              "name": "prediction",
+              "index": 5.0,
+              "aggr": "sum"
+            }
+          },
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": [
+              {
+                "name": "prediction",
+                "index": 5.0,
+                "aggr": "sum"
+              }
+            ],
+            "lat": {
+              "name": "lat",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "lng": {
+              "name": "lon",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398695_-943871729",
+      "id": "20170328-012056_469256597",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "lat\tlon\tbase\tts\tfeatures\tprediction\n40.0729\t-74.1638\tB02617\t2014-04-08 14:11:00.0\t[40.0729,-74.1638]\t5\n40.2168\t-74.567\tB02617\t2014-04-14 18:43:00.0\t[40.2168,-74.567]\t1\n40.2643\t-74.3553\tB02682\t2014-04-03 07:16:00.0\t[40.2643,-74.3553]\t1\n40.3082\t-74.1148\tB02682\t2014-04-01 21:35:00.0\t[40.3082,-74.1148]\t5\n40.4277\t-74.1951\tB02617\t2014-04-18 19:48:00.0\t[40.4277,-74.1951]\t5\n40.4786\t-74.4609\tB02682\t2014-04-03 13:12:00.0\t[40.4786,-74.4609]\t1\n40.4977\t-74.4241\tB02598\t2014-04-21 10:40:00.0\t[40.4977,-74.4241]\t1\n40.4979\t-74.4421\tB02682\t2014-04-29 16:28:00.0\t[40.4979,-74.4421]\t1\n40.4986\t-74.6447\tB02682\t2014-04-27 14:14:00.0\t[40.4986,-74.6447]\t1\n40.4996\t-74.4533\tB02682\t2014-04-20 01:38:00.0\t[40.4996,-74.4533]\t1\n40.4999\t-74.4539\tB02682\t2014-04-23 00:46:00.0\t[40.4999,-74.4539]\t1\n40.5004\t-74.4554\tB02598\t2014-04-30 20:13:00.0\t[40.5004,-74.4554]\t1\n40.5078\t-74.3897\tB02598\t2014-04-30 22:30:00.0\t[40.5078,-74.3897]\t1\n40.5104\t-74.41\tB02598\t2014-04-20 10:24:00.0\t[40.5104,-74.41]\t1\n40.5137\t-74.4675\tB02682\t2014-04-12 20:52:00.0\t[40.5137,-74.4675]\t1\n40.519\t-74.4108\tB02682\t2014-04-04 07:21:00.0\t[40.519,-74.4108]\t1\n40.5193\t-74.3395\tB02682\t2014-04-23 11:02:00.0\t[40.5193,-74.3395]\t1\n40.5195\t-74.3399\tB02598\t2014-04-30 17:05:00.0\t[40.5195,-74.3399]\t1\n40.5218\t-74.4634\tB02617\t2014-04-06 20:39:00.0\t[40.5218,-74.4634]\t1\n40.5362\t-74.327\tB02512\t2014-04-16 10:57:00.0\t[40.5362,-74.327]\t1\n40.5411\t-74.3084\tB02682\t2014-04-07 15:15:00.0\t[40.5411,-74.3084]\t1\n40.5487\t-74.1951\tB02598\t2014-04-19 08:14:00.0\t[40.5487,-74.1951]\t5\n40.5533\t-74.2999\tB02512\t2014-04-04 14:01:00.0\t[40.5533,-74.2999]\t1\n40.5534\t-74.2584\tB02617\t2014-04-19 23:05:00.0\t[40.5534,-74.2584]\t5\n40.556\t-74.4354\tB02598\t2014-04-05 09:18:00.0\t[40.556,-74.4354]\t1\n40.5568\t-74.3986\tB02617\t2014-04-14 09:10:00.0\t[40.5568,-74.3986]\t1\n40.5586\t-74.2655\tB02617\t2014-04-11 15:18:00.0\t[40.5586,-74.2655]\t5\n40.5613\t-74.475\tB02512\t2014-04-29 04:44:00.0\t[40.5613,-74.475]\t1\n40.5631\t-74.3252\tB02682\t2014-04-02 09:12:00.0\t[40.5631,-74.3252]\t1\n40.565\t-74.3264\tB02512\t2014-04-17 06:20:00.0\t[40.565,-74.3264]\t1\n40.5707\t-74.1369\tB02598\t2014-04-01 10:04:00.0\t[40.5707,-74.1369]\t5\n40.5716\t-74.6557\tB02682\t2014-04-24 14:38:00.0\t[40.5716,-74.6557]\t1\n40.5717\t-74.6554\tB02682\t2014-04-14 14:24:00.0\t[40.5717,-74.6554]\t1\n40.5748\t-73.9524\tB02617\t2014-04-01 03:22:00.0\t[40.5748,-73.9524]\t4\n40.5752\t-73.9779\tB02682\t2014-04-12 15:00:00.0\t[40.5752,-73.9779]\t4\n40.5754\t-73.9837\tB02617\t2014-04-27 19:08:00.0\t[40.5754,-73.9837]\t4\n40.5755\t-73.9766\tB02598\t2014-04-19 22:49:00.0\t[40.5755,-73.9766]\t4\n40.5755\t-73.9611\tB02682\t2014-04-05 22:25:00.0\t[40.5755,-73.9611]\t4\n40.5756\t-73.9802\tB02617\t2014-04-05 01:08:00.0\t[40.5756,-73.9802]\t4\n40.5757\t-73.9507\tB02682\t2014-04-25 08:43:00.0\t[40.5757,-73.9507]\t4\n40.5765\t-74.5677\tB02682\t2014-04-27 09:36:00.0\t[40.5765,-74.5677]\t1\n40.5765\t-74.0031\tB02682\t2014-04-17 11:18:00.0\t[40.5765,-74.0031]\t4\n40.5765\t-73.9826\tB02617\t2014-04-27 21:37:00.0\t[40.5765,-73.9826]\t4\n40.5766\t-73.985\tB02617\t2014-04-30 16:28:00.0\t[40.5766,-73.985]\t4\n40.5768\t-74.0032\tB02617\t2014-04-10 18:31:00.0\t[40.5768,-74.0032]\t4\n40.577\t-74.0032\tB02682\t2014-04-19 20:44:00.0\t[40.577,-74.0032]\t4\n40.577\t-73.9533\tB02617\t2014-04-16 20:55:00.0\t[40.577,-73.9533]\t4\n40.5771\t-73.9661\tB02682\t2014-04-17 09:42:00.0\t[40.5771,-73.9661]\t4\n40.5773\t-73.9815\tB02682\t2014-04-13 17:20:00.0\t[40.5773,-73.9815]\t4\n40.5775\t-74.0117\tB02598\t2014-04-30 18:20:00.0\t[40.5775,-74.0117]\t4\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:28:57 AM",
+      "dateFinished": "Mar 28, 2017 3:29:32 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect hour(uber.ts) as hr,prediction, count( uber.prediction) as ct \nfrom uber group by hour(uber.ts), prediction  order by count(uber.prediction) desc",
+      "dateUpdated": "Mar 28, 2017 3:33:23 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": true,
+          "keys": [
+            {
+              "name": "hr",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "ct",
+              "index": 2.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [
+            {
+              "name": "prediction",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "tableHide": false,
+        "helium": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398707_-936176751",
+      "id": "20170328-012127_407029835",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "hr\tprediction\tct\n17\t6\t6463\n16\t6\t5823\n18\t6\t5769\n21\t6\t5368\n19\t6\t5293\n20\t6\t5065\n15\t6\t4530\n22\t6\t4355\n18\t4\t3526\n17\t4\t3438\n19\t4\t3379\n14\t6\t3284\n21\t4\t3270\n20\t4\t3103\n17\t0\t3062\n16\t0\t3026\n16\t4\t2992\n22\t4\t2957\n18\t0\t2861\n23\t6\t2806\n15\t4\t2697\n15\t0\t2628\n7\t6\t2602\n13\t6\t2598\n8\t6\t2513\n12\t6\t2337\n19\t0\t2319\n7\t0\t2245\n23\t4\t2237\n11\t6\t2193\n14\t4\t2189\n8\t4\t2143\n7\t4\t2138\n10\t6\t1947\n13\t4\t1937\n20\t0\t1911\n8\t0\t1893\n14\t0\t1885\n9\t6\t1854\n12\t4\t1819\n6\t0\t1783\n21\t0\t1722\n9\t4\t1705\n6\t6\t1679\n6\t4\t1666\n11\t4\t1665\n0\t6\t1606\n10\t4\t1602\n13\t0\t1592\n0\t4\t1448\n11\t0\t1423\n9\t0\t1422\n10\t0\t1379\n12\t0\t1349\n22\t0\t1184\n1\t6\t1132\n5\t4\t1060\n1\t4\t949\n5\t6\t893\n2\t6\t702\n23\t0\t658\n5\t0\t643\n4\t4\t625\n4\t6\t610\n3\t6\t610\n2\t4\t598\n14\t2\t580\n20\t2\t580\n21\t2\t576\n15\t2\t562\n19\t2\t541\n18\t2\t538\n3\t4\t526\n16\t2\t505\n17\t2\t502\n22\t2\t434\n13\t2\t374\n4\t0\t364\n23\t2\t353\n0\t0\t335\n12\t2\t308\n6\t2\t306\n3\t0\t275\n9\t2\t274\n10\t2\t263\n7\t2\t258\n11\t2\t254\n8\t2\t249\n1\t0\t215\n5\t2\t162\n4\t2\t154\n2\t0\t153\n0\t2\t116\n20\t7\t115\n16\t7\t112\n14\t7\t109\n21\t7\t105\n15\t7\t103\n13\t7\t97\n16\t5\t94\n15\t5\t93\n21\t5\t87\n17\t7\t86\n14\t5\t83\n17\t5\t82\n22\t5\t79\n18\t5\t77\n18\t7\t71\n19\t7\t71\n12\t5\t70\n19\t5\t70\n11\t7\t69\n13\t5\t69\n20\t5\t68\n23\t5\t68\n9\t7\t66\n22\t7\t65\n10\t7\t61\n12\t7\t59\n7\t5\t55\n6\t5\t53\n10\t5\t48\n8\t5\t44\n9\t5\t43\n23\t7\t42\n11\t5\t41\n4\t5\t41\n6\t7\t41\n7\t7\t41\n1\t2\t40\n3\t2\t38\n8\t7\t37\n5\t5\t37\n5\t7\t36\n2\t2\t33\n3\t7\t29\n0\t7\t28\n2\t7\t28\n0\t5\t28\n14\t3\t26\n21\t3\t25\n19\t3\t24\n16\t3\t21\n15\t3\t21\n17\t3\t20\n4\t7\t19\n22\t3\t18\n1\t7\t18\n20\t3\t17\n12\t3\t16\n13\t3\t12\n20\t1\t12\n23\t3\t12\n10\t3\t11\n14\t1\t11\n3\t5\t11\n18\t3\t10\n15\t1\t9\n9\t3\t9\n11\t3\t9\n8\t3\t9\n22\t1\t7\n17\t1\t7\n1\t5\t7\n7\t1\t7\n13\t1\t7\n9\t1\t7\n11\t1\t6\n2\t5\t6\n21\t1\t6\n10\t1\t6\n0\t3\t6\n16\t1\t6\n5\t3\t5\n12\t1\t5\n18\t1\t5\n0\t1\t4\n23\t1\t4\n2\t3\t4\n6\t1\t3\n7\t3\t3\n4\t1\t3\n1\t3\t3\n1\t1\t2\n19\t1\t2\n5\t1\t2\n3\t3\t2\n6\t3\t2\n4\t3\t2\n2\t1\t1\n"
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:29:19 AM",
+      "dateFinished": "Mar 28, 2017 3:29:53 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "model.write.overwrite().save(\"/user/zeppelin/sparkML/kmeans_savemodel\")\n",
+      "dateUpdated": "Mar 28, 2017 3:45:34 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490670398723_-856148980",
+      "id": "20170328-013141_894037299",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Mar 28, 2017 3:06:38 AM",
+      "dateStarted": "Mar 28, 2017 3:45:35 AM",
+      "dateFinished": "Mar 28, 2017 3:45:43 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Mar 28, 2017 3:45:52 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490672734819_-170497142",
+      "id": "20170328-034534_1348552695",
+      "dateCreated": "Mar 28, 2017 3:45:34 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Uber",
+  "id": "2CC93PWU8",
+  "angularObjects": {
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}

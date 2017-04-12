@@ -19,3 +19,4 @@
 2017-03-17 22:44:25,435 INFO  [main] mortbay.log: jetty-6.1.26
 2017-03-17 22:44:26,954 INFO  [main] mortbay.log: Started SelectChannelConnector@0.0.0.0:9095
 2017-03-17 22:44:27,104 INFO  [main] thrift.ThriftServerRunner: starting TBoundedThreadPoolServer on /0.0.0.0:9090 with readTimeout 60000ms; min worker threads=16, max worker threads=1000, max queued requests=1000
+2017-03-18 20:52:31,758 INFO  [ConnectionCache_ChoreService_1] hbase.ScheduledChore: Chore: ConnectionCleaner missed its start time

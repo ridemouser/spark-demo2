@@ -1,0 +1,174 @@
+{
+  "paragraphs": [
+    {
+      "text": "sc.master",
+      "dateUpdated": "Mar 24, 2017 5:36:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490332761500_-954161331",
+      "id": "20170324-051921_1957510665",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nres0: String \u003d local[*]\n"
+      },
+      "dateCreated": "Mar 24, 2017 5:19:21 AM",
+      "dateStarted": "Mar 24, 2017 5:36:29 PM",
+      "dateFinished": "Mar 24, 2017 5:38:05 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sh\nhadoop fs -ls /",
+      "dateUpdated": "Mar 24, 2017 3:15:54 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490332776052_165488616",
+      "id": "20170324-051936_1157230837",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "Found 4 items\ndrwxr-xr-x   - root supergroup          0 2017-01-25 00:36 /apps\ndrwxrwxrwx   - root supergroup          0 2017-02-24 23:18 /table\ndrwxr-xr-x   - root supergroup          0 2017-02-23 22:40 /tmp\ndrwxr-xr-x   - root supergroup          0 2016-12-10 23:13 /user\n"
+      },
+      "dateCreated": "Mar 24, 2017 5:19:36 AM",
+      "dateStarted": "Mar 24, 2017 3:15:55 PM",
+      "dateFinished": "Mar 24, 2017 3:16:15 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "sc.version\n",
+      "dateUpdated": "Mar 24, 2017 4:17:08 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sh"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490368554783_-2136167426",
+      "id": "20170324-151554_1687367124",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Mar 24, 2017 3:15:54 PM",
+      "dateStarted": "Mar 24, 2017 4:17:08 PM",
+      "dateFinished": "Mar 24, 2017 4:21:48 PM",
+      "status": "ABORT",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "",
+      "dateUpdated": "Mar 24, 2017 4:17:20 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {},
+          "map": {
+            "baseMapType": "Streets",
+            "isOnline": true,
+            "pinCols": []
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1490372228562_-541810373",
+      "id": "20170324-161708_1850787040",
+      "dateCreated": "Mar 24, 2017 4:17:08 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Untitled Note 1",
+  "id": "2CEHAXYJW",
+  "angularObjects": {
+    "2C5CHWDFU:shared_process": [],
+    "2C4P3WGVN:shared_process": [],
+    "2C56WY7DF:shared_process": [],
+    "2C3XT4PXW:shared_process": [],
+    "2C27BH6GC:shared_process": [],
+    "2C2TEXKVW:shared_process": [],
+    "2C2S7V7Y6:shared_process": [],
+    "2C34GZX8H:shared_process": [],
+    "2C43JCZ1C:shared_process": [],
+    "2C3QY6GYU:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
