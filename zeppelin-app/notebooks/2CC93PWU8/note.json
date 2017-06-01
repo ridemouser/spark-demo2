@@ -558,7 +558,7 @@
     },
     {
       "text": "%spark\nz.show(categories.select(hour($\"ts\").alias(\"hour\"), $\"prediction\")\n.groupBy(\"hour\",\"prediction\").agg(count(\"prediction\")\n.alias(\"count\")).orderBy( \"hour\",\"prediction\"))",
-      "dateUpdated": "Mar 28, 2017 3:19:38 AM",
+      "dateUpdated": "Apr 26, 2017 4:14:52 PM",
       "config": {
         "colWidth": 12.0,
         "helium": {},
@@ -570,24 +570,21 @@
             {
               "name": "hour",
               "index": 0.0,
-              "aggr": "sum",
-              "$$hashKey": "object:1937"
+              "aggr": "sum"
             }
           ],
           "values": [
             {
               "name": "count",
               "index": 2.0,
-              "aggr": "sum",
-              "$$hashKey": "object:1943"
+              "aggr": "sum"
             }
           ],
           "groups": [
             {
               "name": "prediction",
               "index": 1.0,
-              "aggr": "sum",
-              "$$hashKey": "object:1940"
+              "aggr": "sum"
             }
           ],
           "scatter": {
